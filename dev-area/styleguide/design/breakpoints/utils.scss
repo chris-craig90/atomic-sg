@@ -1,0 +1,29 @@
+// Utlility class's
+// =================================
+
+// Show/ hide elements
+.u-hide { display: none!important; }
+.u-hide\@phone{ @include mq($from: phone)     { display: none!important; } }
+.u-hide\@phablet{ @include mq($from: phablet) { display: none!important; } }
+.u-hide\@tablet{ @include mq($from: tablet)   { display: none!important; } }
+.u-hide\@desktop{ @include mq($from: desktop) { display: none!important; } }
+.u-hide\@wide{ @include mq($from: wide)       { display: none!important; } }
+
+.u-show{ display: inherit; }
+.u-show\@phone{ @include mq($from: phone)     { display: inherit!important; } }
+.u-show\@phablet{ @include mq($from: phablet) { display: inherit!important; } }
+.u-show\@tablet{ @include mq($from: tablet)   { display: inherit!important; } }
+.u-show\@desktop{ @include mq($from: desktop) { display: inherit!important; } }
+.u-show\@wide{ @include mq($from: wide)       { display: inherit!important; } }
+
+// Sow to screenreaders
+.u-show\@sr {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

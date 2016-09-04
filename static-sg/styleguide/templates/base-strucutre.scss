@@ -1,0 +1,269 @@
+// Page Structure
+//
+// Each template shares an underlying base strucutre. This strucutre is made up of a fixed set of UI areas. These UI areas are interchanble but most only appear once on any givin page.
+//
+// #### UI regions
+// - Side Nav
+// - Header Area
+// - Main Content Area
+// - Right Nav
+//
+// <img src="//material-design.storage.googleapis.com/publish/material_v_8/material_ext_publish/0Bx4BSt6jniD7VmpjWnp5UDZEWEU/layout_structure_regions_tablet.png">
+//
+// Styleguide 6.1
+
+// styleguide:ignore:start
+
+// Template Namespace
+// ================================
+.t-basic{
+    position: relative;
+    display: flex;
+    //overflow: hidden;
+    width: 100vw;
+
+
+    // Main Content
+    // ================================
+    // The Main Content area consits of headers, footers and  <main> content.
+    // These elements require a shared parent container to accomodate the side nav's, which are postioned using css flexbox.
+    &__main{
+        position: relative;
+        display: block;
+        //overflow-y: auto;
+        @extend .grid-wrap;
+        padding: 0;
+        max-width: 100%;
+        width: auto;
+        flex: 3 100%; // Forces Main content area to shrink to accomdate sidebars if the are present.
+        @extend .u-bg--grey8;
+    }
+
+
+    // Page Header
+    // ================================
+    // Header region usualy contains toolbars, hero baners and title bars.
+    &__header{
+        position: relative;
+        display: block;
+    }
+
+
+    // Page Content
+    // ================================
+    // Contains Main page content, should have appoprtiate aria-role="main" or include html5 <main> tag.
+    &__page{
+        position: relative;
+        display: block;
+        @include baseline-calc((
+            padding-bottom: 3
+        ));
+
+        &__content,
+        &__aside{
+            position: relative;
+            @include baseline-calc((
+                padding-top: 4
+            ));
+        }
+        &__content{
+            font-size: 0; /* Fix white space issues */
+        }
+
+        // No side bar, push main content to center of view port
+        &--no-aside{
+            @include mq($from: desktop){
+                .t-basic__page__content { @include push(2 of 12); }
+            }
+        }
+
+        // No side bar, push main content to center of view port
+        &--material{
+            .t-basic__page__content{
+                z-index: 100;
+                @extend %tk-zLevel-1;
+                @include baseline-calc((
+                    margin-top: -5,
+                    padding-top: 2
+                ));
+                @include prefix(0.25 of 12);
+                @include suffix(0.25 of 12);
+            }
+            .t-basic__page__aside {
+                z-index: 0;
+                @include prefix(0.25 of 12);
+                @include suffix(0.25 of 12);
+            }
+        }
+
+        // Overlap content with intro splash,
+        &--overlap{
+            @include mq($from: desktop){
+                .t-basic__page__content,
+                .t-basic__page__aside {
+                    @include baseline-calc((
+                        margin-top: -5,
+                        padding-top: 2
+                    ));
+                    // Overlap cap
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        background-color: $color-grey8;
+                        @include baseline-calc((
+                            left: -1,
+                            height: 5,
+                            width: 1
+                        ));
+                    }
+                }
+                .t-basic__page__aside{
+                    @include baseline-calc((
+                        padding-top: 3
+                    ));
+                    &:before {
+                        left: auto;
+                        @include baseline-calc((
+                            right: -1
+                        ));
+                    }
+                }
+            }
+        }
+    }
+
+    // Sidbars
+    // ================================
+    $t-sideBar-width: 280px;
+    $t-sideBar-width--right: 230px;
+    &__sidenav{
+        position: fixed;
+        display: block;
+        @extend %tk-zLevel-4;
+        height: 100vh;
+        overflow: auto;
+        width: $t-sideBar-width; /* Shift side nav position negativley, this will be animated to 0 when opeend */
+        transform: translateX( ($t-sideBar-width + 10) * -1 );
+        z-index: 6000;
+        // Right side nav
+        &--right{
+            width: $t-sideBar-width--right;
+            transform: translateX(0);
+            transform: translateX( $t-sideBar-width--right +10 );
+            right: 0;
+            box-shadow: $tk-shadow--inset;
+        }
+        &--left{ @extend %tk-zLevel-3; }
+        // Open state
+        &--open{  transform: translateX(0px) translateY(0px);}
+
+        // Persistent Sidenav. Desktop and up only.
+        // Adds margin to the left/right of main content container (.t-basic__main).
+        &--persistent.t-basic__sidenav--open.t-basic__sidenav--left ~ .t-basic__main{ @include mq($from: desktop)   {margin-left: $t-sideBar-width;} }
+        &--persistent.t-basic__sidenav--open.t-basic__sidenav--right ~ .t-basic__main{ @include mq($from: wide)   { margin-right: $t-sideBar-width--right;} } // Right Side Nav
+
+        // Side bar header
+        &__header{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include  baseline-border( "bottom", 1px, 0 );
+
+            // Logo and header items
+            &__logo, &__close{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: inherit;
+                padding: 0;
+                margin: 0;
+                @include baseline-calc((
+                    min-height: 5
+                ));
+            }
+
+            // Sidebar logo
+            &__logo{
+                flex: 2 2 70%;
+                max-width: 70%;
+                align-items: flex-start;
+                @include baseline-calc((
+                    padding-left: 2,
+                    padding-right: 2,
+                    padding-top: 1,
+                    padding-bottom: 1,
+                ));
+
+                // Sidebar should always contain <h1> for doc outline.
+                h1{
+                    padding: 0;
+                    margin: 0; // Reset h1 styles
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    text-align: center;
+                    margin: 0;
+                    line-height: 0rem; /* Reset baseline-grid font sizers */
+                }
+            }
+
+            // Sidebar close button
+            &__close{
+                position: relative;
+                align-items: center;
+                @include baseline-calc((
+                    width: 5
+                ));
+            }
+
+            // Sidebar search
+            &__search{
+                position: relative;
+                display: flex;
+                flex-direction: row-reverse;
+                flex: 1 1 100%;
+                @extend %u-bg--grey6;
+                @include baseline-calc((padding: 1.5));
+
+                @include  baseline-border( "top", 1px, 0 );
+
+                input{
+                    position: relative;
+                    display: block;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    text-align: left;
+                    flex: 2;
+                    &[type*="search"]{
+                        flex: 1 1 100%;
+                        padding-left: 0.75rem;
+                    }
+                    &::-webkit-search-cancel-button{
+                        -webkit-appearance: searchfield-cancel-button;
+                        opacity: 1;
+                    }
+                }
+            }
+            // If logo and cloe button are present, add border to spearate
+            &__logo + .t-basic__sidenav__header__close{ border-width: 0 0 0 1px; border-style: solid; }
+        }
+
+        // Side bar main content
+        &__main{
+            position: relative;
+            display: block;
+            @include baseline-calc((
+                padding-bottom: 1,
+                padding-top: 1
+            ));
+        }
+    }
+}
+
+// styleguide:ignore:end

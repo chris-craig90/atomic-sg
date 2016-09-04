@@ -1,0 +1,61 @@
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/susy/sass/_susy.scss";
+@import "../../bower_components/sass-mq/_mq.scss";
+// endbower
+
+
+// Utilities
+// Global resets, sass mixns etc.
+// =================================
+@import "utlities/main";
+// =================================
+
+
+// Design
+// =================================
+@import "design/main";
+// =================================
+
+
+// Atoms
+// =================================
+@import "atoms/main";
+// =================================
+
+
+// Molecules
+// =================================
+@import "molecules/main";
+// =================================
+
+
+// Organisms
+// =================================
+@import "organisms/main";
+// =================================
+
+
+// Templates
+// =================================
+@import "templates/index";
+// =================================
+
+
+// Pages
+// =================================
+@import "pages/main";
+// =================================
+
+
+// SC5 styleguide styles
+// Do not include these in production.
+// ================================
+@import "../sc5/sc5-app.css";
+@import "../sc5/styleguide_helper_elements.css";
+@import "utlities/sg/sg-controls";
+@import "utlities/sg/sg-controls";
+@import "utlities/sg/sg-sc5-resets";
+@import "utlities/sg/sg-utlis";
+// =================================

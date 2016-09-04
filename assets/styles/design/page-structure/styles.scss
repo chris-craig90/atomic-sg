@@ -1,0 +1,15 @@
+
+.base--shadow {
+    //.base__appBar{ @extend %tk-zLevel-1; }
+    .base__sidenav{ @extend %tk-zLevel-3; }
+}
+
+.base--border {
+    .base__appBar,
+    .base__sidenav--left,
+    .base__sidenav--right{ border-style: solid; }
+
+    .base__appBar{ @include  baseline-border( "bottom", 1px, 0 ); }
+    .base__sidenav--left{ border-width: 0 1px 0 0; }
+    .base__sidenav--right{ border-width: 0 0 0 1px; }
+}

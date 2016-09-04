@@ -1,0 +1,76 @@
+// Examples
+//
+// sg-wrapper:
+// <div class="sg-hide">
+//     <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 5.3.5
+
+
+// Into Large - v1.
+//
+// markup:
+// <div class="o-splash o-splash--lrg o-splash--top-rgt o-splash--bgImg o-toolbar--fixedPos__sibling" style="background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.2) 100%), url(/dist/images/demo/placeholder/full/full1.jpg), no-repeat;">
+//     <div class="grid-wrap">
+//         <div class="grid-col-4">
+//             <h2 class="u-typ--serif--thin u-mt--3 u-pb--0">Think, Design, Control.</h2>
+//         </div>
+//     </div>
+// </div>
+//
+//
+// Styleguide 5.3.5.1
+
+
+// Into Large - v2.
+//
+// markup:
+// <div class="o-splash o-splash--lrg o-splash--top-rgt o-splash--bgImg--lgt o-toolbar--fixedPos__sibling" style="background: linear-gradient(to bottom, rgba(255,255,255,255.55) 0%,rgba(255,255,255,0) 100%), url(/dist/images/demo/placeholder/full/full1.jpg), no-repeat;">
+//     <div class="grid-wrap">
+//         <div class="grid-col-4">
+//             <h2 class="u-typ--serif--thin u-mt--3 u-pb--0">Think, Design, Control.</h2>
+//         </div>
+//     </div>
+// </div>
+//
+//
+// Styleguide 5.3.5.2
+
+
+
+// Product Card
+//
+// markup:
+// <div class="o-splash o-splash--lrg o-splash--cent-cent o-splash--bgImg--drk o-toolbar--fixedPos__sibling" style="background: linear-gradient(to bottom,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.4) 100%), url(/dist/images/demo/placeholder/full/full1.jpg), no-repeat;">
+//     <div class="grid-wrap grid-wrap--flex">
+//         <div class="grid-col-12 u-pt--2 u-pb--3">
+//             <div class="m-card m-card--lft@desktop m-card--5050 ">
+//                 <div class="m-card__richMedia">
+//                     <img class="a-sqaure--lrg" $a-sqaure--lrg />
+//                 </div>
+//                 <div class="m-card__txt">
+//                     <div class="m-card__supTxt">
+//                         <div class="u-pb--15@desktop u-pt--15@desktop u-pb--25@wide u-pt--25@wide">
+//                             <p class="u-typ--bit u-pb--1">Category</p>
+//                             <h1 class="u-typ--mega u-pb--2">Pellentesque at ornare justo</h1>
+//                             <p>Nullam accumsan orci a enim lacinia gravida. Nullam at mauris vel urna commodo eleifend. Sed porttitor bibendum tristique. Vivamus accumsan non elit nec sodales. Praesent id nulla nec sapien accumsan vestibulum. Nulla mattis magna ac rutrum malesuada.</p>
+//                             <p class="u-pb--0"><a class="a-btn a-btn--raised a-btn--prime u-mr--1 u-mb--1">Add to basket</a></p>
+//                         </div>
+//                     </div>
+//                     <div class="m-card__actions">
+//                         <div class="m-card__actions__btns">
+//                             <a class="a-btn a-btn--flat rippleJS">Action</a>
+//                         </div>
+//                         <div class="m-card__actions__icons">
+//                             <button class="m-card__actions__expand"><i class="m-card__actions__expand__icon a-icon">&#xE87E;</i></button>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+//
+// Styleguide 5.3.5.3

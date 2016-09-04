@@ -1,0 +1,46 @@
+// Formm Elements
+//
+//
+// Styleguide 3.4
+
+// Labels
+//
+// markup:
+// <label>Label</label>
+//
+// Styleguide 3.4.1
+
+label{
+  position: relative;
+  display: block;
+  width: 100%;
+  color: get-txt-colour($color-grey8, 'secondary' );
+  @extend %font-byte;
+  @include baseline-calc((
+    padding-left: 0.5
+  ));
+}
+
+
+// Text field
+//
+// markup:
+// <input type="text" placeholder="Text input"/>
+//
+// Styleguide 3.4.2
+
+input{
+  position: relative;
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: get-txt-colour($color-grey8, 'secondary' );
+  border-width: 0 0 2px 0;
+  border-radius: 0;
+  @include baseline-calc((
+    padding: 0.5,
+    margin-bottom: 1
+  ));
+
+  &:focus,&:active{ border-color: $color-prime; outline: none;}
+}

@@ -1,0 +1,19 @@
+// Style guide controls
+// ===================================
+
+.sg-controls{
+  position: fixed;
+  z-index: 7000;
+
+  bottom: baseline-val('phone');
+  right: baseline-val('phone');
+}
+
+
+
+
+body:before{display: none;}
+body.mqSettings--show:before {
+  display: block;
+  z-index: 10000;
+}

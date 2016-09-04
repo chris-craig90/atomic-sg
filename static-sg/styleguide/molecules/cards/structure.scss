@@ -1,0 +1,178 @@
+// Card Stucture
+//
+// <div class="grid-wrap u-mb--2">
+// <div class="grid-col-12 grid-col-6@tablet">
+//
+// Cards can be constructed using blocks of content which include:
+//
+// - An optional header
+// - A primary title
+// - Rich media
+// - Supporting text
+// - Actions
+// - These blocks can be organized to promote different types of content. For example, numbers may be emphasized by increasing their typographic scale.
+//
+// On tablet/desktop, cards should follow the 24dp keyline. See Metrics & Keylines for more information.
+// </div>
+// <div class="grid-col-12 grid-col-6@tablet">
+// <img src="//material-design.storage.googleapis.com/publish/material_v_8/material_ext_publish/0Bzhp5Z4wHba3bElRc0xaZGR4S0E/components_cards20.png">
+// </div>
+// </div>
+//
+//
+// markup:
+// <div class="m-card u-bg–grey8">
+//     <div class="m-card__richMedia">
+//         <sg-insert>1.5.1-3</sg-insert>
+//     </div>
+//     <div class="m-card__txt">
+//         <div class="m-card__supTxt">
+//             <p class="u-typ--bit u-pb--1">Category</p>
+//             <h1 class="u-typ--kilo">Title goes here</h1>
+//             <h2 class="u-typ--base u-pb--1">Subtitle</h2>
+//             <p class="u-pb--0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum massa tortor, id malesuada nisl faucibus vitae.</p>
+//         </div>
+//         <div class="m-card__actions">
+//             <div class="m-card__actions__btns">
+//                 <a class="a-btn a-btn--flat rippleJS">Action</a>
+//                 <a class="a-btn a-btn--flat rippleJS">Action</a>
+//             </div>
+//             <div class="m-card__actions__icons">
+//                 <button class="m-card__actions__expand"><i class="m-card__actions__expand__icon a-icon">&#xE87E;</i></button>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// sg-wrapper:
+// <div style="width: 420px;">
+//    <sg-wrapper-content/>
+// </div>
+//
+//
+// Styleguide 4.2.1
+
+// styleguide:ignore:start
+
+// Main card wraper
+// -----------------------------
+.m-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    // Background-colrours
+    // -----------------------------
+    @extend %u-bg--grey8;
+    &--prime{ @extend %u-bg--prime; }
+    &--accent{ @extend %u-bg--accent; }
+    &--alt{ @extend %u-bg--grey1; }
+
+    // Heights
+    // -----------------------------
+    //&--tall{ @include baseline-calc(( height: 108 )); }
+    //&--medium{ @include baseline-calc(( height: 52 )); }
+
+}
+
+// Rich Media
+// -----------------------------
+.m-card__richMedia{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    flex: 1;
+    background:{
+        size: cover;
+        position: center;
+    }
+
+    // Rick media elements
+    // Only one rich media element should be used
+    > *{
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+}
+
+// Text area
+// -----------------------------
+.m-card__txt{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// Optioanl text elments, these must be placed within .m-card__txt
+// =============================
+
+// Supporting Text
+// -----------------------------
+.m-card__supTxt{
+    display: block;
+    width: 100%;
+    @include baseline-calc((
+        padding: 4,
+        padding-top: 2,
+        padding-bottom: 2
+    ));
+
+    // Align center
+    &--cent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-grow: 1;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+// Actions
+// -----------------------------
+.m-card__actions{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include  baseline-border( "top", 1px, 0, $type: "margin" );
+    @include baseline-calc((
+        padding: 2,
+        padding-top: 1,
+        padding-bottom: 1
+    ));
+
+    // Fixes inline-block height issue on child elements (espocally buttuns)
+    *{ vertical-align: middle; }
+
+    // Button Groupings
+    // Group icon and regular a-btn elements in seperate containers
+    // --------------------------------
+    &__icons{ display: inline-block;}
+    &__btns {display: inline-block;}
+
+    // Expanded hiden text control, alwyas float to the right.
+    &__expand{
+        margin-left: auto; /*Forces float right on flex child*/
+        order: 100;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        &--open .m-card__actions__expand__icon{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// styleguide:ignore:end

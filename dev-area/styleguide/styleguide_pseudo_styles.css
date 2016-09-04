@@ -1,0 +1,256 @@
+.flex-container a.pseudo-class-hover,
+.flex-slider a.pseudo-class-hover {
+  outline: none;
+}
+
+.no-js .flexslider .slides > li.pseudo-class-first-child {
+  display: block;
+}
+
+.flexslider.pseudo-class-hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+
+.flexslider.pseudo-class-hover .flex-direction-nav .flex-prev.pseudo-class-hover {
+  opacity: 1;
+}
+
+.flexslider.pseudo-class-hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+
+.flexslider.pseudo-class-hover .flex-direction-nav .flex-next.pseudo-class-hover {
+  opacity: 1;
+}
+
+.flex-pauseplay a.pseudo-class-hover {
+  opacity: 1;
+}
+
+.flex-control-paging li a.pseudo-class-hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.flex-control-thumbs img.pseudo-class-hover {
+  opacity: 1;
+}
+
+a.pseudo-class-active,
+a.pseudo-class-hover {
+  outline-width: 0;
+}
+
+tr.pseudo-class-hover {
+  background-color: #E0E0E0;
+  color: #1d1d1d;
+  border-color: #c5c5c5;
+}
+
+tr.pseudo-class-hover * {
+  color: #1d1d1d;
+}
+
+tr.pseudo-class-hover .u-txt-sec,
+tr.pseudo-class-hover .meta {
+  color: #676767;
+}
+
+tr.pseudo-class-hover .u-txt-dis,
+tr.pseudo-class-hover .pseudo-class-disabled,
+tr.pseudo-class-hover *[disabled],
+tr.pseudo-class-hover .meta {
+  color: #8b8b8b;
+}
+
+tr.pseudo-class-hover .u-txt-icon,
+tr.pseudo-class-hover .a-icon,
+tr.pseudo-class-hover .m-nav-vert--accord > ul ul:before,
+.m-nav-vert--accord > ul tr.pseudo-class-hover ul:before,
+tr.pseudo-class-hover .m-dropDown__trigger:after,
+tr.pseudo-class-hover .sg.sg-label a .fa,
+.sg.sg-label a tr.pseudo-class-hover .fa,
+tr.pseudo-class-hover .meta {
+  color: #8b8b8b;
+}
+
+tr.pseudo-class-hover .u-txt-div {
+  color: #c5c5c5;
+}
+
+tr.pseudo-class-hover * {
+  border-color: #c5c5c5;
+}
+
+tr.pseudo-class-hover hr {
+  border-color: #c5c5c5;
+}
+
+tr.pseudo-class-hover .u-txt-hilgt,
+tr.pseudo-class-hover a {
+  color: #32408f;
+  border-color: #32408f;
+}
+
+tr.pseudo-class-hover .u-txt-prime {
+  color: #1d1d1d;
+}
+
+.a-btn.pseudo-class-focus {
+  background-color: #FFFFFF;
+  color: #1d1d1d;
+}
+
+.a-btn.pseudo-class-hover {
+  background-color: #F5F5F5;
+  color: #202020;
+}
+
+.a-btn[disabled].pseudo-class-hover,
+.a-btn--disabled.pseudo-class-hover {
+  background-color: #FFFFFF;
+  color: #9e9e9e;
+}
+
+.a-btn--raised.pseudo-class-hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.a-btn--fab.pseudo-class-focus {
+  background-color: #00C853 !important;
+  color: #001a0b !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+}
+
+.a-btn--fab.pseudo-class-focus .a-icon,
+.a-btn--fab.pseudo-class-focus .m-nav-vert--accord > ul ul:before,
+.m-nav-vert--accord > ul .a-btn--fab.pseudo-class-focus ul:before,
+.a-btn--fab.pseudo-class-focus .m-dropDown__trigger:after,
+.a-btn--fab.pseudo-class-focus .sg.sg-label a .fa,
+.sg.sg-label a .a-btn--fab.pseudo-class-focus .fa {
+  color: #001a0b !important;
+}
+
+.a-btn--fab.pseudo-class-hover {
+  background-color: #00C853;
+  color: #001a0b;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.a-btn--fab.pseudo-class-hover .a-icon,
+.a-btn--fab.pseudo-class-hover .m-nav-vert--accord > ul ul:before,
+.m-nav-vert--accord > ul .a-btn--fab.pseudo-class-hover ul:before,
+.a-btn--fab.pseudo-class-hover .m-dropDown__trigger:after,
+.a-btn--fab.pseudo-class-hover .sg.sg-label a .fa,
+.sg.sg-label a .a-btn--fab.pseudo-class-hover .fa {
+  color: #001a0b;
+}
+
+input.pseudo-class-focus,
+input.pseudo-class-active {
+  border-color: #3F51B5;
+  outline: none;
+}
+
+.m-form--single button.pseudo-class-hover {
+  background: #E8EAF6;
+  color: #909199;
+}
+
+.m-form--single button.pseudo-class-focus,
+.m-form--single button.pseudo-class-active {
+  outline: none;
+  background: #303F9F;
+  color: white;
+}
+
+.m-nav-hor--border .m-nav-hor__list__item.pseudo-class-first-child {
+  border-left: none;
+}
+
+.m-nav-hor__list__item.pseudo-class-hover {
+  background-color: #BDBDBD;
+}
+
+.m-nav-hor__list__item.pseudo-class-hover a,
+.m-nav-hor__list__item.pseudo-class-hover button {
+  color: #191919;
+}
+
+.m-nav-vert--title > ul > li.pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
+.m-nav-tog--vert .m-nav-tog__list__item.pseudo-class-first-child {
+  border-top: none;
+}
+
+.m-nav-tog__list__item.pseudo-class-first-child {
+  border-left: none;
+}
+
+.m-nav-tog__link.pseudo-class-hover {
+  background-color: #BDBDBD;
+}
+
+.m-nav-tog__link.pseudo-class-hover .a-icon,
+.m-nav-tog__link.pseudo-class-hover .m-nav-vert--accord > ul ul:before,
+.m-nav-vert--accord > ul .m-nav-tog__link.pseudo-class-hover ul:before,
+.m-nav-tog__link.pseudo-class-hover .m-dropDown__trigger:after,
+.m-nav-tog__link.pseudo-class-hover .sg.sg-label a .fa,
+.sg.sg-label a .m-nav-tog__link.pseudo-class-hover .fa {
+  color: #191919;
+}
+
+.m-nav-tog__link.pseudo-class-focus {
+  background-color: #212121;
+}
+
+.m-nav-tog__link.pseudo-class-focus .a-icon,
+.m-nav-tog__link.pseudo-class-focus .m-nav-vert--accord > ul ul:before,
+.m-nav-vert--accord > ul .m-nav-tog__link.pseudo-class-focus ul:before,
+.m-nav-tog__link.pseudo-class-focus .m-dropDown__trigger:after,
+.m-nav-tog__link.pseudo-class-focus .sg.sg-label a .fa,
+.sg.sg-label a .m-nav-tog__link.pseudo-class-focus .fa {
+  color: white;
+}
+
+.m-dropDown__trigger.pseudo-class-focus {
+  outline: none;
+}
+
+.m-dropDown__menu__item.is--active.pseudo-class-hover {
+  background-color: #616161;
+}
+
+.m-dropDown__menu__item.is--active.pseudo-class-hover > a,
+.m-dropDown__menu__item.is--active.pseudo-class-hover > button {
+  color: white;
+}
+
+.m-dropDown__menu__item.pseudo-class-hover {
+  background-color: #BDBDBD;
+}
+
+.m-dropDown__menu__item.pseudo-class-hover > a,
+.m-dropDown__menu__item.pseudo-class-hover > button {
+  color: #191919;
+}
+
+*[class*="o-toolbar_sect"].pseudo-class-first-child {
+  padding-left: 0;
+}
+
+*[class*="o-toolbar_sect"].pseudo-class-last-child {
+  padding-right: 0;
+}
+
+.sg.sg-label a.pseudo-class-hover i.fa {
+  color: rgba(28, 56, 73, 0.7);
+}
+
+.sg.sg-label a.pseudo-class-hover i.fa:after {
+  opacity: 1;
+}

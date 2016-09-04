@@ -1,0 +1,24 @@
+// Toolbar Elements
+//
+//
+// Styleguide 5.1.5
+
+// styleguide:ignore:start
+
+// Toolbar page title
+// ================================
+.o-toolbar__title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    @extend .u-typ--kilo;
+    padding: 0;
+    margin: 0;
+
+    // Reser pad and mar on <a>
+    a{
+        padding: 0;
+    }
+}
+
+// styleguide:ignore:end

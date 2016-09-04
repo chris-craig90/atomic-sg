@@ -1,0 +1,62 @@
+// Grid Overay : Horizontal 12 Column
+// ===================================
+.js-horGridOverlay{
+  @extend .grid-wrap;
+  position: absolute;
+  display: none;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  //transition : map-get($anim, swift-out);
+  z-index: 1000;
+  pointer-events: none;
+
+  // Show overlay modeifiers
+  &--show{display: block!important;}
+
+
+  // ## Grid Collumn
+  &__col{
+    position: relative;
+    height: 100%;
+    @include span(1 of 12);
+    @include susy-breakpoint(map-get($mq-breakpoints, "desktop"), $susy-desktop) {
+      @include gutters($v-grid-gut\@desktop);
+    }
+    @include susy-breakpoint(map-get($mq-breakpoints, "wide"), $susy-wide) {
+      @include gutters($v-grid-gut\@wide);
+    }
+
+    // ### Gutter Styles
+    &__gutter{
+      position: absolute;
+      top: 0;
+      height: 100%;
+
+      border-left: 1px solid hsla(200, 100%, 50%, .3);
+      border-right: 1px solid hsla(200, 100%, 50%, .3);
+
+      background: hsla(200, 100%, 50%, .3);
+      width: 11.22%; // *!MAGIC NUMBER!! - WOrk out the logic behind fixing grid overlay gutter sizes
+
+      @include mq($from: desktop) {
+        width: $v-grid-gut\@desktop * 0.5;
+      }
+      @include mq($from: wide) {
+        width: $v-grid-gut\@wide * 0.5;
+      }
+
+
+
+      &--right{right: 0px; border-right: none; }
+      &--left{left: 0px;border-left: none;}
+    }
+
+  }
+
+}
+
+
+.js-horGridOverlay--hide .js-horGridOverlay{ display: none!important;}

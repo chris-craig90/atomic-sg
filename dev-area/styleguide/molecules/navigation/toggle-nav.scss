@@ -1,0 +1,127 @@
+// Toggle nav
+//
+// .m-nav-tog - Defualt, horizontal alignment
+// .m-nav-tog.m-nav-tog--vert - Vertical alignment
+//
+// markup:
+// <nav class="{$modifiers}">
+//     <ul class="m-nav-tog__list">
+//         <li class="m-nav-tog__list__item">
+//             <button class="m-nav-tog__link ">
+//                 <i class="a-icon a-icon--sml">devices_other</i>
+//             </button>
+//         </li>
+//         <li class="m-nav-tog__list__item">
+//             <button class="m-nav-tog__link">
+//                 <i class="a-icon a-icon--sml">line_style</i>
+//             </button>
+//         </li>
+//         <li class="m-nav-tog__list__item">
+//             <button class="m-nav-tog__link ">
+//                 <i class="a-icon a-icon--sml">line_weight</i>
+//             </button>
+//         </li>
+//     </ul>
+// </nav>
+//
+//
+// Styleguide 4.6.3
+
+
+// styleguide:ignore:start
+
+// Toggle Group Container
+// ================================
+.m-nav-tog{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  @extend %u-bg--grey8;
+  @include  baseline-border( "top", 1px );
+  @include  baseline-border( "bottom", 1px );
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $tk-borderRadius;
+
+  // Alignment
+  // ================================
+  // Vertical List group
+  &--vert{
+    .m-nav-tog__list{ flex-direction: column; }
+    .m-nav-tog__link{
+      @include baseline-calc((
+          padding: 1.5,
+          padding-right: 2.5,
+          padding-left: 2.5
+      ));
+    }
+    .m-nav-tog__list__item{
+      border-width: 1px 0 0 0;
+      border-style: solid;
+      &:first-child{ border-top: none; }
+    }
+  }
+
+  // Toggle group elements
+  // ================================
+
+  &__list{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0; // Fix inline-block gap issue
+  }
+
+  // Single List Item
+  &__list__item{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin  : 0;
+    margin-left: 0!important; // !!**HACK**!! overwrites the sc5 defualt li.sg
+    padding :  0!important; // !!**HACK**!! overwrites the sc5 defualt li.sg
+    font-size: initial; // Fix inline-block gap issue
+    // Apply border
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    &:first-child{ border-left: none; }
+  }
+
+  // Toggle Links, need a different satyle than regular link group links
+  &__link{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    outline: none;
+    transition: background .3s $tk-anim-grow;
+    @include baseline-calc((
+        padding: 2
+    ));
+
+    .a-icon{
+        transition: color .3s $tk-anim-grow;
+        color: get-txt-colour($color-grey8, 'prime');
+    }
+
+    &:hover, &--hover{
+      background-color: $color-grey4;
+      .a-icon { color: get-txt-colour($color-grey4,'prime'); }
+    }
+    &:focus, &--focus{
+      background-color: $color-grey1;
+      .a-icon { color: get-txt-colour($color-grey1, 'prime'); }
+    }
+    [disabled], &--disabled{
+      >*{  opacity: 0.5; }
+      background-color: $color-grey5;
+      .a-icon { color: get-txt-colour($color-grey5,'disabled'); }
+    }
+  }
+
+}
+
+// styleguide:ignore:end

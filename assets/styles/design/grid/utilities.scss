@@ -1,0 +1,42 @@
+// Utilitiy classes
+//
+//
+// | class                 | Type                                                                                   |
+// |-----------------------|----------------------------------------------------------------------------------------|
+// | `.grid-col--bottom` | Vertical align coluumn to bottom                                                       |
+// | `.grid-col--top`    | Vertical align coluumn to top                                                        |
+// | `.grid-col--center` | Verticaly center column                                                                |
+//
+//
+// Styleguide 1.2.4
+
+// styleguide:ignore:start
+
+// Flex grid
+// =========================================
+
+// Flex grid-wrap
+// --------------------------------
+.grid-wrap--flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-wrap--flex-nowrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+// Flex grid-cols
+// --------------------------------
+// Allows you to align individual collumns vertically using `align-self property`
+.grid-col--bottom{ align-self: flex-end; }
+.grid-col--top{ align-self: flex-start; }
+.grid-col--center{ align-self: center; margin: auto;}
+
+
+// styleguide:ignore:end

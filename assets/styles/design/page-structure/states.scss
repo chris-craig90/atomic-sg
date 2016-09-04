@@ -1,0 +1,18 @@
+// Open sidebar
+// ================================
+.base__sidenav--open{  transform: translateX(0px) translateY(0px);}
+
+
+// Persistent Sidenav
+// ================================
+// Desktop and up only.
+// Adds margin to the left/right of main content container (.base__main).
+@include mq($from: desktop) {
+    .base__sidenav--persistent.base__sidenav--left,
+    .base__sidenav--persistent.base__sidenav--right{
+        transform: translateX(0px) translateY(0px)!important;
+    }
+    .base__sidenav--persistent.base__sidenav--left ~ .base__main{ margin-left: $t-sideBar-width; }
+    .base__sidenav--persistent.base__sidenav--right ~ .base__main{ margin-right: $t-sideBar-width--right; }
+
+}

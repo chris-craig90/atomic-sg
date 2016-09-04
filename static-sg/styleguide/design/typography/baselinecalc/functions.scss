@@ -1,0 +1,14 @@
+// Sass Functions
+//
+// ###### <strong>`baseline-val($brk-point)`</strong> - Returns single Baseline value for specified breakpoint
+//
+// <strong>$brk-point</strong> - Breakpoint value. i.e Defualt, Phone etc.
+//
+// <code class="sg-code">
+// .element {<br>
+// &nbsp;&nbsp;&nbsp;&nbsp;line-height: baseline-val('phone') * 3;<br>
+// }
+// </code>
+//
+//
+// Styleguide 1.1.3.1

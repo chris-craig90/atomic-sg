@@ -1,0 +1,4 @@
+/**
+ * Function one.
+ * @namespace one
+ */

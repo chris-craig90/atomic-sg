@@ -1,0 +1,33 @@
+// Toolbar Exmplaes
+//
+// A showcase of different toolbars that demo different styles, content and use cases.
+//
+// sg-wrapper:
+// <div class="js-gridOverlay--bl"><sg-wrapper-content/></div>
+//
+// Styleguide 5.1.6
+
+
+// Toolbar Example: Mobile, logo + sidenav button
+//
+// markup:
+// <nav class="o-toolbar">
+//     <div class="grid-wrap">
+//         <div class="o-toolbar_sect--lft grid-col-6">
+//             <nav class="m-nav-hor">
+//                 <ul class="m-nav-hor__list">
+//                     <li class="m-nav-hor__list__item">
+//                         <button class="m-nav-hor__list__item__link a-icon o-frame__sidenav__openLeft">&#xE5D2;</button>
+//                     </li>
+//                     <li class="m-nav-hor__list__item">
+//                         <sg-insert>1.5.2</sg-insert>
+//                     </li>
+//                 </ul>
+//             </nav>
+//         </div>
+//         <div class="o-toolbar_sect--rgt grid-col-6">
+//         </div>
+//     </div>
+// </nav>
+//
+// Styleguide 5.1.6.1

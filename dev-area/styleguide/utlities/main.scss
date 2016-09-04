@@ -1,0 +1,17 @@
+// Sass Plugins and Mixins
+// =================================
+@import "plugins/baselineCalc";
+@import "../../../bower_components/flexslider/flexslider"; // Manully include flexslider as sass version not aviable
+// =================================
+
+
+// Resets
+// =================================
+@import "_resets.scss";
+// =================================
+
+
+// GLobal
+// =================================
+@import "_global.scss";
+// =================================

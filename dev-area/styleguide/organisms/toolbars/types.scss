@@ -1,0 +1,73 @@
+// Heirarchy
+//
+// $o-toolbar--prime - Button focus state
+// $o-toolbar--sec - Button hover state
+// $o-toolbar--ter - Button hover state
+//
+// markup:
+// <nav class="o-toolbar {$modifiers}">
+//     <div class="grid-wrap">
+//         <div class="o-toolbar_sect--lft grid-col-6">
+//             <sg-insert>4.6.1-2</sg-insert>
+//         </div>
+//         <div class="o-toolbar_sect--rgt grid-col-6">
+//             <nav class="m-nav-hor">
+//                 <ul class="m-nav-hor__list">
+//                     <li class="m-nav-hor__list__item">
+//                         <a class="m-nav-hor__list__item__link"><i class="a-icon">&#xE8B6;</i></a>
+//                     </li>
+//                     <li class="m-nav-hor__list__item m-dropDown">
+//                         <button class="m-nav-hor__list__item__link m-dropDown__trigger"><i class="a-icon">&#xE5D4;</i></button>
+//                         <ul class="m-dropDown__menu" data-test="2">
+//                             <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                             <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                             <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                             <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                         </ul>
+//                     </li>
+//                     <li class="m-nav-hor__list__item">
+//                         <a class="m-nav-hor__list__item__link"><i class="a-icon">&#xE5C8;</i></a>
+//                     </li>
+//                 </ul>
+//             </nav>
+//         </div>
+//     </div>
+// </nav>
+//
+//
+// Styleguide 5.1.2
+$o-toolbar--prime: o-toolbar--prime u-bg--grey8;
+$o-toolbar--sec: o-toolbar--sec u-bg--prime--drk;
+$o-toolbar--ter: o-toolbar--ter u-bg--grey1;
+
+// styleguide:ignore:start
+
+// Primary Toolbar
+// =============================
+.o-toolbar--prime{
+    @include baseline-calc((
+        min-height: 5
+    ));
+    @extend %tk-zLevel-1;
+}
+
+// Secondary Toolbar
+// =============================
+.o-toolbar--sec{
+    @include baseline-calc((
+        min-height: 5
+    ));
+    @extend %tk-zLevel-1;
+    z-index: 10;
+}
+
+// Tertiary Toolbar
+// =============================
+.o-toolbar--ter{
+    @include baseline-calc((
+        min-height: 3
+    ));
+    //@extend %tk-zLevel-1;
+}
+
+// styleguide:ignore:end

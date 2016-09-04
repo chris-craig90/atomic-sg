@@ -1,0 +1,68 @@
+// Tables
+//
+// markup:
+// <table>
+//     <thead>
+//         <tr>
+//             <th>Table Cell</th>
+//             <th>Table Cell</th>
+//             <th>Table Cell</th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//     	<tr>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     	</tr>
+//     	<tr>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     	</tr>
+//     	<tr>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     	</tr>
+//     	<tr>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     	</tr>
+//     	<tr>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     		<td>Table Cell</td>
+//     	</tr>
+//     <tbody>
+// </table>
+//
+//
+// Styleguide 2.2
+
+// styleguide:ignore:start
+table{
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+
+// table head
+thead{
+  @extend .u-font--sanserif--bold;
+  background-color: $color-grey7;
+  color: get-txt-colour($color-grey7, 'prime');
+}
+
+// Table cells
+th,
+td{
+  text-align: left;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em 1em;
+}
+// styleguide:ignore:end

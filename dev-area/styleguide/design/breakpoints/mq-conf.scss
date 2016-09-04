@@ -1,0 +1,24 @@
+// mq config
+// =================================
+
+$mq-breakpoints: (
+    phone:  320px,
+    phablet:  410px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1600px
+);
+
+// To enable support for browsers that do not support @media queries,
+// (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
+// Create a separate stylesheet served exclusively to these browsers,
+// meaning @media queries will be rasterized, relying on the cascade itself
+$mq-responsive: true;
+
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width, e.g. (mobile, tablet, desktop).
+$mq-show-breakpoints: (phone, phablet, tablet, desktop, wide);
+
+
+@import "../../bower_components/sass-mq/_mq.scss";

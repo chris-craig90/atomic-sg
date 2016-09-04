@@ -1,0 +1,226 @@
+//  Grid structure
+//
+// Start by adding an element with a class of <code>grid-wrap</code>. This will create a horizontal block to contain vertical columns.
+//
+// Then add columns within that row, specifying the widths of each column with a number at the end of the class i.e <code>grid-col-6</code>. Responsive modifiers are available for modifiying the column width at specific breakpoints.
+//
+// <strong>Mobile-first</strong>. Code for small screens first, and larger devices will inherit those styles. Customize for larger screens as necessary.
+//
+// markup:
+// <div class="grid-wrap u-mb--1">
+//     <div class="grid-col-12">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+// </div>
+// <div class="grid-wrap u-mb--1">
+//     <div class="grid-col-6">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-6">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+// </div>
+// <div class="grid-wrap u-mb--1">
+//     <div class="grid-col-4">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-4">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-4">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+// </div>
+// <div class="grid-wrap u-mb--1">
+//     <div class="grid-col-3">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-3">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-3">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-3">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+// </div>
+// <div class="grid-wrap u-mb--1">
+//     <div class="grid-col-2">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-2">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-2">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-2">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-2">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-2">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+// </div>
+// <div class="grid-wrap u-mb--1">
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+//     <div class="grid-col-1">
+//         <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//     </div>
+// </div>
+//
+//
+// Styleguide 1.2.2
+
+// styleguide:ignore:start
+
+// Grid Container
+.grid-wrap{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @include container(12 center);
+    width: 100%;
+    max-width: $theme-site-width; // This value can be cinfigured in teme settings
+    //@media(max-width: 1400px){ padding: 0 0.375rem; }
+}
+
+// styleguide:ignore:end
+
+
+// Grid columns
+//
+// Modifier classes are avaivble for columns which will allow you to chnage column sizes at different breakpoints. Append the modifers below to .grid-col class.
+//
+// | class                   | Type           |
+// |-------------------------|----------------|
+// | `grid-col-1@phone `  | Phone and up   |
+// | `grid-col-1@phablet` | Phablet and up |
+// | `grid-col-1@tablet`  | Tablet and up  |
+// | `grid-col-1@desktop` | Desktop and up |
+// | `grid-col-1@wide `   | Wide and up    |
+//
+// markup:
+// <div class="grid-wrap u-mb--1">
+//   <div class="grid-col-6 grid-col-2@phone grid-col-3@phablet grid-col-4@tablet grid-col-8@desktop grid-col-10@wide">
+//     <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//   </div>
+//   <div class="grid-col-6 grid-col-10@phone grid-col-9@phablet grid-col-8@tablet grid-col-4@desktop grid-col-2@wide">
+//     <div class="sg-ruler sg-ruler--hor u-bg--theme--l1"> <div class="sg-ruler__txt">Col 12</div> </div>
+//   </div>
+// </div>
+//
+//
+// Styleguide 1.2.3
+
+// styleguide:ignore:start
+
+// Default Column classes, no MediaQuerries
+// --------------------------------
+.grid{
+  &-col-{
+    &1 { @include span(1);; }
+    &2 { @include span(2);; }
+    &3 { @include span(3);; }
+    &4 { @include span(4);; }
+    &5 { @include span(5);; }
+    &6 { @include span(6);; }
+    &7 { @include span(7);; }
+    &8 { @include span(8);; }
+    &9 { @include span(9);; }
+    &10{ @include span(10); }
+    &11{ @include span(11); }
+    &12{ @include span(12); }
+  }
+}
+
+// Responisve column classes
+// --------------------------------
+// Used in conjunction with mq mixins to generate mediq querries
+// $breakpoint-list string names should match those defined in mq
+$breakpoint-list : phone, phablet, tablet, desktop, wide;
+
+// Loop each name in $breakpoint-list and create a new @media query for each
+// avaiable  collumn width
+@each $breakpoint in $breakpoint-list {
+    $i: index($breakpoint-list, $breakpoint);
+    @include mq($from: $breakpoint)   {
+        .grid-col-{
+            &1\@#{$breakpoint}  { @include span(1);}
+            &2\@#{$breakpoint}  { @include span(2);}
+            &3\@#{$breakpoint}  { @include span(3);}
+            &4\@#{$breakpoint}  { @include span(4);}
+            &5\@#{$breakpoint}  { @include span(5);}
+            &6\@#{$breakpoint}  { @include span(6);}
+            &7\@#{$breakpoint}  { @include span(7);}
+            &8\@#{$breakpoint}  { @include span(8);}
+            &9\@#{$breakpoint}  { @include span(9);}
+            &10\@#{$breakpoint} { @include span(10);}
+            &11\@#{$breakpoint} { @include span(11);}
+            &12\@#{$breakpoint} { @include span(12);}
+        }
+    }
+}
+
+// Responisve Gutter widths
+// --------------------------------
+// Overitde the defualt sussy gutter width and apply a fixed width gutter to
+// collumns for desktop and wide screen devices
+// Gutter widths defined in varlaibles.scss file.
+
+// Desktop and up gutter width
+.grid-wrap{
+    padding-left: $v-grid-gut\@desktop * 0.5;
+    padding-right: $v-grid-gut\@desktop * 0.5;
+    @include mq( $from: desktop ){
+        padding-left: $v-grid-gut\@desktop * 0.5;
+        padding-right: $v-grid-gut\@desktop * 0.5;
+    }
+}
+*[class*="grid-col-"]{
+  @include susy-breakpoint(map-get($mq-breakpoints, "desktop"), $susy-desktop) {
+    @include gutters($v-grid-gut\@desktop);
+  }
+}
+*[class*="grid-col-"]{
+  @include susy-breakpoint(map-get($mq-breakpoints, "wide"), $susy-wide) {
+    @include gutters($v-grid-gut\@wide);
+  }
+}
+
+// styleguide:ignore:end

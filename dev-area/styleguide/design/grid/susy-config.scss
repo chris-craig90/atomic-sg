@@ -1,0 +1,58 @@
+// Sussy Grid settings
+//
+//
+// Susy is a powerful set of Sass mixins for building grid-based layouts.
+//
+// What’s so great about Susy, here’s a list of pros to consider:
+//
+// - Anti-framework: Susy doesn’t impose any specific grid philosophy on you. Thus, you won’t be dropping in a CSS file and using classes out of the box (as you would with a Framework such as Bootstrap); instead, you’ll be defining your own grid rules, letting Susy take care of the calculations for you.
+// - Mixin-oriented, no-bloat: Susy isn’t a framework. It doesn’t have a kilobyte count, because it doesn’t output any CSS rules you don’t manually define yourself.
+// - Powerful configuration, sensible defaults: Susy uses configuration rules during its build process, but it doesn’t require that you learn everything to get started.
+//
+// <div class="u-mt--6">
+// </div>
+//
+// | Susy setting      | Value      |
+// |-------------------|------------|
+// | columns           | 12         |
+// | math              | fluid      |
+// | output            | float      |
+// | gutters           | 0.25       |
+// | gutter-position   | inside     |
+// | global-box-sizing | border-box |
+//
+//
+// Styleguide 1.2.1
+
+// styleguide:ignore:start
+
+// Defualt grid config
+$susy: (
+  columns: 12,
+  gutters: .25,
+  math: fluid,
+  gutter-position: inside,
+  global-box-sizing:	border-box,
+);
+
+
+// Desktop and up grid config
+$susy-desktop: (
+  columns: 12,
+  gutters: .5,
+  math: fluid,
+  gutter-position: inside,
+  global-box-sizing:	border-box,
+);
+
+
+// Wide and up grid config
+$susy-wide: (
+  columns: 12,
+  gutters: .7,
+  math: fluid,
+  gutter-position: inside,
+  global-box-sizing:	border-box,
+);
+
+// styleguide:ignore:end

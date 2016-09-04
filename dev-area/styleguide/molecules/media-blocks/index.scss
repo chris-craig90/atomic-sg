@@ -1,0 +1,28 @@
+// Meida Block
+//
+// The media object is an abstract element used as the basis for building more complex and repetitive components (like blog comments, Tweets, etc). Included is support for left and right aligned content, content alignment options and more.
+//
+// Styleguide 4.4
+
+// Basic Structure
+// =================================
+@import "structure";
+// =================================
+
+
+// Alignment of media item and text
+// =================================
+@import "alignment";
+// =================================
+
+
+// Media block style varients
+// =================================
+@import "styles-varients";
+// =================================
+
+
+// Examples
+// =================================
+@import "examples";
+// =================================

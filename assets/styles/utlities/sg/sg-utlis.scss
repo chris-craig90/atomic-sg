@@ -1,0 +1,139 @@
+
+// SG Utltities
+
+// Dummy height
+.sg-blk-tall{
+  display: block;
+  height: baseline-val('phone')*15;
+}
+.sg-blk-mid{
+  display: block;
+  height: baseline-val('phone')*4;
+}
+.sg-blk-sml{
+  display: block;
+  height: baseline-val('phone')*2;
+}
+
+
+// SG Ruler
+//
+// Generates a block of text with centerterd text and width/height indicaters/ruller.
+//
+// markup:
+// <div class="sg-ruler sg-ruler--hor">
+//   <div class="sg-ruler__txt">
+//       Dec. 40px
+//   </div>
+// </div>
+//
+//
+
+.sg-ruler{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: baseline-val('phone') 0;
+  border-right: 1px solid get-txt-colour($color-grey8, 'dividers');
+  border-left: 1px solid get-txt-colour($color-grey8, 'dividers');
+  text-align: center;
+
+  &__txt{
+    @extend .u-typ--byte;
+    @include baseline-calc((
+        height: 5
+    ));
+    width: 100%;
+    border-top: 1px solid get-txt-colour($color-grey8, 'dividers');
+    border-bottom: 1px solid get-txt-colour($color-grey8, 'dividers');
+  }
+}
+
+
+// Font Tile
+// ================================
+.sg-font-tile{
+  display: inline-block;
+  width: 150px;
+  margin-right: 1.5rem;
+  .m-tile__content{
+    @include baseline-calc((padding: 1));
+  }
+}
+
+
+// Text color swatch
+// ================================
+.sg-txtColor-swatch{
+  position: relative;
+  display: block;
+  @include baseline-calc((
+    padding: 3
+  ));
+  &__opacity{float: right;}
+}
+
+
+// Header
+// ================================
+.sg-fontToken--exa:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("exa");}
+.sg-fontToken--peta:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("peta");}
+.sg-fontToken--tera:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("tera");}
+.sg-fontToken--giga:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("giga");}
+.sg-fontToken--mega:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("mega");}
+.sg-fontToken--kilo:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("kilo");}
+.sg-fontToken--base:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("base");}
+.sg-fontToken--byte:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("font-sm");}
+.sg-fontToken--bit:before{ color: get-txt-colour( $color-grey3, 'secondary' ); @include sg-font-token-names("font-xs");}
+
+
+// Show/ Hide
+.sg-wrapper .sg-hide {
+    position: relative;
+    display: block;
+    max-height: 200px!important;
+    height: 200px!important;
+    min-height: 200px;
+    background: #fff;
+     *{display: none;}
+     &:after{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+         margin: 0;
+         padding: 1.5rem;
+         content: 'View preview in full screen mode';
+         text-align: center;
+         color: get-txt-colour(#fff, 'secondary');
+         border: 1px dashed get-txt-colour(#fff, 'dividers');
+     }
+}
+
+
+// Code Block
+.sg-code{
+  position: relative;
+  display: block;
+  @extend .u-bg--grey6;
+  border-radius: 3px;
+  @include baseline-calc((
+      padding: 4,
+  ));
+
+  // Shadow
+  // Seee http://blog.dudak.me/2014/css-shadows-under-adjacent-elements/
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: $tk-shadow--l1;
+    pointer-events: none;
+  }
+}

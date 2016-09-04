@@ -1,0 +1,23 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.2.3",
+    "susy": "~2.2.12",
+    "bower": "*",
+    "install": "~1.0.4",
+    "sass-mq": "~3.2.9",
+    "vanilla-ripplejs": "~1.0.3",
+    "Stickyfill": "~1.1.4",
+    "flexslider": "~2.6.1",
+    "eq.js": "~1.9.0",
+    "compass-sass-mixins": "*",
+    "waypoints": "~4.0.0"
+  },
+  "overrides": {}
+}

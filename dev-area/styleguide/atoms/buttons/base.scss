@@ -1,0 +1,56 @@
+// styleguide:ignore:start
+
+// Base button Styles and behaviours
+// Sets defualt cursors types, state styles etc.
+// ================================
+
+.a-btn{
+    position: relative;
+    display:  inline-block!important; // !!**HACK**!! overwrites the sc5 defualt button positionging
+    margin: 0;
+    padding: 0;
+    transition: all $tk-anim-raise 0.2s;
+    @include baseline-calc((
+        padding-left: 2,
+        padding-right: 2,
+        line-height: 7
+    ));
+
+    // Defualt Bg Colors
+    //background: $color-grey8;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+// Defualt button states
+.a-btn{
+    &:focus,
+    &--focus,
+    &.pseudo-class-focus{
+        background-color: $color-grey8;
+        color : get-txt-colour( $color-grey5, 'prime');
+    }
+
+    &:hover,
+    &--hover,
+    &.pseudo-class-hover{
+        background-color: $color-grey6;
+        color : get-txt-colour( $color-grey6, 'prime');
+    }
+
+    &[disabled],
+    &--disabled,
+    &[disabled]:hover,
+    &--disabled:hover,
+    &.pseudo-class-disabled{
+        background-color: $color-grey8;
+        color : get-txt-colour( $color-grey8, 'disabled');
+    }
+
+    &--icon{
+        border-radius: $tk-borderRadius--circ;
+        @include baseline-calc(( padding: 1 ));
+    }
+}
+
+// styleguide:ignore:end

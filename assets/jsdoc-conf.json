@@ -1,0 +1,6 @@
+{
+    "opts": {
+      "destination": "./js-documentation/jsdoc"
+    },
+    "plugins": ["plugins/markdown"]
+}

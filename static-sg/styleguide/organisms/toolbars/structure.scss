@@ -1,0 +1,72 @@
+// Toolbar Structure
+//
+// Toolbars consit of a single elemet with `.o-toolbar`.
+// They should be used in conjynction with the Grid classes for spacings.
+//
+// Toolbars are divided into three seperate areas.
+// 1. Left section   - Always aligned to the left of the toolbar, content align left.
+// 2. Middle section - Always aligned in the middle, content align center.
+// 3. Right section  - Always aligned to the right of the toolbar, content align right.
+//
+// markup:
+// <nav class="o-toolbar o-toolbar--prime">
+//     <div class="grid-wrap">
+//         <div class="o-toolbar_sect--lft grid-col-4">
+//             <div class="sg-ruler u-bg--grey"><div class="sg-ruler__txt">Left Section. 1/3</div></div>
+//         </div>
+//         <div class="o-toolbar_sect--mid grid-col-4">
+//             <div class="sg-ruler u-bg--grey"><div class="sg-ruler__txt">Middle Section. 1/3</div></div>
+//         </div>
+//         <div class="o-toolbar_sect--rgt grid-col-4">
+//             <div class="sg-ruler u-bg--grey"><div class="sg-ruler__txt">Right Section. 1/3</div></div>
+//         </div>
+//     </div>
+// </nav>
+//
+//
+// Styleguide 5.1.1
+
+// styleguide:ignore:start
+
+// Toolbar container
+// =============================
+.o-toolbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    //transition: all .2s $tk-anim-grow;
+
+    // Stickly toolbar
+    &.stuck{
+        position: fixed;
+        top: 0;
+        z-index: 5000;
+        margin: 0 auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        @include mq(){
+            max-width: calc( #{$theme-site-width} - #{$v-grid-gut\@desktop * 2 } );
+        }
+    }
+}
+
+// Tool Bar sections
+// Aligns the content ro the right, left, or center of element
+// Use in conjuction with the grid col classes for setting widths,
+// =============================
+*[class*="o-toolbar_sect"]{
+  display: flex;
+  flex-direction: row;
+  &:first-child{ padding-left: 0; }
+  &:last-child{ padding-right: 0; }
+}
+.o-toolbar_sect--lft{ justify-content: flex-start; }
+.o-toolbar_sect--rgt{ justify-content: flex-end; }
+.o-toolbar_sect--mid{ justify-content: center; flex: 1 1 100%; }
+
+// styleguide:ignore:end

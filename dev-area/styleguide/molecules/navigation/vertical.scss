@@ -1,0 +1,222 @@
+// Vertical lists
+//
+// .m-nav-vert--accord - Accordion drop down menu
+// .m-nav-vert--title - Vertical nav foccuing on first level child elements
+// .m-nav-vert--chapter.u-txt-hilgt - Chapter style navigation, usefull for anchor links
+//
+// markup:
+// <nav class="{$modifiers}">
+//     <h1 class="u-txt-sec">Heading</h1>
+//     <ul role="menu">
+//         <li>
+//             <a>Design</a>
+//             <ul>
+//                 <li><a class="u-txt--prime">Typography</a></li>
+//                 <li><a class="u-txt--prime">Grid system</a></li>
+//                 <li><a class="u-txt--prime">Color</a></li>
+//                 <li><a class="u-txt--prime">Design Tokens</a></li>
+//                 <li><a class="u-txt--prime">Images</a></li>
+//             </ul>
+//         </li>
+//         <li>
+//             <a>Advanced</a>
+//             <ul role="menu">
+//                 <li><a class="u-txt--prime">Menu Title Attribute</a></li>
+//                 <li><a class="u-txt--prime">Menu CSS Class</a></li>
+//                 <li><a class="u-txt--prime">Menu Description</a></li>
+//                 <li><a class="u-txt--prime">New Window / Tab</a></li>
+//             </ul>
+//         </li>
+//         <li><a>Breakpoints</a></li>
+//         <li><a>Grid</a></li>
+//         <li><a>Surface behaviors</a></li>
+//         <li><a>Patterns</a></li>
+//     </ul>
+// </nav>
+//
+//
+// Styleguide 4.6.2
+
+// styleguide:ignore:start
+
+// Vertical nav: Chapter style
+// ================================
+.m-nav-vert--chapter{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-width: 0 0 0 0.375rem;
+    border-style: solid;
+    padding-left: 1.5rem;
+    @include baseline-calc((
+        margin-bottom: 2
+    ));
+
+    // Nav heading
+    h1{
+        @extend %font-byte;
+        @include baseline-calc(( padding-bottom: 1 ));
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            @include baseline-calc((
+                line-height: 8,
+                margin-bottom: 1
+            ));
+        }
+        a{
+            display: block;
+            @extend %kilo;
+        }
+
+        // Hide all sub navs
+        ul{ display: none}
+    }
+}
+
+
+// Vertical nav: Titled nav
+// ================================
+.m-nav-vert--title {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    @include baseline-calc((
+        margin-bottom: 2,
+        padding-left: 6
+    ));
+
+    // Nav heading vissible to screen readers only
+    h1{ @extend .u-show\@sr; }
+
+    ul{
+        padding: 0;
+        list-style: none;
+    }
+
+    a{
+        position: relative;
+        display: block;
+        @extend %base;
+    }
+
+    // Top level menu items
+    > ul > li {
+        @include baseline-calc((
+            margin-bottom: 3
+        ));
+
+        &:last-child{ margin-bottom: 0; }
+
+        // Top level links Should be used with .u-txt-sec for correct text color
+        > a{ @extend %font-byte; }
+    }
+
+    // Hide sub-menu's 3 levels deep and above
+    ul ul ul { display: none;}
+
+}
+
+
+// Vertical nav: Accordion
+// ================================
+
+.m-nav-vert--accord{
+
+    // Main menu
+    > ul{
+        position: relative;
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Nav heading vissible to screen readers only
+    h1{ @extend .u-show\@sr; }
+
+    > ul {
+
+        // Menu Items
+        li{
+            position: relative;
+            display: block;
+            list-style: none;
+            padding: 0;
+            //@include  baseline-border( "top", 1px, 0, $type: "margin" );
+            //&:first-child{ border-color: transparent; }
+
+            // Links
+            a{
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin: 0;
+                transition: background .3s $tk-anim-fade;
+                @include baseline-calc((
+                    padding: 2
+                ));
+            }
+            > ul > li > a{ @include baseline-calc(( margin-left: 4 )); }
+            > ul > li > ul > li > a{ @include baseline-calc(( margin-left: 8 )); }
+        }
+
+        // Top level items
+        > li{
+            > a{}
+        }
+
+        // Sub menus
+        ul{
+            position: relative;
+            display: block;
+            padding: 0;
+            transition: max-height .2s $tk-anim-grow;
+
+            // Hide Child <li>
+            // This allows us to see the chevron icon when menu is closed
+            > li { display: none;}
+
+            // Chevron icon
+            // Add to <ul> instead of <a> to maintain basic vert nav strucutre,
+            // Detecting child elements is not possible with vannilla CSS
+            &:before{
+                position: absolute;
+                pointer-events: none;
+                @extend .a-icon;
+                margin: 0;
+                padding: 0;
+                @include baseline-calc((
+                    right: 2,
+                    top: -6
+                ));
+                content: 'chevron_right';
+                transition: transform .2s  $tk-anim-spin;
+            }
+
+        }
+        // Open Sub menu
+        .m-nav-vert--accord\@open + ul{
+            // Rotae cehvron icon
+            &:before{ transform: rotate(90deg); }
+
+            // Show child <li>
+            > li { display: block; }
+        }
+
+        // Top level items
+        > li > a.m-nav-vert--accord\@open {
+            background-color: $color-grey5;
+            color: get-txt-colour($color-grey5, 'hiLgt');
+        }
+
+    }
+
+}
+
+// styleguide:ignore:end

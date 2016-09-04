@@ -1,0 +1,80 @@
+// Fixed tollbars
+//
+// Position fixed toolbars. Polyfill used for unsorpted browsers.
+//
+// $o-toolbar--pinned - Defualt pinned toolbar, 100% width
+// $o-toolbar--pinned--fixedWidth - Fixed width toolbars when pinned, nead some extra padding
+//
+// markup:
+// <nav id="toolbar-prime" class="o-toolbar o-toolbar--prime {$modifiers} u-bg--grey8">
+//     <div class="grid-wrap">
+//         <div class="o-toolbar_sect--lft grid-col-6">
+//             <div class="o-toolbar_sect__logo"><sg-insert>1.5.2</sg-insert></div>
+//             <sg-insert>4.6.1-1</sg-insert>
+//         </div>
+//         <div class="o-toolbar_sect--rgt grid-col-6">
+//             <nav class="m-nav-hor">
+//                 <ul class="m-nav-hor__list">
+//                     <li class="m-nav-hor__list__item">
+//                        <sg-insert>4.5.4</sg-insert>
+//                     </li>
+//                     <li class="m-nav-hor__list__item">
+//                         <a class="m-nav-hor__list__item__link"><i class="a-icon">&#xE5D4;</i></a>
+//                     </li>
+//                     <li class="m-nav-hor__list__item">
+//                         <a class="m-nav-hor__list__item__link"><i class="a-icon">&#xE5C8;</i></a>
+//                     </li>
+//                 </ul>
+//             </nav>
+//         </div>
+//     </div>
+// </nav>
+//
+// sg-wrapper:
+// <div class="sg-hide">
+//     <div style="min-height: 200vh;">
+//         <sg-wrapper-content/>
+//     </div>
+// </div>
+//
+// Styleguide 5.1.4
+$o-toolbar--pinned: js-toolbar-pinnedii;
+$o-toolbar--pinned--fixedWidth: js-toolbar-pinnedii o-toolbar--fixedWidth u-mt--2;
+
+
+
+.js-toolbar-pinned.stuck{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+.t-basic__sidenav--persistent.t-basic__sidenav--open.t-basic__sidenav--left~.t-basic__main .js-toolbar-pinned.stuck{
+    @include mq($from: 'wide'){
+        left: 280px;
+    }
+}
+.t-basic__sidenav--persistent.t-basic__sidenav--open.t-basic__sidenav--right~.t-basic__main .js-toolbar-pinned.stuck{
+    @include mq($from: 'wide'){
+        right: 230px;
+    }
+}
+
+
+
+// Pinned toolbar subling
+// This class adds padding top to sibling elemtns to the fixed toolbar. Ususally used on spash heros so toolbar does ntoverlay copy.
+.o-toolbar--fixedPos__sibling{
+  @include baseline-calc(( padding-top: 11,  margin-top: "-8" ));
+}
+
+
+// Logo element
+.o-toolbar_sect__logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}

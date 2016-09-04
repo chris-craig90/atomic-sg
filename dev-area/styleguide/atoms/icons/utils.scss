@@ -1,0 +1,24 @@
+// Utility Classes
+//
+// ###### Icon sizes
+//
+// | Class          | Descrition |
+// | ---------------| ---------- |
+// | .a-icon--sml   |  14px      |
+// | .a-icon--mid   |  18px      |
+// | .a-icon--reg   |  24px      |
+// | .a-icon--large |  36px      |
+//
+//
+// Styleguide 3.2.2
+
+// styleguide:ignore:start
+
+// Icon size modifiers
+// ================================
+.a-icon--sml{ font-size: 14px; }
+.a-icon--mid{ font-size: 18px; }
+.a-icon--reg{ font-size: 24px; }
+.a-icon--large{ font-size: 36px; }
+
+// styleguide:ignore:end

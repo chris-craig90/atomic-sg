@@ -1,0 +1,151 @@
+// Flat Buttons
+//
+// .a-btn--flat - Flat button
+// :hover - Hover state
+// :focus - Hover state
+// :disabled - Hover state
+//
+// markup:
+// <p><a class="a-btn a-btn--flat {$modifiers}">Flat Button</a></p>
+//
+// sg-wrapper:
+// <div class="js-gridOverlay"><sg-wrapper-content/></div>
+//
+// Styleguide 3.1.1
+
+// styleguide:ignore:start
+
+.a-btn--flat{
+    // Button States
+    &:focus,
+    &--focus,
+    &.pseudo-class-focus{}
+
+    &:hover,
+    &--hover
+    &.pseudo-class-hover{}
+
+    &[disabled],
+    &--disabled,
+    &[disabled]:hover,
+    &--disabled:hover,
+    &.pseudo-class-hover{}
+}
+
+// styleguide:ignore:end
+
+
+// Raised Buttons
+//
+// .a-btn--raised - Flat button
+// :hover - Hover state
+// :focus - Hover state
+// :disabled - Hover state
+//
+// markup:
+// <p><a class="a-btn a-btn--raised {$modifiers}">Raised Button</a></p>
+//
+// sg-wrapper:
+// <div class="js-gridOverlay"><sg-wrapper-content/></div>
+//
+// Styleguide 3.1.2
+
+// styleguide:ignore:start
+
+.a-btn--raised{
+    box-shadow: $tk-shadow--l2;
+
+    // Button states
+    &:focus,
+    &--focus,
+    &.pseudo-class-focus{}
+
+    &:hover,
+    &--hover,
+    &.pseudo-class-hover{box-shadow: $tk-shadow--l4; }
+
+    &[disabled],
+    &--disabled,
+    &.pseudo-class-disabled{ box-shadow: $tk-shadow--l2; }
+}
+
+// styleguide:ignore:end
+
+
+// FAB's
+//
+// .a-btn--fab - Flat button
+// :hover - Hover state
+// :focus - Hover state
+// :disabled - Hover state
+//
+// markup:
+// <p><a class="a-btn a-btn--fab {$modifiers}"><i class="a-icon a-icon--reg">add_location</i></a></p>
+//
+// sg-wrapper:
+// <div class="js-gridOverlay"><sg-wrapper-content/></div>
+//
+// Styleguide 3.1.3
+
+// styleguide:ignore:start
+
+.a-btn--fab{
+    background-color: $color-accent;
+    color: get-txt-colour($color-accent, 'prime');
+    border-radius: $tk-borderRadius--circ;
+    box-shadow: $tk-shadow--l3;
+    padding: 0;
+
+    // Button states
+    &:focus,
+    &--focus
+    &.pseudo-class-focus{
+        // !!**HACK**!! overwrites the sc5 defualt button pseduo elements style sheet
+        background-color: $color-accent--drk!important;
+        color: get-txt-colour($color-accent--drk, 'prime')!important;
+        box-shadow: $tk-shadow--l3!important;
+        .a-icon { color: get-txt-colour($color-accent--drk, 'prime')!important; }
+    }
+
+    &:hover,
+    &--hover,
+    &.pseudo-class-hover{
+        background-color: $color-accent--drk;
+        color: get-txt-colour($color-accent--drk, 'prime');
+        box-shadow: $tk-shadow--l4;
+        .a-icon { color: get-txt-colour($color-accent--drk, 'prime'); }
+    }
+
+    &[disabled],
+    &--disabled,
+    &.pseudo-class-disabled{
+        background-color: $color-accent--lgt;
+        color: get-txt-colour($color-accent--lgt, 'disabled');
+        .a-icon { color: get-txt-colour($color-accent--lgt, 'disabled'); }
+    }
+
+    // Fab Icon
+    // Forces icon to allways be a perfect square to maintain circle of fab button
+    .a-icon {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: get-txt-colour($color-accent, 'prime');
+        @include baseline-calc((
+            line-height: 8,
+            width: 8
+        ));
+    }
+}
+
+
+// Colours
+
+.a-btn--prime{
+    background-color: $color-prime;
+    color: get-txt-colour( $color-prime, 'prime' )!important;
+}
+
+// styleguide:ignore:end

@@ -1,0 +1,91 @@
+// Basic Strucutre
+//
+// markup:
+// <div class="sg-hide">
+// <div class="o-frame o-frame--shadow">
+//     <sg-insert>5.2.2-1</sg-insert>
+//     <sg-insert>5.2.2-2</sg-insert>
+//     <div class="o-frame__main js-gridOverlay">
+//         <div class="o-frame__appBar u-bg--prime js-gridOverlay--bl">
+//             <nav class="o-toolbar">
+//                 <div class="o-toolbar_sect--lft grid-col-6">
+//                     <nav class="m-nav-hor">
+//                         <ul class="m-nav-hor__list">
+//                             <li class="m-nav-hor__list__item">
+//                                 <button class="m-nav-hor__list__item__link a-icon o-frame__sidenav__openLeft">&#xE5D2;</button>
+//                             </li>
+//                         </ul>
+//                     </nav>
+//                 </div>
+//                 <div class="o-toolbar_sect--rgt grid-col-6">
+//                     <nav class="m-nav-hor">
+//                         <ul class="m-nav-hor__list">
+//                             <li class="m-nav-hor__list__item">
+//                                 <button class="m-nav-hor__list__item__link a-icon o-frame__sidenav__openRight">&#xE5D2;</button>
+//                             </li>
+//                         </ul>
+//                     </nav>
+//                 </div>
+//             </nav>
+//         </div>
+//         <div class="o-frame__canvas">
+//             <sg-wrapper-content/>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 5.2.1
+
+
+// styleguide:ignore:start
+
+// Template Namespace
+// ================================
+.o-frame{
+    position: relative;
+    display: flex;
+    //overflow: hidden;
+    width: 100vw;
+
+
+    // Main Content
+    // ================================
+    // The Main Content area consits of headers, footers and  <main> content.
+    // These elements require a shared parent container to accomodate the side nav's, which are postioned using css flexbox.
+    &__main{
+        position: relative;
+        display: block;
+        //overflow-y: auto;
+        @extend .grid-wrap;
+        padding: 0;
+        max-width: 100%;
+        width: auto;
+        flex: 3 100%; // Forces Main content area to shrink to accomdate sidebars if the are present.
+        transition: all 0.3s $tk-anim-slide;
+        margin: 0; // Transiotn back to 0 margin
+    }
+
+    // App Bar
+    // --------------------------------
+    // SHould side inside __main element.
+    &__appBar{
+        position: relative;
+        display: flex;
+        @include baseline-calc((
+            min-height: 10
+        ));
+    }
+
+    // Content Canvas
+    // --------------------------------
+    // This is where the page specific content is stored
+    // This elment should be places inisde o-frame__main
+    // See the templates section for examples of content strcutures and layouts
+    &__canvas{
+        position: relative;
+        display: block;
+    }
+}
+
+// styleguide:ignore:end

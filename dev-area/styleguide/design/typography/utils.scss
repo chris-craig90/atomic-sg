@@ -1,0 +1,158 @@
+// Utliity Classes
+//
+//  ###### Font family
+//
+// | Class                      | Description   |
+// | -------------------------- |:-------------:|
+// | .u-typ--sanserif          |               |
+// | .u-typ--sanserif--bold    |               |
+// | .u-typ--sanserif--light   |               |
+// | .u-typ--sanserif--italiic |               |
+// | .u-typ--serif             |               |
+// | .u-typ--serif--bold       |               |
+// | .u-typ--serif--light      |               |
+// | .u-typ--serif--thin       |               |
+//
+// <div class="u-mb--6">
+// </div>
+//
+//  ###### Font scale
+//
+// | Class           | Description   |
+// | --------------- |:-------------:|
+// | .u-typ--exa  |               |
+// | .u-typ--peta |               |
+// | .u-typ--tera |               |
+// | .u-typ--giga |               |
+// | .u-typ--mega |               |
+// | .u-typ--kilo |               |
+// | .u-typ--base |               |
+// | .u-typ--byte |               |
+// | .u-typ--bit  |               |
+//
+// <div class="u-mb--6">
+// </div>
+//
+//  ###### Vertical spacings
+//
+// | Class       | Description   |
+// | ----------- |:-------------:|
+// | .u-mb--1 |               |
+// | .u-mb--2 |               |
+// | .u-mb--3 |               |
+// | .u-mb--4 |               |
+// | .u-mb--5 |               |
+// | .u-mt--1 |               |
+// | .u-mt--2 |               |
+// | .u-mt--3 |               |
+// | .u-mt--4 |               |
+// | .u-mt--5 |               |
+//
+// <div class="u-mb--6">
+// </div>
+//
+//  ###### Text alignment
+//
+// | Class              | Description   |
+// |:------------------ | -------------:|
+// | .u-typ-cntr |               |
+//
+//
+//
+// Styleguide 1.1.6
+
+// styleguide:ignore:start
+
+// Font Familys
+// ================================
+.u-typ--sanserif{ font-weight: normal; font-family: $type-family--sanserif; }
+.u-typ--sanserif--bold{ font-weight: normal; font-family: $type-family--sanserif--bold; }
+.u-typ--sanserif--light{ font-weight: normal; font-family: $type-family--sanserif--light; }
+.u-typ--sanserif--italiic{ font-weight: normal; font-family: $type-family--sanserif--itlaic; }
+
+.u-typ--serif{ font-weight: normal; font-family: $type-family--serif; }
+.u-typ--serif--bold{ font-weight: normal; font-family: $type-family--serif--bold; }
+.u-typ--serif--light{ font-weight: normal; font-family: $type-family--serif--light; }
+.u-typ--serif--thin{ font-weight: normal; font-family: $type-family--serif--thin; }
+
+
+// Font scale
+// ================================
+.u-typ--exa { @extend %exa;  }
+.u-typ--peta{ @extend %peta; }
+.u-typ--tera{ @extend %tera; }
+.u-typ--giga{ @extend %giga; }
+.u-typ--mega{ @extend %mega; }
+.u-typ--kilo{ @extend %kilo; }
+.u-typ--byte{ @extend %font-byte; }
+.u-typ--bit{ @extend %font-bit; }
+.u-typ--base, %u-typ--base{@extend %base;}
+
+
+// Vertical Spacings
+// Generates vertical spacing utils for both padding and margins,
+// Class name follows: u-typ-[margin/padding - top/bottom]--[Basline Multilpier]
+// Example output: `.u-mb--2`
+//
+// For resposnive utils prefix with BEMIT stile `@` flag
+// Example output: `.u-mb--2@phablet`
+// ================================
+
+// $spacingsUtils map is looped over to generate spacings utils
+// Map name will be applied to the generated class name
+// Map value must be css property
+$spacingsUtils: (
+    mar: 'margin',
+    mb: 'margin-bottom',
+    mt: 'margin-top',
+    ml: 'margin-left',
+    mr: 'margin-right',
+    pad: 'padding',
+    pb: 'padding-bottom',
+    pt: 'padding-top',
+    pl: 'padding-left',
+    pr: 'padding-right'
+);
+
+// List of breakpoint names, used in conjuctin with mq sass mixin
+// Breakpoints will be attached to class names with `@` flag
+$breakpoint-list : phone, phablet, tablet, desktop, wide;
+
+// Defualt spacing util classes
+// Example output: `.u-mb--2`
+@each $name, $property in $spacingsUtils {
+    @for $i from 1 through 25{
+        .u-#{$name}--0{
+            #{$property}: 0!important;
+        }
+        .u-#{$name}--#{$i}{
+            #{$property}: baseline-val('default') * $i;
+        }
+    }
+}
+
+// Respsonisve spacing util classes
+// Example output: `.u-mb--2@wide`
+@each $breakpoint in $breakpoint-list {
+    $className: '';
+    @include mq($from: $breakpoint)   {
+        @each $name, $property in $spacingsUtils {
+            @for $i from 1 through 25{
+                .u-#{$name}--0\@#{$breakpoint}{
+                    #{$property}: 0!important;
+                }
+                .u-#{$name}--#{$i}\@#{$breakpoint}{
+                    #{$property}: baseline-val('default') * $i;
+                }
+            }
+        }
+    }
+}
+
+
+// Text Alignment
+// ================================
+.u-typ-cntr{ text-align: center;}
+
+
+// styleguide:ignore:end

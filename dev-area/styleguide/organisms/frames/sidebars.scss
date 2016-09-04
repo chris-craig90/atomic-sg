@@ -1,0 +1,184 @@
+// Sidbars
+//
+// .o-frame__sidenav--left; - Left Sidebar
+// .o-frame__sidenav--right; - Right Sidebar
+//
+// markup:
+// <div class="o-frame__sidenav o-frame__sidenav--persistent o-frame__sidenav--open js-gridOverlay--bl u-bg--grey8 {$modifiers}">
+//     <div class="o-frame__sidenav__appBar">
+//         <div class="o-frame__sidenav__logo">
+//            <a href="" title="Home"><sg-insert>1.5.2</sg-insert></a>
+//         </div>
+//         <button class="o-frame__sidenav__close u-hide--desktopgg a-icon o-frame__sidenav__openLeft"><i class="a-icon a-icon--reg">close</i></button>
+//     </div>
+//     <form class="o-frame__sidenav__search">
+//         <input type="search" placeholder="Search">
+//         <input type="submit" value="&#xE8B6;" class="a-icon">
+//     </form>
+//     <header class="o-frame__sidenav__title">
+//         <h1>Heading</h1>
+//         <p class="meta">Sub heading</p>
+//     </header>
+//     <div class="o-frame__sidenav__main">
+//         <h6>Main content</h6>
+//     </div>
+// </div>
+//
+// sg-wrapper:
+// <div class="sg-hide"><sg-wrapper-content/></div>
+//
+// Styleguide 5.2.2
+
+// styleguide:ignore:start
+
+// Sidebar widths
+$t-sideBar-width: 280px;
+$t-sideBar-width--right: 230px;
+
+.o-frame__sidenav{
+    position: fixed;
+    display: block;
+    height: 100vh;
+    overflow: auto;
+    width: $t-sideBar-width; /* Shift side nav position negativley, this will be animated to 0 when opeend */
+    transform: translateX( ($t-sideBar-width + 10) * -1 );
+    z-index: 1000;
+    transition: transform 0.3s $tk-anim-slide;
+
+    // Right side nav
+    // --------------------------------
+    &--right{
+        width: $t-sideBar-width--right;
+        transform: translateX(0);
+        transform: translateX( $t-sideBar-width--right +10 );
+        right: 0;
+    }
+
+    // Sidebar elements
+    // ================================
+
+    // Logo and header items,
+    // --------------------------------
+    // Logo an close button shoulf sit inside appBar
+
+    &__appBar{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo, &__close{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: inherit;
+        padding: 0;
+        margin: 0;
+        @include baseline-calc((
+            min-height: 10,
+            max-height: 10
+        ));
+    }
+
+    // Sidebar logo
+    // --------------------------------
+    &__logo{
+        width: 70%;
+        align-items: flex-start;
+        @include baseline-calc((
+            padding-left: 4,
+            padding-right: 4
+        ));
+
+        a{ padding: 0; } // Reset defualt padding
+        img{ display: block; } // Reset defualt padding
+    }
+
+    // Sidebar close button
+    // --------------------------------
+    &__close{
+        position: relative;
+        align-items: center;
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        @include baseline-calc((
+            width: 10
+        ));
+    }
+
+    // Sidebar search
+    // --------------------------------
+    &__search{
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        flex: 1 1 100%;
+        order: 3;
+        @extend %u-bg--grey6;
+        @include baseline-calc((padding: 3));
+
+        @include  baseline-border( "top", 1px, 0 );
+
+        input{
+            position: relative;
+            display: block;
+            border: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            flex: 2;
+            &[type*="search"]{
+                flex: 1 1 100%;
+                padding-left: 0.75rem;
+            }
+            &::-webkit-search-cancel-button{
+                -webkit-appearance: searchfield-cancel-button;
+                opacity: 1;
+            }
+        }
+    }
+
+    // Sidebar title/ substitle
+    // --------------------------------
+    &__title{
+        position: relative;
+        display: flex;
+        position: relative;
+        display: block;
+        width: 100%;
+        order: 4;
+        //@include  baseline-border( "top", 1px, 0 );
+
+        @include baseline-calc((
+            padding-left: 6,
+            padding-right: 4,
+            padding-top: 6,
+            padding-bottom: 4
+        ));
+
+        h1{
+            @extend .u-typ--mega;
+            @extend.u-typ--sanserif--light;
+        }
+        p{ @extend .u-typ--byte; }
+    }
+
+    // Side bar main content
+    // --------------------------------
+    // Simply a contaner for other elements,
+    // Usually used to contain vertical nav, advert lists
+    &__main{
+        order: 5;
+        position: relative;
+        display: block;
+        width: 100%;
+        @include baseline-calc((
+            padding-bottom: 4,
+            padding-top: 1
+        ));
+    }
+}
+
+// styleguide:ignore:end

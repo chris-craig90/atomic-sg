@@ -1,0 +1,35 @@
+// BaselineCalc Settings
+// ========================================
+
+// Baseline Breakpoints
+// ------------------------------
+$breakpoints: (
+  phone   : "20em",
+  phablet : "25.625em",
+  tablet  : "48em",
+  desktop : "61.250em",
+  wide    : "100.250em"
+);
+
+// BaselineCalc Settings
+// ------------------------------
+$type-scale-settings: (
+  scale-keys    : (base, kilo, mega, giga, tera, peta, exa),
+  neg-scale-keys: (font-sm, font-xs),
+  brk-pnts      : $breakpoints,
+  font-sizes    : ( 1rem   , 1rem   , 1rem   , 1rem   , 1rem   , 1rem   ),
+  scales        : ( 1.067  , 1.067  , 1.125  , 1.2    , 1.25   , 1.333  ),
+  baseline-size : ( 0.75rem , 0.75rem , 0.75rem , 0.75rem , 0.75rem , 0.75rem )
+);
+
+// Build Type Scale
+// ------------------------------
+$type-scale: build-type-scale(
+  $type-scale-settings
+);
+
+
+// Baseline Grid Overlay
+// ------------------------------
+// <div class="show-baseline__grid"></div>
+@include show-baseline();

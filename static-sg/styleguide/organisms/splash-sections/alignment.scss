@@ -1,0 +1,33 @@
+// Alignment
+//
+// | Class                | Description     |
+// | -------------------- |:---------------:|
+// | .o-splash--cent-cent | Center - Center |
+// | .o-splash--cent-lft  | Center - left   |
+// | .o-splash--cent-rgt  | Center - left   |
+// | .o-splash--top-cent  | Top - Center    |
+// | .o-splash--top-lft   | Top - left      |
+// | .o-splash--top-rgt   | Top - left      |
+// | .o-splash--btm-cent  | Bottom - Center |
+// | .o-splash--btm-lft   | Bottom - left   |
+// | .o-splash--btm-rgt   | Bottom - left   |
+//
+//
+// Styleguide 5.3.2
+
+// Alignment
+
+// Vertical center
+.o-splash--cent-cent { align-items: center; justify-content: center;    } // Center - Center
+.o-splash--cent-lft  { align-items: center; justify-content: flex-start;} // Center - left
+.o-splash--cent-rgt  { align-items: center; justify-content: flex-end;  } // Center - left
+
+// Vertical top
+.o-splash--top-cent { align-items: flex-start; justify-content: center;    } // Top - Center
+.o-splash--top-lft  { align-items: flex-start; justify-content: flex-start;} // Top - left
+.o-splash--top-rgt  { align-items: flex-start; justify-content: flex-end;  } // Top - left
+
+// Vertical bottom
+.o-splash--btm-cent { align-items: flex-end; justify-content: center;    } // Bottom - Center
+.o-splash--btm-lft  { align-items: flex-end; justify-content: flex-start;} // Bottom - left
+.o-splash--btm-rgt  { align-items: flex-end; justify-content: flex-end;  } // Bottom - left

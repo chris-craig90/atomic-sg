@@ -1,0 +1,32 @@
+// Background image
+//
+// Adss tint to background image to improve legibility of text
+//
+// $o-splash--bgImg - defualt dark overlay
+// $o-splash--bgImg--lgt - light overlay
+//
+// markup:
+// <div {$modifiers} ></div>
+//
+//
+// Styleguide 5.3.4
+$o-splash--bgImg: class="o-splash o-splash--mid o-splash--bgImg " style="background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.2) 100%), url(/dist/images/demo/bike/large1.jpg), no-repeat;";
+$o-splash--bgImg--lgt: class="o-splash o-splash--mid o-splash--bgImg--lgt " style="background: linear-gradient(to bottom, rgba(255,255,255,255.55) 0%,rgba(255,255,255,0) 100%), url(/dist/images/demo/bike/large1.jpg), no-repeat;";
+
+// styleguide:ignore:start
+
+.o-splash--bgImg{
+    @extend %u-bg--grey1;
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.2) 100%);
+    background-position: center!important;
+    background-size: cover!important;
+}
+
+.o-splash--bgImg--lgt{
+    @extend %u-bg--grey8;
+    background: linear-gradient(to bottom,  rgba(255,255,255,255.55) 0%,rgba(255,255,255,0) 100%);
+    background-size: cover!important;
+    background-position: center!important;
+}
+
+// styleguide:ignore:end

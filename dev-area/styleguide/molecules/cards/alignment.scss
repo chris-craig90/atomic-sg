@@ -1,0 +1,70 @@
+// Alignment
+//
+// .m-card--lft - Align media block to the left
+// .m-card--rgt - Align media block to the right
+// .m-card--lft.m-card--5050 - Align left, 50/50
+// .m-card--rgt.m-card--5050 - Align right, 50/50
+//
+// markup:
+// <div class="m-card {$modifiers}">
+//     <div class="m-card__richMedia">
+//         <sg-insert>1.5.1-2</sg-insert>
+//     </div>
+//     <div class="m-card__txt">
+//         <div class="m-card__supTxt">
+//             <p class="u-typ--bit u-pb--1">Category</p>
+//             <h1 class="u-typ--kilo u-pb--0">Title goes here</h1>
+//         </div>
+//         <div class="m-card__actions">
+//             <div class="m-card__actions__btns">
+//                 <a class="a-btn a-btn--flat rippleJS">Action</a>
+//             </div>
+//             <div class="m-card__actions__icons">
+//                 <button class="m-card__actions__expand"><i class="m-card__actions__expand__icon a-icon">&#xE87E;</i></button>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// sg-wrapper:
+// <div style="width: 320px;">
+//    <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 4.2.2
+
+// styleguide:ignore:start
+
+@mixin m-card--align ( $direction: 'left' ) {
+    display: flex;
+    @if( $direction == 'right' ){
+        flex-direction: row-reverse;
+    }
+    @else{
+        flex-direction: row;
+    }
+
+    .m-card__richMedia{
+      height: auto;
+      flex: 33.333%;
+    }
+    .m-card__txt{ flex: 66.666%; }
+
+    // 50/50 Card
+    &.m-card--5050{
+        .m-card__richMedia{ flex: 50%; }
+        .m-card__txt{ flex: 50%; }
+    }
+}
+
+.m-card--lft{ @include m-card--align('left'); }
+.m-card--rgt{ @include m-card--align('right'); }
+
+
+// Resposnive alignents
+@include mq($from: 'desktop' ){
+    .m-card--lft\@desktop{ @include m-card--align('left'); }
+    .m-card--rgt\@desktop{ @include m-card--align('right'); }
+}
+
+// styleguide:ignore:end

@@ -1,0 +1,174 @@
+// Text
+//
+// sg-wrapper:
+// <div class="js-gridOverlay"><sg-wrapper-content/></div>
+//
+// Styleguide 3.3
+
+
+// Headings
+//
+// markup:
+// <h1>Heading Level 1</h1>
+// <h2>Heading Level 2</h2>
+// <h3>Heading Level 3</h3>
+// <h4>Heading Level 4</h4>
+// <h5>Heading Level 5</h5>
+// <h6>Heading Level 6</h6>
+//
+//
+// Styleguide 3.3.1
+
+// styleguide:ignore:start
+
+// Auto width headings that take up full line
+h1, h2, h3, h4, h5, h6{
+    display: table;
+}
+h1{ @extend .u-typ--exa ; @include baseline-calc(( padding-bottom : 1 ));}
+h2{ @extend .u-typ--peta; @include baseline-calc(( padding-bottom : 1 ));}
+h3{ @extend .u-typ--tera; @include baseline-calc(( padding-bottom : 1 ));}
+h4{ @extend .u-typ--giga; @include baseline-calc(( padding-bottom : 1 ));}
+h5{ @extend .u-typ--mega; @include baseline-calc(( padding-bottom : 1 ));}
+h6{ @extend .u-typ--base; @include baseline-calc(( padding-bottom : 1 ));}
+
+.a-underline:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    bottom: 1px;
+    background-color: $color-grey1;
+}
+
+// styleguide:ignore:end
+
+
+// Paragraph styles
+//
+// markup:
+// <h6>Intro paragraph</h6>
+// <p class="a-txt-intro u-typ--kilo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices lectus eu libero finibus, ut tincidunt justo sodales. Praesent in dolor non urna lacinia hendrerit. Suspendisse sed urna vel nisl elementum venenatis. In varius, risus a aliquet accumsan, sapien odio rhoncus dolor, quis consectetur purus nisl non velit. Fusce sit amet tellus et felis bibendum lacinia. Nulla facilisi. Nullam in augue in mauris hendrerit imperdiet. Etiam faucibus odio auctor, aliquet urna consequat, condimentum massa. Nulla tincidunt turpis a efficitur interdum. Donec nec sodales nunc. Integer lacinia nisi eget venenatis molestie. Curabitur nulla ante, vulputate non sapien eget, venenatis pharetra risus. Proin at scelerisque neque. Quisque volutpat eros non lorem luctus fringilla. In malesuada faucibus neque eget molestie. Duis et massa vel urna sollicitudin mattis.</p>
+//
+//
+// Styleguide 3.3.2
+
+// styleguide:ignore:start
+
+// Default <p>
+// --------------------------------
+p {
+    display: block;
+    width: 100%;
+    @extend %base;
+    @include baseline-calc(( padding-bottom : 3 ));
+}
+
+// styleguide:ignore:end:;
+
+
+// Horizontal Line
+//
+// hr: - Defualt `<hr>`
+// .a-hr--short: - Short `<hr>`
+// .a-hr--bold - Bold `<hr>`
+//
+// markup:
+// <hr class="{$modifiers}">
+//
+//
+// Styleguide 3.3.3
+
+// styleguide:ignore:start
+
+// Default <hr>
+// --------------------------------
+hr{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    margin-top: -1px;
+    @include  baseline-border( "top", 1px, 0.5, $type: "margin" );
+    @include baseline-calc(( margin-bottom : 0.5, margin-top : 1 ));
+    height: auto;
+}
+
+// <hr> style modifiers
+// --------------------------------
+// Short <hr>
+.a-hr--short{
+    width: 33.333%;
+    margin-right: auto;
+}
+// Bold <hr>
+.a-hr--bold{
+    margin: 0;
+    @include  baseline-border( "top", 3px, 0.5, $type: "margin" );
+    @include baseline-calc(( margin-bottom : 0.5 ));
+}
+
+// styleguide:ignore:end
+
+
+// Inline Text Elements
+//
+// markup:
+// <p><a href="#">This is a text link</a></p>
+// <p><strong>Strong is used to indicate strong importance</strong></p>
+// <p><em>This text has added emphasis</em></p>
+// <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+// <p>The <i>i element</i> is text that is set off from the normal text</p>
+// <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+// <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+// <p><s>This text has a strikethrough</s></p>
+// <p>Superscript<sup>®</sup></p>
+// <p>Subscript for things like H<sub>2</sub>O</p>
+// <p><small>This small text is small for for fine print, etc.</small></p>
+// <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+// <p>Keybord input: <kbd>Cmd</kbd></p>
+// <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+// <p><cite>This is a citation</cite>
+// </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+// <p>The <mark>mark element</mark> indicates a highlight</p>
+// <p><code>This is what inline code looks like.</code></p>
+// <p><samp>This is sample output from a computer program</samp></p>
+// <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+//
+//
+// Styleguide 3.3.4
+
+// styleguide:ignore:start
+// Links & Buttons
+a, button{
+  cursor: pointer;
+  @extend %base;
+	@include baseline-calc(( padding-bottom : 1 ));
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+button{
+  border: none;
+  background: initial;
+}
+
+small,
+kbd {
+    @extend %font-byte;
+}
+
+code,
+samp {
+	//font-family: Courier;
+	//@extend %base;
+}
+time{
+    @extend %font-byte;
+    font-style: italic;
+}
+samp{
+    background: get-colour("grey", 2);
+}
+// styleguide:ignore:end

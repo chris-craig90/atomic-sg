@@ -1,0 +1,54 @@
+// Examples
+//
+//
+// Styleguide 5.2.3
+
+
+// Styleguide
+//
+// markup:
+// <div class="sg-hide">
+// <div class="o-frame o-frame--shadow">
+//     <!-- Sidebar -->
+//     <div class="o-frame__sidenav o-frame__sidenav--left o-frame__sidenav--persistent o-frame__sidenav--open js-gridOverlay--bl u-bg--prime">
+//         <div class="o-frame__sidenav__appBar">
+//             <div class="o-frame__sidenav__logo u-hide--desktop">
+//                <a href="" title="Home"><sg-insert>1.5.2</sg-insert></a>
+//             </div>
+//             <button class="o-frame__sidenav__close u-hide--desktop a-icon o-frame__sidenav__openLeft"><i class="a-icon a-icon--reg">close</i></button>
+//         </div>
+//         <header class="o-frame__sidenav__title">
+//             <h1>Interface guidelines</h1>
+//             <p class="meta">Version 1.0</p>
+//         </header>
+//         <div class="o-frame__sidenav__main">
+//             <header class="u-pl--2 u-pr--2 u-mb--1 u-font–serif–light">
+//             </header>
+//             <sg-insert>4.6.2.2</sg-insert>
+//         </div>
+//     </div>
+//     <!-- Main content -->
+//     <div class="o-frame__main js-gridOverlay">
+//         <!-- App bar -->
+//         <div class="o-frame__appBar u-bg--prime js-gridOverlay--bl u-hide--desktop">
+//             <nav class="o-toolbar">
+//                 <div class="o-toolbar_sect--lft grid-col-12">
+//                     <nav class="m-nav-hor">
+//                         <ul class="m-nav-hor__list">
+//                             <li class="m-nav-hor__list__item">
+//                                 <button class="m-nav-hor__list__item__link a-icon o-frame__sidenav__openLeft">&#xE5D2;</button>
+//                             </li>
+//                         </ul>
+//                     </nav>
+//                 </div>
+//             </nav>
+//         </div>
+//         <!-- Content Canvas -->
+//         <div class="o-frame__canvas">
+//             <sg-wrapper-content/>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 5.2.3.1

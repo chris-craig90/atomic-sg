@@ -1,0 +1,128 @@
+// Typeface
+//
+// #### Roboto
+// Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.
+//
+// <div class="u-mt--2 u-mb--2">
+//
+// ###### Serif
+//
+// <p class="u-typ--giga u-typ--sanserif">
+// A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+// a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+// 0 1 2 3 4 5 6 7 8 9
+// </p>
+//
+//
+// <div class="u-mt--4 u-mb--4">
+//
+// ###### Slab serif
+//
+// <p class="u-typ--giga u-typ--serif">
+// A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+// a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+// 0 1 2 3 4 5 6 7 8 9
+// </p>
+//
+//
+//
+// Styleguide 1.1.1
+
+// styleguide:ignore:start
+
+// San Serif
+// ================================
+// Regular
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Regular Itialic
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('../fonts/Roboto-Italic-webfont.eot');
+    src: url('../fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Italic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Bold
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/Roboto-Bold-webfont.eot');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Light
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Slab Serif
+// ================================
+// Regular
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('../fonts/RobotoSlab-Regular-webfont.eot');
+    src: url('../fonts/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoSlab-Regular-webfont.woff') format('woff'),
+         url('../fonts/RobotoSlab-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Thin
+@font-face {
+    font-family: 'roboto_slabthin';
+    src: url('../fonts/RobotoSlab-Thin-webfont.eot');
+    src: url('../fonts/RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoSlab-Thin-webfont.woff') format('woff'),
+         url('../fonts/RobotoSlab-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoSlab-Thin-webfont.svg#roboto_slabthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Light
+@font-face {
+    font-family: 'roboto_slablight';
+    src: url('../fonts/RobotoSlab-Light-webfont.eot');
+    src: url('../fonts/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoSlab-Light-webfont.woff') format('woff'),
+         url('../fonts/RobotoSlab-Light-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+// Bold
+@font-face {
+    font-family: 'roboto_slabbold';
+    src: url('../fonts/RobotoSlab-Bold-webfont.eot');
+    src: url('../fonts/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoSlab-Bold-webfont.woff') format('woff'),
+         url('../fonts/RobotoSlab-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// styleguide:ignore:end

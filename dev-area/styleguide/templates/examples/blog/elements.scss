@@ -1,0 +1,8 @@
+// Template elements
+//
+// A Collection of elements to be used exclusivley on blog post templates.
+
+// Images. Pull Left/ Right
+.t-bpost-img--pullLft{
+    @include pull(1 of 12);
+}

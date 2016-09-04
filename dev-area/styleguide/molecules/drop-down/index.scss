@@ -1,0 +1,32 @@
+// Dropdowns
+//
+// sg-wrapper:
+// <div class="js-gridOverlay--bl"><sg-wrapper-content/></div>
+//
+// Styleguide 4.7
+
+// styleguide:ignore:start
+.m-dropDown{
+
+    &__trigger{
+        outline: none;
+        &:focus{ outline: none; }
+        // Open state
+        &--open{}
+
+    }
+}
+// styleguide:ignore:end
+
+
+// Drop down menu
+// =================================
+@import "menu";
+// =================================
+
+
+
+// Drop down menu
+// =================================
+@import "tooltip";
+// =================================

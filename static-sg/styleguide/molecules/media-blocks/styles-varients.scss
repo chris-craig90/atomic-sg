@@ -1,0 +1,138 @@
+// Style Variants
+//
+//
+//
+// Styleguide 4.4.3
+
+
+// Shape outside
+//
+// markup:
+// <div class="m-mediaBlk m-mediaBlk--shape" >
+//   <img class="m-mediaBlk__thumb a-sqaure--lrg" src="/dist/images/starwars/atst.png">
+//   <div class="m-mediaBlk__content">
+//     <h1 class="u-typ--mega u-mt--3 u-typ--serif">Phasellus placerat bibendum</h1>
+//     <div class="u-typ--byte meta">Lorem ipsum dolor</div>
+//     <p class="u-pb--4 u-typ--byte">Mauris non lorem vel sem feugiat sodales. Pellentesque suscipit convallis nulla, at pellentesque nisl. Integer mi felis, gravida sollicitudin finibus id, lobortis faucibus dui. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+//   </div>
+// </div>
+//
+// sg-wrapper:
+// <div class="js-gridOverlay--bl">
+//     <div style="width: 405px;"><sg-wrapper-content/></div>
+// </div>
+//
+// Styleguide 4.4.3.1
+
+// styleguide:ignore:start
+
+.m-mediaBlk--shape{
+  overflow: hidden;
+  display: block;
+  .m-mediaBlk__content{
+    background-color: transparent;
+  }
+  .m-mediaBlk__thumb  {
+    object-fit: contain;
+    float: left;
+    shape-outside: url(/dist/images/starwars/atst.png);
+    shape-image-threshold: 0.87;
+    shape-margin: 20px;
+    height: 100%;
+    width: 50%;
+    margin-left: -20%;
+    z-index: 0;
+  }
+}
+
+// styleguide:ignore:end
+
+// Background Image
+//
+// markup:
+// <div class="m-mediaBlk m-mediaBlk--bgImg m-mediaBlk--bgImg--mid" >
+//     <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/tall1.jpg">
+//     <a class="m-mediaBlk__content">
+//         <div class="grid-col-7 u-mt--22x">
+//             <h1 class="u-typ--mega u-typ--serif">Phasellus placerat bibendum.Mauris non lorem vel sem feugiat sodales.</h1>
+//             <hr class="a-hr--bold a-hr--short">
+//             <p class="u-pb--2">READ MORE</p>
+//         </div>
+//     </a>
+// </div>
+//
+// sg-wrapper:
+// <div style="max-width: 460px;">
+//     <sg-wrapper-content/>
+// </div>
+//
+//
+// Styleguide 4.4.3.2
+
+// styleguide:ignore:start
+
+.m-mediaBlk--bgImg{
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  @extend .a-sqaure;
+  &--mid{ @extend .a-sqaure; }
+  &--lrg{ @extend .a-sqaure--lrg; }
+
+  .m-mediaBlk__content{
+    @extend %u-bg--grey1;
+    background-color: transparent;
+    width: 100%;
+    @include baseline-calc(( padding: 2 ));
+    &:before{
+      content: '';
+      background: rgba(0, 0, 0, .6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .m-mediaBlk__thumb  {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  // ## Content position modifiers
+  // ### Vertical Center
+  &--cent-cent .m-mediaBlk__content { align-items: center; justify-content: center;    } // Center - Center
+  &--cent-lft  .m-mediaBlk__content { align-items: center; justify-content: flex-start;} // Center - left
+  &--cent-rgt  .m-mediaBlk__content { align-items: center; justify-content: flex-end;  } // Center - left
+  // ### Vertical top
+  &--top-cent .m-mediaBlk__content { align-items: flex-start; justify-content: center;    } // Top - Center
+  &--top-lft  .m-mediaBlk__content { align-items: flex-start; justify-content: flex-start;} // Top - left
+  &--top-rgt  .m-mediaBlk__content { align-items: flex-start; justify-content: flex-end;  } // Top - left
+  // ### Vertical bottom
+  &--btm-cent .m-mediaBlk__content { justify-content: flex-end; align-items: center;    } // Bottom - Center
+  &--btm-lft  .m-mediaBlk__content { justify-content: flex-end; align-items: flex-start;} // Bottom - left
+  &--btm-rgt  .m-mediaBlk__content { justify-content: flex-end; align-items: flex-end;  } // Bottom - left
+
+  &--cent-cent .m-mediaBlk__content,
+  &--cent-lft  .m-mediaBlk__content,
+  &--cent-rgt  .m-mediaBlk__content,
+  &--top-cent .m-mediaBlk__content,
+  &--top-lft  .m-mediaBlk__content,
+  &--top-rgt  .m-mediaBlk__content,
+  &--btm-cent .m-mediaBlk__content,
+  &--btm-lft  .m-mediaBlk__content,
+  &--btm-rgt  .m-mediaBlk__content{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// styleguide:ignore:end

@@ -1,0 +1,169 @@
+// Images
+//
+// - Sqaure, 1:1
+// - Banners, 5:1
+// - Tall : 1:2
+//
+// sg-wrapper:
+// <div class="js-gridOverlay"><sg-wrapper-content/></div>
+//
+// Styleguide 1.5
+
+
+// Sqaure
+//
+// $a-sqaure--xs - XS thumb
+// $a-sqaure--sml - Small thumb
+// $a-sqaure--mid - Mid size thumb, defualt thumb size, use `a-sqaure`
+// $a-sqaure--lrg - Button focus state
+// $a-sqaure--xl - Button focus state
+//
+// markup:
+// <img {$modifiers} />
+//
+//
+// Styleguide 1.5.1
+
+$a-sqaure--xs: src="/dist/images/demo/placeholder/sqaure/xs1.jpg"  class="a-sqaure--xs";
+$a-sqaure--sml: src="/dist/images/demo/placeholder/sqaure/sml1.jpg"  class="a-sqaure--sml";
+$a-sqaure--mid: src="/dist/images/demo/placeholder/sqaure/mid1.jpg"  class="a-sqaure--mid";
+$a-sqaure--lrg: src="/dist/images/demo/placeholder/sqaure/lrg1.jpg"  class="a-sqaure--lrg";
+$a-sqaure--xl: src="/dist/images/demo/placeholder/sqaure/xl1.jpg" class="a-sqaure--xl";
+
+// styleguide:ignore:start
+// Use object fit to allow fixed width/ height without image distortion
+img[class*="a-sqaure"]{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+// Sqaure image sizes
+.a-sqaure,
+.a-sqaure--mid { @include baseline-calc(( height: 48, width: 48 ));   }
+.a-sqaure--xs  { @include baseline-calc(( height: 6, width: 6 ));     }
+.a-sqaure--sml { @include baseline-calc(( height: 16, width: 16 ));   }
+.a-sqaure--lrg { @include baseline-calc(( height: 80, width: 80 ));   }
+.a-sqaure--xl  { @include baseline-calc(( height: 110, width: 110 )); }
+// styleguide:ignore:end
+
+
+// Banner
+//
+// $a-banner--mid - Mid size banner, defualt thumb size, use `a-sqaure`
+// $a-banner--lrg - Large size banner, defualt thumb size, use `a-sqaure`
+// $a-banner--xl - XL size banner, defualt thumb size, use `a-sqaure`
+//
+// markup:
+// <img {$modifiers} />
+//
+//
+// Styleguide 1.5.2
+
+$a-banner--mid: src="/dist/images/demo/placeholder/banner/mid1.jpg";
+$a-banner--lrg: src="/dist/images/demo/placeholder/banner/lrg1.jpg";
+$a-banner--xl: src="/dist/images/demo/placeholder/banner/xl1.jpg";
+
+
+// styleguide:ignore:start
+// Use object fit to allow fixed width/ height without image distortion
+img[class*="a-banner"]{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+// Sqaure image sizes
+.a-banner,
+.a-banner--mid { @include baseline-calc(( height: 32 )); }
+.a-banner--lrg { @include baseline-calc(( height: 48 )); }
+.a-banner--xl { @include baseline-calc(( height: 64 )); }
+
+// styleguide:ignore:end
+
+
+
+
+
+// Tall Images
+//
+// $a-tall--sml - Small thumb
+// $a-tall--mid - Mid size thumb, defualt thumb size, use `a-sqaure`
+// $a-tall--lrg - Button focus state
+// $a-tall--xl - Button focus state
+//
+// markup:
+// <img {$modifiers} />
+//
+//
+// Styleguide 1.5.3
+
+$a-tall--sml: src="/dist/images/demo/placeholder/tall/sml1.jpg" class="a-tall--sml";
+$a-tall--mid: src="/dist/images/demo/placeholder/tall/mid1.jpg" class="a-tall--mid";
+$a-tall--lrg: src="/dist/images/demo/placeholder/tall/lrg1.jpg" class="a-tall--lrg";
+$a-tall--xl: src="/dist/images/demo/placeholder/tall/xl1.jpg" class="a-tall--xl";
+
+
+// styleguide:ignore:start
+// Use object fit to allow fixed width/ height without image distortion
+img[class*="a-tall"]{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+// Sqaure image sizes
+.a-tall--sml { @include baseline-calc(( height: 30, width: 15 ));   }
+.a-tall,
+.a-tall--mid { @include baseline-calc(( height: 48, width: 24 ));   }
+.a-tall--lrg { @include baseline-calc(( height: 125, width: 62 ));   }
+.a-tall--xl  { @include baseline-calc(( height: 250, width: 125 )); }
+// styleguide:ignore:end
+
+
+
+
+
+
+// Logo
+//
+// $a-logo--light - Light logo
+// $a-logo--dark - Dark logo
+//
+// markup:
+// <img class="a-logo" alt="Company logo" {$modifiers}>
+//
+// Styleguide 1.5.4
+
+$a-logo--light: src="/dist/images/demo/placeholder/logo/logo-light.svg";
+$a-logo--dark: src="/dist/images/demo/placeholder/logo/logo-dark.svg";
+
+.a-logo{
+    // object-fit: contain;
+    // object-position: center;
+    // width: auto;
+    // max-width: 128px;
+    width: auto;
+    @include baseline-calc((
+        height: 9
+    ));
+}
+
+
+
+
+// JS Bseline auto height
+// Automatically rounds the height of an image to the nearest baseline grid line.
+.js-img-bs{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.u-img-circ{ border-radius: 100%;}

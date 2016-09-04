@@ -1,0 +1,11 @@
+// Open sidebar
+// ================================
+.o-frame__sidenav--open{  transform: translateX(0px) translateY(0px);}
+
+
+// Persistent Sidenav
+// ================================
+// Desktop and up only.
+// Adds margin to the left/right of main content container (.o-frame__main).
+.o-frame__sidenav--persistent.o-frame__sidenav--open.o-frame__sidenav--left ~ .o-frame__main{ @include mq($from: desktop)   {margin-left: $t-sideBar-width;} }
+.o-frame__sidenav--persistent.o-frame__sidenav--open.o-frame__sidenav--right ~ .o-frame__main{ @include mq($from: wide)   { margin-right: $t-sideBar-width--right;} } // Right Side Nav

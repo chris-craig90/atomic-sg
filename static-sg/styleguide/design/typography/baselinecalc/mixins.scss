@@ -1,0 +1,39 @@
+// Sass Mixins
+//
+// ###### <strong>`baseline-calc`</strong> - Returns css properties inside each breakpoint, each property value pased is multiplied by baseline size <br>
+//
+// <strong>$propMap</strong>- Map of CSS propertiys                     |
+//
+// <code class="sg-code u-mb--6 u-mt--3">
+// @include baseline-calc(( <br>
+// &nbsp;&nbsp;&nbsp;&nbsp;height : 2.5,  <br>
+// &nbsp;&nbsp;&nbsp;&nbsp;line-height : 2.5, <br>
+// &nbsp;&nbsp;&nbsp;&nbsp;max-width : 8, <br>
+// ));
+// </code>
+//
+//
+// ###### <strong>`basline-rest`</strong> - Sets font line-height, forces text to rest on basline and ads optional margin-bottom
+//
+// <strong>$settings-list</strong>  - Sass list. Nestted collection of lists, each nested list item defines top padding, line-hright and margin bottom for each breakpoint defined when baseline-calc() olugin was initiated  <br>
+// <strong>$line-height</strong>  - Number. Text line height, multiple of basline size <br>
+// <strong>$padding-top</strong>  - CSS dimension (px, em, rem etc ). Top padding forces text to rest on the baselineline <br>
+// <strong>$margin-bottom</strong>  - Number. Bottom margin, multiple of basline size. Usses CSS calc() to subtract baseline-rest value <br>
+//
+// <code class="sg-code u-mb--6 u-mt--3">
+// @include basline-rest((<br>
+// &nbsp;&nbsp;&nbsp;&nbsp;(%line-height, $padding-top, $margin-bottom)<br>
+// ));
+// </code>
+//
+//
+// ###### <strong>`font-sizes( $scale-key )`</strong> - Returnns the repsonive font-sizes for the specified $scale-key
+//
+// <strong>$scale-key</strong> - String. Scale Key name
+//
+// <code class="sg-code u-mb--6 u-mt--3">
+// @include font-sizes("base");
+// </code>
+//
+//
+// Styleguide 1.1.3.2

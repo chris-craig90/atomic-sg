@@ -1,0 +1,74 @@
+// Design Tokens
+//
+// Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
+//
+// Styleguide 1.4
+
+
+// Animations
+//
+//
+// Styleguide 1.4.1
+
+// styleguide:ignore:start
+$tk-anim-grow: cubic-bezier(0.7,0,0.6,1);
+$tk-anim-raise: cubic-bezier(0.7,0,0.6,1);
+$tk-anim-spin: ease-in-out;
+$tk-anim-fade: cubic-bezier(0.42, 0, 0.58, 1);
+$tk-anim-slide: cubic-bezier(0.7,0,0.6,1);
+
+// Animation Timings
+$tk-anim-instant: 0s;
+$tk-anim-immediately: 0.05s;
+$tk-anim-quickly: 0.1s;
+$tk-anim-promptly: 0.2s;
+$tk-anim-slowly: 0.63s;
+$tk-anim-paused: 3.2s;
+// styleguide:ignore:end
+
+
+// Shadows
+//
+// <div class="u-shadow-l1 u-mr--4 u-mb--4 u-mt--4" style="width: 100px;height: 100px; border-radius: 50%; display: inline-block;"></div>
+// <div class="u-shadow-l2 u-mr--4 u-mb--4 u-mt--4" style="width: 100px;height: 100px; border-radius: 50%; display: inline-block;"></div>
+// <div class="u-shadow-l3 u-mr--4 u-mb--4 u-mt--4" style="width: 100px;height: 100px; border-radius: 50%; display: inline-block;"></div>
+// <div class="u-shadow-l4 u-mr--4 u-mb--4 u-mt--4" style="width: 100px;height: 100px; border-radius: 50%; display: inline-block;"></div>
+// <div class="u-shadow-l5 u-mr--4 u-mb--4 u-mt--4" style="width: 100px;height: 100px; border-radius: 50%; display: inline-block;"></div>
+//
+// | Sass Variable  | Class        |
+// | -------------- |:------------:|
+// | $tk-shadow--l1 | .u-shadow-l1 |
+// | $tk-shadow--l2 | .u-shadow-l2 |
+// | $tk-shadow--l3 | .u-shadow-l3 |
+// | $tk-shadow--l4 | .u-shadow-l4 |
+// | $tk-shadow--l5 | .u-shadow-l5 |
+//
+//
+// Styleguide 1.4.2
+
+// styleguide:ignore:start
+
+// Shadow Variables
+$tk-shadow--l1 : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$tk-shadow--l2 : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$tk-shadow--l3 : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$tk-shadow--l4 : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$tk-shadow--l5 : 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+$tk-shadow : $tk-shadow--l3; // Defualt shadow, try to use spedicfc shadow level where poossibel
+$tk-shadow--inset : inset  0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+
+// Shadow utils
+.u-shadow-l1{ box-shadow: $tk-shadow--l1!important;}
+.u-shadow-l2{ box-shadow: $tk-shadow--l2!important;}
+.u-shadow-l3{ box-shadow: $tk-shadow--l3!important;}
+.u-shadow-l4{ box-shadow: $tk-shadow--l4!important;}
+.u-shadow-l5{ box-shadow: $tk-shadow--l5!important;}
+
+// Z-Depth
+%tk-zLevel-0{ z-index: -1;}
+%tk-zLevel-1{ box-shadow: $tk-shadow--l1!important; z-index: 100;}
+%tk-zLevel-2{ box-shadow: $tk-shadow--l2!important; z-index: 200;}
+%tk-zLevel-3{ box-shadow: $tk-shadow--l3!important; z-index: 300;}
+%tk-zLevel-4{ box-shadow: $tk-shadow--l4!important; z-index: 400;}
+%tk-zLevel-5{ box-shadow: $tk-shadow--l5!important; z-index: 500;}
+// styleguide:ignore:end

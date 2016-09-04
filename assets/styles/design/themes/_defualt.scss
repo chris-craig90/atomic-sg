@@ -1,0 +1,57 @@
+// Defualt theme
+// ================================
+// Contains a list of all defualt values,
+// overridw the values in here to customize your theme
+
+
+// Colours
+// --------------------------------
+
+// Primary colous
+$theme-color-prime: #3F51B5;
+$theme-color-prime--drk: #303F9F;
+$theme-color-prime--lgt: #E8EAF6;
+
+// Accent colous
+$theme-color-accent : #00E676;
+$theme-color-accent--drk : #00C853;
+$theme-color-accent--lgt : #B9F6CA;
+
+// Greyscale
+$theme-color-grey1: #212121;
+$theme-color-grey2: #616161;
+$theme-color-grey3: #9E9E9E;
+$theme-color-grey4: #BDBDBD;
+$theme-color-grey5: #E0E0E0;
+$theme-color-grey6: #F5F5F5;
+$theme-color-grey7: #FAFAFA;
+$theme-color-grey8: #FFFFFF;
+
+
+// Card Style
+// --------------------------------
+// $theme-card: 'flat';
+$theme-card: 'material-crisp';
+// $theme-card: 'material';
+
+
+
+// Post/ Page template settings
+// --------------------------------
+
+// Blog post
+//$theme-post-style: '';
+//$theme-post-style: t-basic__page--overlap;
+$theme-post-style: t-basic__page--material;
+
+
+// Misc
+// --------------------------------
+$tk-borderRadius       : 3px;
+$tk-borderRadius--lrg  : 7px;
+$tk-borderRadius--sml  : 2px;
+$tk-borderRadius--circ : 50%;
+
+$theme-site-width: 86rem;
+
+$theme-appBar-height: 102px;

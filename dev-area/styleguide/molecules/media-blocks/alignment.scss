@@ -1,0 +1,57 @@
+// Alignment
+//
+// .m-mediaBlk--lft - Float meida block thumbnail
+// .m-mediaBlk--rgt -  Float meida block thumbnail to the right
+//
+// markup:
+// <a class="m-mediaBlk {$modifiers}" href="#">
+//   <img class="m-mediaBlk__thumb a-sqaure--sml" $a-sqaure--sml >
+//   <div class="m-mediaBlk__content">
+//     <h3 class="u-typ--kilo u-pb--0 u-txt-prime">Title Goes here</h3>
+//     <p class="u-txt-sec">Lorem ipsum dolor</p>
+//   </div>
+// </a>
+//
+// sg-wrapper:
+// <div class="js-gridOverlay--bl">
+//     <div style="width: 405px;"><sg-wrapper-content/></div>
+// </div>
+//
+// Styleguide 4.4.2
+
+// styleguide:ignore:start
+
+.m-mediaBlk--lft,
+.m-mediaBlk--rgt{
+    display: flex;
+    .m-mediaBlk__content{ flex: 60%; }
+    .m-mediaBlk__thumb  {
+        flex: 40%;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+// Align Left
+.m-mediaBlk--lft{
+    flex-direction: row;
+    .m-mediaBlk__thumb  {
+        margin-left: 0;
+        @include baseline-calc(( margin-right: 2 ));
+    }
+}
+
+// Align Right
+.m-mediaBlk--rgt{
+    flex-direction: row-reverse;
+    .m-mediaBlk__thumb  {
+        margin-right: 0;
+        @include baseline-calc(( margin-left: 2 )) ;
+    }
+}
+
+// Center align meida block content
+.m-mediaBlk--lft.m-mediaBlk--cent,
+.m-mediaBlk--rgt.m-mediaBlk--cent{ align-items: center }
+
+// styleguide:ignore:end

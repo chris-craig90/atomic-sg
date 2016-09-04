@@ -1,0 +1,50 @@
+// Page Structure
+//
+// Each template shares an underlying base strucutre. This strucutre is made up of a fixed set of UI areas. These UI areas are interchanble but most only appear once on any givin page.
+//
+// <div class="grid-wrap">
+//     <div class="grid-col-12 grid-col-4@desktop">
+//         <h6>UI regions</h6>
+//         <ul>
+//             <li>Side Nav</li>
+//             <li>Header Area</li>
+//             <li>Main Content Area</li>
+//             <li>Right Nav</li>
+//         </ul>
+//     </div>
+//     <div class="grid-col-12 grid-col-8@desktop">
+//         <img src="//material-design.storage.googleapis.com/publish/material_v_8/material_ext_publish/0Bx4BSt6jniD7VmpjWnp5UDZEWEU/layout_structure_regions_tablet.png">
+//     </div>
+// </div>
+//
+//
+// Styleguide 1.6
+
+// Basic structure
+// =================================
+@import "structure";
+// =================================
+
+
+// Sidebars
+// =================================
+@import "sidebars";
+// =================================
+
+
+// Styles
+// =================================
+@import "styles";
+// =================================
+
+
+// States
+// =================================
+@import "states";
+// =================================
+
+
+// Examples
+// =================================
+@import "examples/index";
+// =================================

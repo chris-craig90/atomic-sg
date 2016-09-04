@@ -1,0 +1,55 @@
+// Grouping
+//
+// markup:
+// <div class="m-mediaBlkGrp grid-wrap u-mt--2 u-mb--2">
+//   <div class="m-mediaBlkGrp__item grid-col-12 grid-col-6@tablet grid-col-3@wide">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+//   <div class="m-mediaBlkGrp__item grid-col-12 grid-col-6@tablet grid-col-3@wide">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+//   <div class="m-mediaBlkGrp__item grid-col-12 grid-col-6@tablet grid-col-3@wide">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+//   <div class="m-mediaBlkGrp__item grid-col-12 grid-col-6@tablet grid-col-3@wide">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+// </div>
+//
+//
+// Styleguide 4.4.4
+
+// Group container
+.m-mediaBlkGrp{
+  position: relative;
+  display: flex;
+  //padding: 0 0.75rem;
+}
+
+// Group item
+// *Applys visual style only! Use in conjunction with a grid column class*
+.m-mediaBlkGrp__item{
+    padding: 0;
+    border-width: 0;
+    border-style: solid;
+    &:first-child{ border-color: transparent!important; }
+    @include mq($from: tablet){
+        border-width: 0 0 0 1px;
+        &:nth-child(3){ border-width: 0;}
+    }
+    @include mq($from: wide){
+        &:nth-child(3){ border-width: 0 0 0 1px;}
+    }
+
+    .m-mediaBlk{
+        @include baseline-border();
+        @include baseline-calc((
+            padding: 2,
+        ));
+        @include mq($from: wide){
+            padding-top: 0;
+        }
+     }
+    //&:last-child .m-mediaBlk{ padding-right:0; }
+    //&:first-child .m-mediaBlk{ padding-left:0; }
+}

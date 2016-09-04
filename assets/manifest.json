@@ -1,0 +1,67 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/modernizr/modernizr.js",
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "components.js": {
+      "files": [
+        "styles/molecules/cards/cards.js",
+        "styles/templates/side-nav.js",
+        "scripts/atomic/m-dropdown.js"
+      ]
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "styleguide.js": {
+      "files": [
+        "scripts/styleguide/baselinegrid.js",
+        "scripts/styleguide/horizontalgrid.js",
+        "scripts/styleguide/sc5-template.js",
+        "scripts/styleguide/styleguide.js"
+      ]
+    },
+    "styleguide--fix.js": {
+      "files": [
+        "scripts/styleguide/styleguide--fix.js"
+      ]
+    },
+    "styleguide.css": {
+      "files": [
+        "sc5/sc5-app.css",
+        "sc5/styleguide_helper_elements.css"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "plugins.js": {
+      "bower": ["vanilla-ripplejs", "Stickyfill", "flexslider", "waypoints"],
+      "files": [
+        "../bower_components/waypoints/lib/shortcuts/sticky.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://style-guide.dev/style-guide/static-sg/",
+    "styleguideUrl": "http://localhost:7000/",
+    "dist": "/dev-area/styleguide/"
+  },
+  "paths": {
+    "dist": "dev-area/styleguide/dist/",
+    "production": "dev-area/production/",
+    "source": "assets/"
+  }
+}

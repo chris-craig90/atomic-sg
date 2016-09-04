@@ -1,0 +1,29 @@
+// Sizes
+//
+// $splash-mid - Mid sized splash
+// $splash-lrg - Large splash
+// $splash-screen - Full screen splash
+//
+// markup:
+// <div class="o-splash {$modifiers}"></div>
+//
+// sg-wrapper:
+// <div class="sg-hide">
+//     <sg-wrapper-content/>
+// </div>
+//
+//
+// Styleguide 5.3.3
+$splash-mid: o-splash--mid;
+$splash-lrg: o-splash--lrg;
+$splash-screen: o-splash--screen;
+
+.o-splash--mid {
+    @include baseline-calc(( min-height: 42 ));
+}
+
+.o-splash--lrg  {
+    @include baseline-calc(( min-height: 54 ));
+}
+
+.o-splash--screen { min-height: 100vh; }

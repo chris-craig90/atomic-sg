@@ -1,0 +1,170 @@
+// Examples
+//
+//
+//
+// Styleguide 4.4.5
+
+// Simple Four
+//
+//
+// markup:
+// <div class="grid-wrap u-mb--14 u-mt--6">
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.1</sg-insert>
+//   </div>
+// </div>
+//
+//
+// Styleguide 4.4.5.1
+
+
+// Simple Four Horizontal
+//
+//
+// markup:
+// <div class="grid-wrap u-mb--8 u-mt--4">
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-6@tablet grid-col-3@desktop grid-col-3@wide u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.2-1</sg-insert>
+//   </div>
+// </div>
+//
+//
+// Styleguide 4.4.5.1.1
+
+
+
+
+// Mixed type three
+//
+//
+// markup:
+// <div class="grid-wrap u-mt--4">
+//   <div class="grid-col-12 grid-col-7@tablet grid-col-6@desktop u-mb--3 u-mb--1@desktop">
+//      <div class="m-mediaBlk m-mediaBlk--bgImg m-mediaBlk--bgImg--lrg" >
+//        <img class="m-mediaBlk__thumb a-sqaure--lrg" $a-sqaure--lrg>
+//        <a class="m-mediaBlk__content">
+//          <div class="grid-col-7 u-mt--22x">
+//            <h1 class="u-typ--mega u-typ--serif">Phasellus placerat bibendum.Mauris non lorem vel sem feugiat sodales.</h1>
+//            <hr class="a-hr--bold a-hr--short">
+//            <p class="u-pb--2">READ MORE</p>
+//          </div>
+//        </a>
+//      </div>
+//   </div>
+//   <div class="grid-col-12 grid-col-5@tablet grid-col-3@desktop u-mb--3 u-mb--0@desktop">
+//     <sg-insert>4.4.1</sg-insert>
+//   </div>
+//   <div class="grid-col-12 grid-col-3@desktop u-mb--2 u-mb--0@desktop">
+//     <sg-insert>4.4.1</sg-insert>
+//   </div>
+// </div>
+//
+//
+// Styleguide 4.4.5.4
+
+
+// Masonry cluster
+//
+//
+// markup:
+// <div class="grid-wrap o-toolbar--fixedPos__sibling">
+//     <div class="grid-col-12 grid-col-8@tablet grid-col-9@desktop">
+//         <div class="grid-wrap grid-wrap--nest js-horGridOverlay--hide">
+//             <div class="grid-col-12 grid-col-6@tablet grid-col-8@desktop u-mb--1 u-mb--2--desktop">
+//                 <div class="m-mediaBlk m-mediaBlk--bgImg m-mediaBlk--bgImg--lrg m-mediaBlk--bgImg--cent-cent" >
+//                     <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/tall1.jpg">
+//                     <a class="m-mediaBlk__content">
+//                         <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//                     </a>
+//                 </div>
+//             </div>
+//             <div class="grid-col-12 grid-col-6@tablet grid-col-4@desktop u-mb--1 u-mb--2--desktop">
+//                 <div class="m-mediaBlk m-mediaBlk--bgImg m-mediaBlk--bgImg--lrg m-mediaBlk--bgImg--cent-cent" >
+//                     <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/tall2.jpg">
+//                     <a class="m-mediaBlk__content">
+//                         <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="grid-wrap grid-wrap--nest js-horGridOverlay--hide">
+//             <div class="grid-col-12 grid-col-6@tablet grid-col-4@desktop u-mb--2 ">
+//                 <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--mid m-mediaBlk--bgImg--cent-cent" >
+//                     <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/thumb-large1.jpg">
+//                     <a class="m-mediaBlk__content">
+//                         <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//                     </a>
+//                 </div>
+//             </div>
+//             <div class="grid-col-12 grid-col-6@tablet grid-col-8@desktop u-mb--2 ">
+//                 <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--mid m-mediaBlk--bgImg--cent-cent" >
+//                     <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/thumb-wide1.jpg">
+//                     <a class="m-mediaBlk__content">
+//                         <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//                     </a>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="grid-col-12 grid-col-4@tablet grid-col-3@desktop">
+//         <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--mid m-mediaBlk--bgImg--cent-cent u-mb--1 u-mb--2--desktop" >
+//             <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/thumb-large2.jpg">
+//             <a class="m-mediaBlk__content">
+//                 <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//             </a>
+//         </div>
+//         <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--lrg m-mediaBlk--bgImg--cent-cent u-mb--2" >
+//             <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/tall3.jpg">
+//             <a class="m-mediaBlk__content">
+//                 <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//             </a>
+//         </div>
+//     </div>
+// </div>
+// <div class="grid-wrap">
+//     <div class="grid-col-12 grid-col-6@tablet grid-col-4@desktop u-mb--1 u-mb--2--desktop">
+//         <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--mid m-mediaBlk--bgImg--cent-cent" >
+//             <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/thumb-large3.jpg">
+//             <a class="m-mediaBlk__content">
+//                 <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//             </a>
+//         </div>
+//     </div>
+//     <div class="grid-col-12 grid-col-6@tablet grid-col-4@desktop u-mb--1 u-mb--2--desktop">
+//         <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--mid m-mediaBlk--bgImg--cent-cent" >
+//             <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/thumb-large4.jpg">
+//             <a class="m-mediaBlk__content">
+//                 <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//             </a>
+//         </div>
+//     </div>
+//     <div class="grid-col-12 grid-col-4@desktop u-mb--2 u-mb--2--desktop">
+//         <div class="m-mediaBlk m-mediaBlk--bgImg  m-mediaBlk--bgImg--mid m-mediaBlk--bgImg--cent-cent" >
+//             <img class="m-mediaBlk__thumb" src="/dist/images/demo/temp/thumb-large5.jpg">
+//             <a class="m-mediaBlk__content">
+//                 <h1 class="u-typ--giga u-typ-cntr">PHARETRA</h1>
+//             </a>
+//         </div>
+//     </div>
+// </div>
+//
+//
+// Styleguide 4.4.5.5

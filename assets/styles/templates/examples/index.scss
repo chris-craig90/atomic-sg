@@ -1,0 +1,66 @@
+// Examples
+//
+//
+// Styleguide 6.2
+
+
+// Basic templates
+//
+//
+// Styleguide 6.2.1
+
+// =================================
+@import "basic/simple-text";
+// =================================
+
+
+// Home page templates
+//
+//
+// Styleguide 6.2.2
+
+// =================================
+@import "home/home-slider";
+// =================================
+
+
+// Shop templates
+//
+//
+// Styleguide 6.2.3
+
+// =================================
+@import "shop/category-grid";
+// =================================
+
+
+// Blog templates
+//
+//
+// Styleguide 6.2.4
+
+// =================================
+@import "blog/elements";
+@import "blog/blog-post";
+// =================================
+
+
+// Documentation templates
+//
+//
+// Styleguide 6.2.5
+
+// =================================
+@import "docs/doc-plain";
+// =================================
+
+
+
+// Ecommerce templates
+//
+//
+// Styleguide 6.2.6
+
+// =================================
+@import "ecommerce/product-page.scss";
+// =================================

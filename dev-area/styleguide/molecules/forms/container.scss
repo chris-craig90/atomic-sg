@@ -1,0 +1,53 @@
+// Form container
+//
+// markup:
+// <form class="m-form">
+//     <h1 class="m-form__heading">Form heading</h1>
+//     <sg-insert>4.5.2.1</sg-insert>
+//     <sg-insert>4.5.2.2</sg-insert>
+//     <sg-insert>4.5.2.1</sg-insert>
+//     <sg-insert>4.5.2.2</sg-insert>
+//     <sg-insert>4.5.2.1</sg-insert>
+//     <sg-insert>4.5.2.2</sg-insert>
+// </form>
+//
+// sg-wrapper:
+// <div style="width: 400px;">
+//    <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 4.5.1
+
+// styleguide:ignore:start
+
+.m-form{
+  position: relative;
+  display: block;
+  @include baseline-calc((
+    padding-top: 2,
+    padding-bottom: 2
+  ));
+
+  // Form heading
+  &__heading{
+    position: relative;
+    display: inline-block;
+    @extend %base;
+    margin: 0;
+    padding: 0;
+    @include baseline-calc((
+      line-height: 6,
+      margin-top: 2,
+      margin-bottom: 2,
+      padding-left: 2,
+      padding-right: 2
+    ));
+    border-left: 3px solid $color-prime;
+    background: $color-prime--lgt;
+    color: get-txt-colour($color-prime--lgt, 'prime');
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+// styleguide:ignore:end

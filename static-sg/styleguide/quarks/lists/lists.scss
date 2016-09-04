@@ -1,0 +1,39 @@
+// Lists
+//
+// Markup:
+// <ul>
+//     <li>Suspendisse in elementum ante</li>
+//     <li>In hac habitasse platea dictumst</li>
+//     <li>Fusce eleifend, leo at imperdiet</li>
+//     <li>Interdum et malesuada fames ac ante ipsum</li>
+//     <li>Quisque facilisis rutrum placerat</li>
+// </ul>
+//
+//
+// Styleguide 2.1
+
+// styleguide:ignore:start
+// List items
+// Set '<li>' to sit on baseline and add top/bottom spacing
+// ================================
+li{
+  //@include font-sizes("base");
+  margin: 0;
+  padding:0;
+  @include baseline-calc((
+      line-height: 3
+  ));
+}
+
+// Unordered Lists
+// ================================
+ul{padding: 0 0 0 2em;}
+
+// Ordered Lists
+// ================================
+ol{}
+
+// Definition Lists
+// ================================
+dl{}
+// styleguide:ignore:end

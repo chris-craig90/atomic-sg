@@ -1,0 +1,25 @@
+
+// Box Sizing
+// =================================
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  // Defualts all emlements to be  flat,
+  // allows us to use the z lae for positioning without having to set z index on flat elemnts.
+  ///z-index: -1;
+}
+
+// Resposnive Images, wont overlow container
+img {
+    max-width: 100%;
+}
+
+// VIdeo eleemnts
+video{
+  position: relative;
+  display: block;
+  max-width: 100%;
+}

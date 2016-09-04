@@ -1,0 +1,70 @@
+// Examples
+//
+//
+// Styleguide 1.6.3
+
+
+// Styleguide
+//
+// markup:
+// <div class="sg-hide">
+// <div class="base base--shadow">
+//     <!-- Sidebar -->
+//     <div class="base__sidenav base__sidenav--left base__sidenav--persistent44 js-gridOverlay--bl u-bg--prime">
+//         <div class="base__sidenav__appBar">
+//             <div class="base__sidenav__logo u-hide--desktop">
+//                <a href="" title="Home"><sg-insert>1.5.2</sg-insert></a>
+//             </div>
+//             <button class="base__sidenav__close u-hide--desktop a-icon base__sidenav__openLeft"><i class="a-icon a-icon--reg">close</i></button>
+//         </div>
+//         <header class="base__sidenav__title">
+//             <h1>Interface guidelines</h1>
+//             <p class="meta">Version 1.0</p>
+//         </header>
+//         <div class="base__sidenav__main">
+//             <header class="u-pl--2 u-pr--2 u-mb--1 u-font–serif–light">
+//             </header>
+//             <sg-insert>4.6.2-2</sg-insert>
+//         </div>
+//     </div>
+//     <!-- Main content -->
+//     <div class="base__main js-gridOverlay">
+//         <!-- App bar -->
+//         <div class="base__appBar base__appBar--trans js-gridOverlay--bl">
+//             <div class="grid-wrap">
+//                 <div class="grid-col-12">
+//                     <div class="o-toolbar u-shadow-l2 u-mt--3 u-mb--4 u-bgonly--grey8 js-pinned">
+//                         <div class="o-toolbar_sect--lft u-bg--grey1">
+//                             <nav class="m-nav-hor">
+//                                 <h1 class="u-txt-sec">Heading</h1>
+//                                 <ul role="menu">
+//                                     <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                     <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-1</sg-insert></li>
+//                                 </ul>
+//                             </nav>
+//                         </div>
+//                         <div class="o-toolbar_sect--mid u-bg--grey8 u-hide u-show@desktop">
+//                             <sg-insert>4.6.1-1</sg-insert>
+//                         </div>
+//                         <div class="o-toolbar_sect--rgt u-bg--accent--drk">
+//                             <nav class="m-nav-hor">
+//                                 <h1 class="u-txt-sec">Shop</h1>
+//                                 <ul role="menu">
+//                                     <li><a class="u-txt-prime"><span class="a-icon">&#xE8CC;</span><span class="u-hide u-show@desktop">&nbsp;Basket&nbsp;</span><span class="u-hide u-show@desktop u-txt-sec">(3)</span></a></li>
+//                                 </ul>
+//                             </nav>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- Content Canvas -->
+//         <div class="base__canvas">
+//             <sg-wrapper-content/>
+//             <sg-insert>5.4.1</sg-insert>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 1.6.3.1

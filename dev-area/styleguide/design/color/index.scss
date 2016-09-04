@@ -1,0 +1,130 @@
+// Color
+//
+// Salesforce (SLDS) uses a specific color palette to communicate meaning, convey visual differentiation, and provide a consistent look and feel. From neutrals to brights, each hue is chosen to fit into the overall visual language and promote a contemporary and vibrant user experience.
+//
+// <div class="grid-wrap u-mt--4">
+//     <div class="grid-col-12 grid-col-4@tablet">
+//         <h6>Primary colours</h6>
+//         <div class="u-mb--2">
+//            <div class="colour-swatch colour-swatch--prime">
+//            <div class="colour-swatch__swatch-name"></div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            </div>
+//         </div>
+//     </div>
+//     <div class="grid-col-12 grid-col-4@tablet">
+//         <h6>Accent colours</h6>
+//         <div class="u-mb--2">
+//            <div class="colour-swatch colour-swatch--accent">
+//            <div class="colour-swatch__swatch-name"></div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            </div>
+//         </div>
+//     </div>
+//     <div class="grid-col-12 grid-col-4@tablet">
+//         <h6>Greyscale</h6>
+//         <div class="u-mb--2">
+//            <div class="colour-swatch colour-swatch--grey">
+//            <div class="colour-swatch__swatch-name"></div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            <div class="colour-swatch__variant">
+//            <div class="colour-swatch__variant__name"></div>
+//            <div class="colour-swatch__variant__hex"></div>
+//            </div>
+//            </div>
+//         </div>
+//     </div>
+// </div>
+//
+//
+// Styleguide 1.3
+
+// Color Functions
+// =================================
+@import "functions";
+// =================================
+
+
+// Colors Palletes
+// =================================
+@import "palletes";
+// =================================
+
+
+// Text colours
+// =================================
+@import "text-color";
+// =================================
+
+
+// Utilities
+// =================================
+@import "utils";
+// =================================
+
+
+// Styleguide pallete generator
+// =================================
+@import "sg-pallete";
+// =================================

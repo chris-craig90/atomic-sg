@@ -1,0 +1,69 @@
+// Structure
+//
+// Content alignment classes
+//
+// | Class                | Description     |
+// | -------------------- |:---------------:|
+// | .o-splash--cent-cent | Center - Center |
+// | .o-splash--cent-lft  | Center - left   |
+// | .o-splash--cent-rgt  | Center - left   |
+// | .o-splash--top-cent  | Top - Center    |
+// | .o-splash--top-lft   | Top - left      |
+// | .o-splash--top-rgt   | Top - left      |
+// | .o-splash--btm-cent  | Bottom - Center |
+// | .o-splash--btm-lft   | Bottom - left   |
+// | .o-splash--btm-rgt   | Bottom - left   |
+//
+//
+// .o-splash.o-splash--mid - Mid sized splash
+// .o-splash.o-splash--lrg - Large splash
+// .o-splash.o-splash--screen.sg-hide - Full screen splash
+//
+// markup:
+// <div class="{$modifiers}">
+//   <div class="grid-wrap">
+//     <div class="grid-col-12">
+//       <p class="u-typ--tera u-pb--0">Splash section</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.3.1
+
+// styleguide:ignore:start
+
+.o-splash{
+  position: relative;
+  display: flex;
+  @extend %u-bg--prime;
+  @include baseline-calc(( padding-top: 3, padding-bottom: 3));
+  background-size: cover;
+  background-position: center;
+
+  // Sizes
+  // ================================
+  &--mid { @include baseline-calc(( min-height: 84 )); }
+  &--lrg {
+      @include baseline-calc(( min-height: 90 ));
+      @include baseline-calc(( min-height: 90 ), 'wide');
+  }
+  &--screen { min-height: 100vh; }
+
+  // Content alignment
+  // ================================
+  // Vertical center
+  &--cent-cent { align-items: center; justify-content: center;    } // Center - Center
+  &--cent-lft  { align-items: center; justify-content: flex-start;} // Center - left
+  &--cent-rgt  { align-items: center; justify-content: flex-end;  } // Center - left
+  // Vertical top
+  &--top-cent { align-items: flex-start; justify-content: center;    } // Top - Center
+  &--top-lft  { align-items: flex-start; justify-content: flex-start;} // Top - left
+  &--top-rgt  { align-items: flex-start; justify-content: flex-end;  } // Top - left
+  // Vertical bottom
+  &--btm-cent { align-items: flex-end; justify-content: center;    } // Bottom - Center
+  &--btm-lft  { align-items: flex-end; justify-content: flex-start;} // Bottom - left
+  &--btm-rgt  { align-items: flex-end; justify-content: flex-end;  } // Bottom - left
+
+}
+
+// styleguide:ignore:end

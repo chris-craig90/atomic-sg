@@ -1,0 +1,67 @@
+// Sliders
+//
+// markup:
+// <div class="flexslider o-splashSlider">
+//     <ul class="slides">
+//         <li>
+//             <sg-insert>5.3.5.1</sg-insert>
+//         </li>
+//         <li>
+//             <sg-insert>5.3.5.1</sg-insert>
+//         </li>
+//     </ul>
+// </div>
+//
+// sg-wrapper:
+// <div class="sg-hide">
+//     <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 5.3.6
+
+// styleguide:ignore:start
+
+.o-splashSlider{
+     position: relative;
+     display: block;
+     zoom: 1;
+     margin: 0;
+     padding: 0;
+     overflow: initial;
+     border: none;
+
+     // Direction Controls
+     .flex-direction-nav{ display: none;}
+
+     // Pagination
+    .flex-control-nav.flex-control-paging {
+        position: absolute;;
+        display: flex;
+        bottom: 0px;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 100;
+
+        li{
+            flex: 1 1 100%;
+            margin: 0;
+        }
+        li a{
+            border-radius: 0px;
+            position: relative;
+            display: block;
+            width: 100%;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+            background-color: $color-grey2;
+            @include baseline-calc((
+              height: 0.5
+            ));
+            &.flex-active{ background-color: $color-grey1;}
+        }
+    }
+
+}
+
+// styleguide:ignore:end

@@ -1,0 +1,210 @@
+// Menu
+//
+// .m-dropDown--below - Defualt positioning
+// .m-dropDown--above - Postion dropdown abov trigger
+//
+// markup:
+// <span class="m-dropDown {$modifiers}">
+//     <a class="m-dropDown__trigger">Drop down</a>
+//     <ul class="m-dropDown__menu">
+//         <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//         <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//         <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//         <li class="m-dropDown__menu__item">
+//             <a class="m-dropDown__trigger">Drop Down</a>
+//             <ul class="m-dropDown__menu">
+//                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                 <li class="m-dropDown__menu__item">
+//                     <a class="m-dropDown__trigger">Drop Down</a>
+//                     <ul class="m-dropDown__menu">
+//                         <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                         <li class="m-dropDown__menu__item">
+//                             <a class="m-dropDown__trigger">Drop Down</a>
+//                             <ul class="m-dropDown__menu">
+//                                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                                 <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                             </ul>
+//                         </li>
+//                         <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                         <li class="m-dropDown__menu__item"><a>Menu Item</a></li>
+//                     </ul>
+//                 </li>
+//             </ul>
+//         </li>
+//     </ul>
+// </span>
+//
+//
+//
+//
+// Styleguide 4.7.1
+
+// styleguide:ignore:start
+
+.m-dropDown__menu{
+        position: absolute;
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 1000;
+
+        // Theme styles
+        @extend %u-bg--grey7;
+        box-shadow: $tk-shadow--l3;
+        text-align: center;
+        border-radius: 3px;
+
+        // Dropdown size
+        width: 205px;
+
+        // Transitions
+        transition: all .2s $tk-anim-slide;
+        transform: translateY(1rem);
+        opacity: 0;
+
+        // turn off pointer events when closed,
+        // allows us to animated the drop down without display none issues
+        pointer-events: none;
+
+        // Open state
+        &--open{
+            pointer-events: visible;
+            transform: translateY(0.75rem);
+            opacity: 1;
+        }
+
+        // Menu item
+        &__item{
+            position: relative;
+            @include baseline-calc((
+                padding: 2,
+            ));
+            &:not(:last-child){ @include  baseline-border( "bottom", 1px, 0, $type: "margin" ); }
+
+            transition: background-color .2s $tk-anim-fade;
+            // Active State
+            &.is--active, &.is--active:hover{
+                background-color: $color-grey2;
+                 > a, > button { color: get-txt-colour( $color-grey2, 'prime'); }
+            }
+            // Hover State
+            &:hover{
+                background-color: $color-grey4;
+                > a, > button { color: get-txt-colour($color-grey4, 'prime'); }
+            }
+        }
+
+        // Arrow indicator - The Double-Box Method
+        &__tri {
+            position: absolute;
+            top: -12px;
+            width: 22px;
+            height: 15px;
+            overflow: hidden;
+            box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+            &:after {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: $color-grey8;
+                transform: rotate(45deg); /* Prefixes... */
+                top: 7px;
+                left: 4px;
+                box-shadow: 0px 0px 9px -2px rgba(0,0,0, 0.3);
+            }
+        }
+        // Position modifiers
+        &--center{
+            margin-left: calc( (160px - 100%) * -0.5 );
+            .m-dropDown__menu__tri{ margin-left: calc( (22px - 100%) * -0.5 );}
+        }
+        &--left{
+            left: 0;
+            .m-dropDown__menu__tri{ left: 1.5rem; }
+        }
+        &--right{
+            right: 0;
+            .m-dropDown__menu__tri{ right: 1.5rem; }
+        }
+
+    // Nested Drop down menus
+    // Position the menu to the left/right of the trigger.
+    // Left align
+    .m-dropDown__menu,
+    .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu,
+    .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu {
+        left: 95%;
+        top: -12px;
+        margin: 0;
+        .m-dropDown__menu__tri {
+            margin: 0;
+            top: 18px;
+            left: -18px;
+            transform: rotate(-90deg);
+        }
+
+
+    }
+
+    // Chnage cehvron icon
+    .m-dropDown__trigger:after{
+        content: 'chevron_right';
+        transform: translateY(1px);
+    }
+
+    // Right align
+    .m-dropDown__menu .m-dropDown__menu,
+    .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu,
+    .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu .m-dropDown__menu{
+        left: -95%;
+        margin: 0;
+        .m-dropDown__menu__tri {
+            left: auto;
+            right: -18px;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+// Dropdown above
+// ================================
+
+.m-dropDown--above{
+
+    // Top Level menu
+    .m-dropDown__menu{
+        bottom: 180%;
+
+        // Open State
+        &--open{ bottom: 200%; }
+
+        // Arrow indicator - The Double-Box Method
+        &__tri {
+            top: auto; bottom: -12px;
+            &:after{ top: -6px; }
+        }
+    }
+}
+
+
+// Trigger, add icon after element
+.m-dropDown__trigger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after{
+        @extend .a-icon;
+        //width: 1px;
+        content: 'arrow_drop_down';
+    }
+}
+
+
+
+// styleguide:ignore:end

@@ -1,0 +1,135 @@
+// Utility Classes
+//
+//
+// ###### Background colors
+//
+// | Class                                  | Descrition |
+// | ---------------------------------------| ---------- |
+// | %u-bg--prime, .u-bg--prime             |            |
+// | %u-bg--prime--drk, .u-bg--prime--drk   |            |
+// | %u-bg--prime--lgt, .u-bg--prime--lgt   |            |
+// | %u-bg--accent, .u-bg--accent           |            |
+// | %u-bg--accent--drk, .u-bg--accent--drk |            |
+// | %u-bg--accent--lgt, .u-bg--accent--lgt |            |
+// | %u-bg--grey1, .u-bg--grey1             |            |
+// | %u-bg--grey1, .u-bg--grey2             |            |
+// | %u-bg--grey1, .u-bg--grey3             |            |
+// | %u-bg--grey1, .u-bg--grey4             |            |
+// | %u-bg--grey1, .u-bg--grey5             |            |
+// | %u-bg--grey1, .u-bg--grey6             |            |
+// | %u-bg--grey1, .u-bg--grey7             |            |
+// | %u-bg--grey1, .u-bg--grey8             |            |
+//
+// <div class="u-mb--2"></div>
+//
+// ###### Text colors
+//
+// | Class             | Descrition |
+// | ------------------| ---------- |
+// | u-txt-prime     |            |
+// | u-txt-sec       |            |
+// | u-txt-dis       |            |
+// | u-txt-icon      |            |
+// | u-txt-div       |            |
+// | u-txt-hilgt     |            |
+//
+// <div class="u-mb--2"></div>
+//
+//
+// Styleguide 1.3.5
+
+// styleguide:ignore:start
+
+// Background Colours
+// ================================
+// Auto generates text color utils based on $colorUtils map
+
+// Map of colours used to create util classes
+$colorUtils: (
+ prime: $color-prime,
+ prime--lgt: $color-prime--lgt,
+ prime--drk: $color-prime--drk,
+ accent: $color-accent,
+ accent--lgt: $color-accent--lgt,
+ accent--drk: $color-accent--drk,
+ grey8: $color-grey8,
+ grey7: $color-grey7,
+ grey6: $color-grey6,
+ grey5: $color-grey5,
+ grey4: $color-grey4,
+ grey3: $color-grey3,
+ grey2: $color-grey2,
+ grey1: $color-grey1,
+);
+
+
+// Utility class generator
+// --------------------------------
+// Loop $colorUtils map and create new util class
+// Util classes that are generated will apply consitent text colours to child elements
+@each $name, $color in $colorUtils {
+
+    // Text colour utils
+    //.u-bg-#{$name}--prime{color: get-txt-colour($color, 'prime');}
+    //.u-bg-#{$name}--secondary{color: get-txt-colour($color, 'secondary');}
+    //.u-bg-#{$name}--disabled{color: get-txt-colour($color, 'disabled');}
+    //.u-bg-#{$name}--icons{color: get-txt-colour($color, 'icons');}
+    //.u-bg-#{$name}--dividers{color: get-txt-colour($color, 'dividers');}
+
+    .u-bgonly--#{$name}{ background-color: $color;}
+
+    // Background colour utils
+    %u-bg--#{$name},
+    .u-bg--#{$name} {
+        background-color: $color;
+        color: get-txt-colour($color, 'prime');
+        border-color: get-txt-colour($color, 'dividers');
+
+        *{ color: get-txt-colour($color, 'prime'); }
+
+        // Color classes & Defualt elememts
+        // ================================
+
+        // Secondary color
+        // --------------------------------
+        .u-txt-sec,
+        .meta{ color:get-txt-colour($color, 'secondary'); }
+
+        // Disabled color
+        // --------------------------------
+        .u-txt-dis,
+        .pseudo-class-disabled,
+        *[disabled],
+        .meta{ color:get-txt-colour($color, 'disabled'); }
+
+        // Icon color
+        // --------------------------------
+        .u-txt-icon,
+        .a-icon,
+        .meta{ color:get-txt-colour($color, 'icons'); }
+
+        // Borders & Dividers
+        // --------------------------------
+        // Apply border color to all elements,
+        // When applying borders to elemwns, use `baseline-border` mixin to
+        // maintain cinsitent border colours
+        .u-txt-div{ color:get-txt-colour($color, 'dividers');  }
+        *{ border-color: get-txt-colour($color, 'dividers'); }
+        hr{ border-color: get-txt-colour($color, 'dividers'); }
+
+        // Highlight Colour
+        // --------------------------------
+        .u-txt-hilgt,
+        a{
+            color: get-txt-colour($color, 'hiLgt');
+            border-color: get-txt-colour($color, 'hiLgt');
+        }
+
+        // Primary color
+        // --------------------------------
+        .u-txt-prime{  color:get-txt-colour($color, 'prime'); }
+
+    }
+}
+
+// styleguide:ignore:end

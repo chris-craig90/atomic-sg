@@ -1,0 +1,43 @@
+// Meida Block Structure
+//
+// Media blocks simply display two content types, usually an image and a block of text.
+//
+// markup:
+// <div class="m-mediaBlk">
+//   <img class="m-mediaBlk__thumb a-sqaure" src="/dist/images/demo/placeholder/sqaure/mid1.jpg">
+//   <div class="m-mediaBlk__content">
+//     <h3 class="u-typ--kilo u-typ--serif--light">Curabitur & pellentesque</h3>
+//     <hr class="a-hr--bold a-hr--short u-mt--1">
+//     <p class="u-typ--byte"><a class="u-typ--byte">READ MORE</a></p>
+//   </div>
+// </div>
+//
+// sg-wrapper:
+// <div class="js-gridOverlay--bl">
+//     <div style="width: 405px;"><sg-wrapper-content/></div>
+// </div>
+//
+// Styleguide 4.4.1
+
+// styleguide:ignore:start
+
+.m-mediaBlk{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  &__thumb{
+    position: relative;
+    display: block;
+    object-fit: cover;
+    @include baseline-calc(( margin-bottom: 2 )) ;
+    width: 100%;
+  }
+  &__content{
+    position: relative;
+    display: block;
+  }
+}
+
+// styleguide:ignore:end

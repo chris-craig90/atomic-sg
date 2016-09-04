@@ -1,0 +1,43 @@
+// Material Icons
+//
+// Material design system icons are simple, modern, friendly, and sometimes quirky. Each icon is created using our design guidelines to depict in simple and minimal forms the universal concepts used commonly throughout a UI. Ensuring readability and clarity at both large and small sizes, these icons have been optimized for beautiful display on all common platforms and display resolutions.
+//
+// See the full set of material design icons in the [Material Icons Library](https://design.google.com/icons/) .
+//
+// markup:
+// <i class="a-icon">done</i>
+// <i class="a-icon">account_circle</i>
+// <i class="a-icon">menu</i>
+// <i class="a-icon">face</i>
+//
+//
+// Styleguide 3.2.1
+
+// styleguide:ignore:start
+
+// Material design icons, uses google fonts.
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v15/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+}
+
+// Appply materil design ixon font to .a-icon class
+// and apply defualt styling
+.a-icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+}
+
+// styleguide:ignore:end

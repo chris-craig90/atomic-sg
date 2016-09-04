@@ -1,0 +1,42 @@
+// Typography
+//
+// Text is the primary way that users digest content and accomplish work, so it’s important to use good typographic principles to establish a clear visual hierarchy and to maximize legibility.
+//
+// Styleguide 1.1
+
+// Font Fmaily
+// =================================
+@import "typeface";
+// =================================
+
+
+// Variables
+// =================================
+@import "variables";
+// =================================
+
+
+// BaselineCalc sass plugin setup and instructions
+// =================================
+@import "baselineCalc/index";
+// =================================
+
+
+// BaselineCalc sass plugin config
+// =================================
+@import "typeScale";
+// =================================
+
+
+// Utilities
+// =================================
+@import "utils";
+// =================================
+
+
+// Apply defualt font family and base font size to <html>
+html{
+  font-family: $type-family;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}

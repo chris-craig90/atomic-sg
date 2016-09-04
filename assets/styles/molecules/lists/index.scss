@@ -1,0 +1,87 @@
+// Lists
+//
+// sg-wrapper:
+// <div class="js-gridOverlay"><sg-wrapper-content/></div>
+//
+// Styleguide 4.9
+
+// Unorderered lists
+//
+// $a-ul - Defualt `<ul>`
+// $a-ul--border - Border `<ul>`. Adds a bottom border to child `<li>`
+//
+// markup:
+// <ul class="{$modifiers}">
+//     <li>List item</li>
+//     <li>List item</li>
+//     <li>List item</li>
+//     <li>List item</li>
+//     <li>List item</li>
+// </ul>
+//
+// Styleguide 4.9.1
+
+$a-u: '';
+$a-ul--border: a-ul--border;
+
+ul{ padding: 0 0 0 2em; }
+li{ margin: 0; padding:0; }
+
+// <ul> style modifiers
+// ================================
+
+// Border <ul>
+// --------------------------------
+// Adds a bottom border to list items
+.a-ul--border{
+    list-style: none;
+    padding: 0;
+    li{
+        @include  baseline-border( "top", 1px, 0, $type: "margin" );
+        // Add pading using :before and :after psudo elemets to maintain vertical rythem
+        &:before,
+        &:after{
+            content: '';
+            display: block;
+            @include baseline-calc((
+                padding-top: 0.5,
+                padding-bottom: 0.5
+            ));
+        }
+    }
+}
+
+
+// Orderered lists
+//
+// markup:
+// <ol>
+//     <li>List item</li>
+//     <li>List item</li>
+//     <li>List item</li>
+//     <li>List item</li>
+//     <li>List item</li>
+// </ol>
+//
+// Styleguide 4.9.2
+
+ol{}
+
+
+// Definiion lists
+//
+// markup:
+// <dl>
+//     <dt>Name</dt>
+//     <dd>Godzilla</dd>
+//     <dt>Born</dt>
+//     <dd>1952</dd>
+//     <dt>Birthplace</dt>
+//     <dd>Japan</dd>
+//     <dt>Color</dt>
+//     <dd>Green</dd>
+// </dl>
+//
+// Styleguide 4.9.3
+
+dl{}

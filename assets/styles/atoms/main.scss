@@ -1,0 +1,24 @@
+// Atoms
+//
+// This is the atoms chapter. Atoms are the only parts that contain actual
+// class and style definitions. The higher level abastractions are mere
+// composites of the existing atoms.
+//
+// Styleguide 3.0
+
+// Buttons
+// =================================
+@import "buttons/index";
+// =================================
+
+
+// Icons
+// =================================
+@import "icons/index";
+// =================================
+
+
+// Text Atoms
+// =================================
+@import "text/index";
+// =================================

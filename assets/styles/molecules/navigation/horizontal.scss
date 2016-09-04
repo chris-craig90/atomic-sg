@@ -1,0 +1,146 @@
+// Horizontal navigation
+//
+// .m-nav-hor - Defualt
+// .m-nav-hor--border - Border modifier
+//
+// markup:
+// <nav class="{$modifiers}">
+//     <h1 class="u-txt-sec">Heading</h1>
+//     <ul role="menu">
+//         <li>
+//             <a class="u-txt-prime">Design</a>
+//             <ul>
+//                 <li><a class="u-txt-prime">Typography</a></li>
+//                 <li><a class="u-txt-prime">Grid system</a></li>
+//                 <li><a class="u-txt-prime">Color</a></li>
+//                 <li><a class="u-txt-prime">Design Tokens</a></li>
+//                 <li><a class="u-txt-prime">Images</a></li>
+//             </ul>
+//         </li>
+//         <li>
+//             <a class="u-txt-prime">Advanced</a>
+//             <ul role="menu">
+//                 <li><a class="u-txt-prime">Menu Title Attribute</a></li>
+//                 <li><a class="u-txt-prime">Menu CSS Class</a></li>
+//                 <li><a class="u-txt-prime">Menu Description</a></li>
+//                 <li><a class="u-txt-prime">New Window / Tab</a></li>
+//             </ul>
+//         </li>
+//         <li><a class="u-txt-prime">Breakpoints</a></li>
+//         <li><a class="u-txt-prime">Grid</a></li>
+//         <li><a class="u-txt-prime">Surface behaviors</a></li>
+//         <li><a class="u-txt-prime">Patterns</a></li>
+//     </ul>
+// </nav>
+//
+//
+// Styleguide 4.6.1
+
+// styleguide:ignore:start
+
+// Link Group Container
+// ================================
+.m-nav-hor{
+    display: flex;
+
+
+    // Nav heading vissible to screen readers only
+    h1{ @extend .u-show\@sr; }
+
+    // Top level menu list
+    > ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0;
+        margin: 0;
+
+        // List items
+        > li{
+            display: flex;
+            align-items: center;
+            @include baseline-calc((
+                padding: 3,
+                padding-left: 3,
+                padding-right: 3
+            ));
+
+            // Links
+            > a,
+            > button{
+                display: flex;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        // Hide submenus
+        ul{ display: none;}
+    }
+
+    // Border modifier
+    &--border{
+        .m-nav-hor__list__item{
+            border-width: 0 0 0 1px;
+            border-style: solid;
+            &:first-child{ border-left: none; }
+        }
+    }
+}
+
+// Sub container, usually a <ul>
+// ================================
+.m-nav-hor__list{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0; // Fix inline-block gap issue
+}
+
+// Single List Item
+// ================================
+.m-nav-hor__list__item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin  : 0;
+    margin-left: 0!important; // !!**HACK**!! overwrites the sc5 defualt li.sg
+    padding :  0!important; // !!**HACK**!! overwrites the sc5 defualt li.sg
+    font-size: initial; // Fix inline-block gap issue
+    transition: background-color $tk-anim-promptly $tk-anim-fade;
+    &:hover{
+        background-color: $color-grey4;
+        a,
+        button{
+            color: get-txt-colour( $color-grey4, 'prime');
+        }
+    }
+
+    // Dorop down menu problem
+    // Fixes top postion issues with the drop down menu inside flex elememnts
+    .m-dropDown__menu{ @include baseline-calc(( top: 4.1 )); }
+    .m-dropDown__menu--open{ @include baseline-calc(( top: 4 )); }
+
+}
+
+// Link Button
+// ================================
+.m-nav-hor__list__item__link{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    @include baseline-calc((
+        line-height: 4,
+        padding-left: 4,
+        padding-right: 4
+    ));
+    margin: 0;
+    white-space: nowrap;
+    color: inherit; // Inherit partent tool bar for link colors
+    > *{ margin: auto; display: block; } // Center content. z`
+}
+
+// styleguide:ignore:end

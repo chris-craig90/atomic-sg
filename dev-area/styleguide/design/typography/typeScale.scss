@@ -1,0 +1,110 @@
+// Modular Type Scales
+//
+// Choosing a modular type scale answers the question, “Which font sizes should I use in this project/design?” It provides you a set of proportional values to set the varying sizes of text used throughout a consistent design. From the Elements of Typographic Style:
+//
+// <blockquote>A modular scale, like a musical scale, is a prearranged set of harmonious proportions. – Robert Bringhurst</blockquote>
+//
+// markup:
+// <div class="js-gridOverlay--bl sg-hide44">
+//     <p class="u-typ--exa u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--exa"></span></p>
+//     <p class="u-typ--peta u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--peta"></span></p>
+//     <p class="u-typ--tera u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--tera"></span></p>
+//     <p class="u-typ--giga u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--giga"></span></p>
+//     <p class="u-typ--mega u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--mega"></span></p>
+//     <p class="u-typ--kilo u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--kilo"></span></p>
+//     <p class="u-typ--base u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--base"></span></p>
+//     <p class="u-typ--byte u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--byte"></span></p>
+//     <p class="u-typ--bit u-pb--0">Lorem ipsum dolor sit</p>
+//     <p class="u-typ--byte  u-pb--0"><span class="sg-fontToken--bit"></span></p>
+//     <div class="show-baseline__grid"></div>
+// </div>
+//
+//
+// Styleguide 1.1.2
+
+// styleguide:ignore:start
+
+// Reset common text elements margin
+h1, h2, h3, h4, h5, h6,
+p, ul, blockquote, figure{
+  margin: 0;
+  position: relative;
+}
+
+// Larger Font Sizes
+// ------------------------------
+%exa{
+  margin: 0;
+  @include font-sizes("exa");
+  @include basline-rest((
+    (5, 0px, 0), (5, 0px, 0), (6, 0px, 0), (9, 3px, 0), (11, 4px, 0), (16, 2px, 0)
+  ));
+}
+%peta{
+  margin: 0;
+  @include font-sizes("peta");
+  @include basline-rest((
+    (5, 1px, 0), (5, 1px, 0), (6, 1px, 0), (8, 3px, 0), (9, 2px, 0), (12, 5px, 0)
+  ));
+}
+%tera{
+  margin: 0;
+  @include font-sizes("tera");
+  @include basline-rest((
+    (4, 4px, 0), (4, 4px, 0), (5, 5px, 0), (6, 0px, 0), (8, 3px, 0), (10, 0px, 0)
+  ));
+}
+%giga{
+  margin: 0;
+  @include font-sizes("giga");
+  @include basline-rest((
+    (4, 5px, 0), (4, 5px, 0), (5, 1px, 0), (6, 2px, 0), (7, 3px, 0), (8, 4px, 0)
+  ));
+}
+%mega{
+  margin: 0;
+  @include font-sizes("mega");
+  @include basline-rest((
+    (4, 5px, 0), (4, 5px, 0), (5, 2px, 0), (5, 1px, 0), (6, 3px, 0), (6, 1px, 0)
+  ));
+}
+%kilo{
+  margin: 0;
+  @include font-sizes("kilo");
+  @include basline-rest((
+    (4, 0px, 0), (4, 0px, 0), (4, 5px, 0), (4, 5px, 0), (5, 2px, 0), (5, 1px, 0)
+  ));
+}
+// Base Font Size
+// ------------------------------
+%base{
+  margin: 0;
+  @include font-sizes("base");
+  @include basline-rest((
+    (4, 0px, 0), (4, 0px, 0), (4, 0px, 0), (4, 0px, 0), (4, 0px, 0), (4, 0px, 0)
+  ));
+}
+// Small Scale
+// ------------------------------
+%font-byte{
+  @include font-sizes("font-sm");
+  @include basline-rest((
+    (4, 0px, 0), (4, 0px, 0), (4, 1px, 0), (4, 1px, 0), (3, 4px, 0), (4, 1px, 0)
+  ));
+}
+%font-bit{
+  @include font-sizes("font-xs");
+  @include basline-rest((
+    (4, 1px, 0), (4, 1px, 0), (3, 5px, 0), (3, 5px, 0), (3, 5px, 0), (2, 3px, 0)
+  ));
+}
+
+// styleguide:ignore:end

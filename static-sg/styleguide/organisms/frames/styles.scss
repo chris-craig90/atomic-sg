@@ -1,0 +1,15 @@
+
+.o-frame--shadow {
+    .o-frame__appBar{ @extend %tk-zLevel-1; }
+    .o-frame__sidenav{ @extend %tk-zLevel-3; }
+}
+
+.o-frame--border {
+    .o-frame__appBar,
+    .o-frame__sidenav--left,
+    .o-frame__sidenav--right{ border-style: solid; }
+
+    .o-frame__appBar{ @include  baseline-border( "bottom", 1px, 0 ); }
+    .o-frame__sidenav--left{ border-width: 0 1px 0 0; }
+    .o-frame__sidenav--right{ border-width: 0 0 0 1px; }
+}

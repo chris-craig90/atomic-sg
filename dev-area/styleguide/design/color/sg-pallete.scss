@@ -1,0 +1,92 @@
+// styleguide:ignore:start
+// ========================================
+// Material Color Pallete Mixin
+// ========================================
+$material-colours: (
+  'prime': (
+    "Name" : "Primary colour pallete",
+    "Sec Name"  : "Hues",
+    "Colours" : (
+      '500 - $color-prime'      : $color-prime,
+      '100 - $color-prime--lgt' : $color-prime--lgt,
+      '500 - primary'           : $color-prime,
+      '700 - $color-prime--drk' : $color-prime--drk,
+    ),
+  ),
+  'accent': (
+    "Name" : "Accent colour",
+    "Sec Name" : "Variants",
+    "Colours" : (
+      '$color-accent'      : $color-accent,
+      '$color-accent--drk' : $color-accent--drk,
+      '$color-accent--lgt' : $color-accent--lgt,
+    ),
+  ),
+  'grey': (
+    "Name" : "Greyscale",
+    "Sec Name" : "Variants",
+    "Colours" : (
+      '$color-grey1'     : $color-grey1,
+      '$color-grey2'     : $color-grey2,
+      '$color-grey3'     : $color-grey3,
+      '$color-grey4'     : $color-grey4,
+      '$color-grey5'     : $color-grey5,
+      '$color-grey6'     : $color-grey6,
+      '$color-grey7'     : $color-grey7,
+      '$color-grey8'     : $color-grey8,
+    ),
+  )
+);
+
+.colour-swatch{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  @include baseline-calc((padding-top : 2));
+  &__variant{
+    display: none;
+    @include baseline-calc((height : 8));
+    &:nth-child(2){border-bottom: 5px solid #fff;}
+    &__name, &__hex{
+      position: absolute;
+      @include baseline-calc((line-height : 8));
+    }
+    &__name{@include baseline-calc((left : 2));}
+    &__hex{@include baseline-calc((right : 2));}
+  }
+  &__swatch-name{
+    position: relative;
+    text-transform: capitalize;
+    @include baseline-calc((padding : 2));
+    @include baseline-calc((line-height : 2));
+  }
+
+  @each $color-key, $color-variants in $material-colours {
+    $base-color-value: "red";
+    $swatch-name: $color-key;
+    $swatch-colours : map-get($color-variants ,"Colours");
+    $swatch-name : map-get($color-variants ,"Name");
+    &--#{$color-key} {
+      $variant-counter : 2;
+      @each $variant-name, $variant-value in $swatch-colours{
+        @if $variant-counter == 2 {
+          $base-color-value: $variant-value;
+        }
+        .colour-swatch__variant:nth-child(#{$variant-counter}){
+          background: $variant-value;
+          color: get-txt-colour($variant-value, 'prime')!important;
+          display: block;
+          .colour-swatch__variant__name:before{content: "#{$variant-name}";}
+          .colour-swatch__variant__hex:before{content: "#{$variant-value}";}
+        }
+        $variant-counter : $variant-counter + 1;
+      }
+      background: $base-color-value;
+      color: get-txt-colour($base-color-value, 'prime')!important;
+      .colour-swatch__swatch-name:before{content: $swatch-name; }
+    }
+  }
+}
+
+// styleguide:ignore:end
