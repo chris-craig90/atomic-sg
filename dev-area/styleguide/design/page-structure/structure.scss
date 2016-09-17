@@ -1,35 +1,93 @@
 // Basic Strucutre
 //
 // markup:
-// <div class="sg-hide">
+// <div class="sg-hide js-gridOverlay--bl">
 // <div class="base base--shadow">
-//     <sg-insert>1.6.2-1</sg-insert>
-//     <sg-insert>1.6.2-2</sg-insert>
-//     <div class="base__main js-gridOverlay">
-//         <div class="base__appBar u-bg--prime js-gridOverlay--bl">
-//             <nav class="o-toolbar">
-//                 <div class="o-toolbar_sect--lft grid-col-6">
-//                     <nav class="m-nav-hor">
-//                         <ul class="m-nav-hor__list">
-//                             <li class="m-nav-hor__list__item">
-//                                 <button class="m-nav-hor__list__item__link a-icon base__sidenav__openLeft">&#xE5D2;</button>
-//                             </li>
-//                         </ul>
-//                     </nav>
-//                 </div>
-//                 <div class="o-toolbar_sect--rgt grid-col-6">
-//                     <nav class="m-nav-hor">
-//                         <ul class="m-nav-hor__list">
-//                             <li class="m-nav-hor__list__item">
-//                                 <button class="m-nav-hor__list__item__link a-icon base__sidenav__openRight">&#xE5D2;</button>
-//                             </li>
-//                         </ul>
-//                     </nav>
-//                 </div>
-//             </nav>
+//     <!-- Sidebar -->
+//     <div class="base__sidenav base__sidenav--left base__sidenav--persistent base__sidenav--prime">
+//         <div class="base__sidenav__appBar">
+//             <div class="base__sidenav__logo u-hide--desktop">
+//                <a href="" title="Home"><sg-insert>1.5.4-1</sg-insert></a>
+//             </div>
+//             <button class="base__sidenav__close u-hide--desktop base__sidenav__openLeft"><i class="a-icon a-icon--reg">close</i></button>
 //         </div>
+//         <div class="base__sidenav__systemBar">
+//             <button class="base__sidenav__btn"><i class="a-icon a-icon--reg"><span class="a-icon">&#xE8CC;</span></a></i></button>
+//             <button class="base__sidenav__btn"><i class="a-icon a-icon--reg">&#xE853;</i></button>
+//         </div>
+//         <form class="base__sidenav__search">
+//             <input type="search" placeholder="Search">
+//             <input type="submit" value="&#xE8B6;" class="a-icon">
+//         </form>
+//         <header class="base__sidenav__title">
+//             <h1>Interface guidelines</h1>
+//             <p class="meta">Version 1.0</p>
+//         </header>
+//         <div class="base__sidenav__main">
+//             <header class="u-pl--2 u-pr--2 u-mb--1 u-font–serif–light">
+//             </header>
+//             <sg-insert>4.6.2-2</sg-insert>
+//         </div>
+//     </div>
+//     <!-- Main content -->
+//     <div class="base__main js-gridOverlay">
+//         <!-- App bar -->
+//         <sg-insert>1.6.3</sg-insert>
+//         <!-- Content Canvas -->
 //         <div class="base__canvas">
-//             <sg-wrapper-content/>
+//             <div class="grid-wrap">
+//             <div class="grid-col-12">
+//             <p>
+//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu luctus mauris. Donec erat metus, aliquet vitae turpis at, egestas elementum ligula. Sed dui magna, tempus vitae diam et, sollicitudin faucibus enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi semper dolor vitae volutpat lacinia. In arcu velit, efficitur nec enim eu, suscipit consequat mi. Donec nec felis nisi. Aliquam erat volutpat. Fusce placerat eu lectus ut convallis. Maecenas rhoncus quam in lectus ornare imperdiet. Cras dignissim leo sit amet massa ornare, id feugiat nisl lobortis. Morbi eget massa rutrum, ornare tellus et, ornare metus. In in tortor at mi luctus congue.
+//             </p>
+//             <p>
+//             Duis vel mauris vulputate felis volutpat cursus ut in ex. Nunc pretium eros ultrices commodo fermentum. Sed vitae nisi eros. Ut ultricies nulla sed porttitor sodales. Donec id fringilla justo. Sed commodo neque at eros luctus, scelerisque efficitur urna malesuada. Pellentesque cursus eros ut dui faucibus pretium a ac diam. Duis tristique enim nisi, id placerat eros mattis et. Fusce porttitor tincidunt libero commodo lacinia. Etiam fringilla in augue in pulvinar. Sed nulla ipsum, elementum elementum turpis quis, mollis porttitor mi. Curabitur vitae sapien libero. Vivamus suscipit turpis ex, non feugiat augue molestie vitae. Suspendisse commodo enim id ultricies rhoncus.
+//             </p>
+//             <p>
+//             Cras finibus neque arcu, in vulputate orci malesuada ac. Maecenas at libero cursus, auctor odio venenatis, vulputate nunc. Quisque quis ultricies ligula, sed facilisis urna. Nunc sit amet tortor in neque blandit rutrum. Nunc et pretium nunc. Morbi eleifend dignissim nisl, eget elementum massa ornare eu. Integer ac rhoncus tortor. Cras pulvinar arcu vitae felis sodales malesuada.
+//             </p>
+//             <p>
+//             Nunc scelerisque mi ut ex feugiat feugiat. Proin at pulvinar quam. In hac habitasse platea dictumst. Nulla fringilla eu mi at facilisis. Nullam luctus at enim nec malesuada. Nullam lobortis non orci et sodales. Nam ultricies, lacus sed molestie cursus, mi lacus sollicitudin orci, eu iaculis libero est in diam. Ut vitae odio nunc. Donec est nibh, sagittis vel elit eget, viverra luctus mauris. In euismod eleifend sem dictum iaculis. Fusce nec hendrerit odio. Mauris et magna iaculis, vulputate sem at, facilisis sem. Duis scelerisque bibendum bibendum. Etiam maximus tortor velit, id tristique ex efficitur vel. Quisque efficitur felis at erat lobortis, sit amet vestibulum justo egestas. Donec in ex luctus, dapibus ligula in, euismod eros.
+//             </p>
+//             <p>
+//             Cras justo diam, maximus non faucibus et, dignissim sed eros. Integer facilisis nunc in metus scelerisque, id porta ex porta. Fusce bibendum hendrerit sagittis. Aliquam euismod mauris aliquet turpis faucibus, a mattis metus vulputate. Donec consequat quis nunc eu vestibulum. Ut maximus mauris mauris, nec lobortis libero blandit nec. Nullam auctor risus id leo varius, ut viverra arcu ullamcorper. Aliquam tellus mauris, porttitor at ligula et, tempor finibus massa. Vivamus sit amet egestas neque, faucibus maximus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//             </p>
+//             <p>
+//             Morbi gravida, nulla a consectetur pellentesque, ex lacus venenatis est, eu placerat ex diam ac mauris. Ut lorem orci, dapibus eget leo in, finibus tristique mauris. Proin ultrices augue eget massa viverra, nec varius sem accumsan. Nunc elementum ligula placerat arcu scelerisque porttitor. Vivamus in lectus sit amet dui rutrum dictum. Ut sit amet ipsum orci. Phasellus eu nulla sit amet neque venenatis feugiat et id orci. Maecenas in neque diam. Fusce consequat, lacus non dictum commodo, sapien dolor laoreet est, et ultricies est lacus ut nulla. Proin accumsan lectus ac augue viverra tempor. Praesent congue vulputate quam id tincidunt. Pellentesque varius tincidunt cursus. Aenean ornare diam at elit feugiat efficitur. Donec faucibus justo vitae magna ultricies vulputate. Quisque tempus euismod neque sed sodales.
+//             </p>
+//             <p>
+//             Sed mattis sem ante, pharetra bibendum mauris rutrum vel. Proin at iaculis velit, eget suscipit ex. Donec rutrum, lacus sit amet tincidunt egestas, lorem elit placerat metus, eget porta libero nulla at nunc. Phasellus posuere dignissim turpis, vel congue nisl sagittis sed. Curabitur malesuada elementum laoreet. Aenean a risus eget velit porta condimentum ut at ex. Phasellus sollicitudin tortor id ullamcorper euismod. Ut ultricies fermentum vulputate. Etiam volutpat vehicula felis, sed mollis neque accumsan sed. In hac habitasse platea dictumst. Maecenas metus ipsum, rhoncus sit amet gravida ac, euismod vitae tellus. Donec vel nunc erat. Fusce sodales sem ac tincidunt condimentum. Ut suscipit mauris est, id volutpat urna aliquet id. Sed sed enim faucibus, facilisis dui et, scelerisque purus.
+//             </p>
+//             <p>
+//             Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec hendrerit vel dolor et pulvinar. Vivamus accumsan fermentum faucibus. Duis facilisis tempor finibus. Nulla dui mi, vulputate a odio id, pretium facilisis arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc et dictum purus. Nam lorem lacus, porttitor vel venenatis condimentum, maximus condimentum augue.
+//             </p>
+//             <p>
+//             Aliquam tempor libero mauris, in pharetra lorem vulputate vitae. Curabitur faucibus arcu pretium aliquam porta. Nulla faucibus felis nec risus vestibulum, vel dignissim felis tincidunt. In pharetra interdum sem, sit amet rhoncus felis condimentum ut. Nam ac rutrum purus. Sed maximus commodo nisi, non pulvinar libero pellentesque nec. Ut ultrices mauris id augue egestas, non porta elit suscipit. Cras tempus vel diam at pulvinar. Maecenas porta neque elit, id mattis augue pellentesque eget. Sed et sollicitudin diam, a iaculis orci. Quisque interdum mi non tortor ultrices egestas. Cras blandit, nisi rutrum fringilla bibendum, enim orci efficitur risus, ac consequat mauris lacus id tellus.
+//             </p>
+//             <p>
+//             Nullam vitae justo dolor. Donec tristique massa in libero vehicula posuere. Proin eget tempus nibh. Nullam dignissim arcu urna, eu luctus massa sodales quis. Vivamus vulputate blandit egestas. Aliquam imperdiet aliquet nisi, non elementum tellus venenatis et. Curabitur eu nisi pharetra, faucibus nulla quis, luctus lacus. Etiam nec arcu vehicula, auctor metus in, fringilla lectus. Nam sit amet orci a purus faucibus vulputate a eget magna.
+//             </p>
+//             <p>
+//             Vivamus a elementum urna, eu ultrices lectus. Fusce arcu nibh, faucibus vel neque at, bibendum condimentum arcu. Cras porta dolor eu mi ultrices, et tempus mauris egestas. Vivamus eget tincidunt sem. Duis dapibus vulputate lobortis. Vivamus ut pulvinar justo. Praesent at sapien a lorem tristique scelerisque. Curabitur pharetra elit a venenatis eleifend. Mauris gravida ex eget orci dictum, sed pulvinar mi sollicitudin.
+//             </p>
+//             <p>
+//             Sed maximus ullamcorper massa sit amet auctor. Proin pellentesque dolor in augue semper, ut ullamcorper risus rhoncus. Sed semper euismod felis, quis luctus turpis volutpat sed. Integer ut neque eros. Donec sagittis iaculis libero ut volutpat. Etiam mollis suscipit scelerisque. Aliquam at dui ornare, sagittis diam non, tempus velit. Morbi facilisis consequat auctor. Nulla sit amet ante vulputate, porttitor erat cursus, tristique tellus. Nunc sit amet cursus turpis. Nunc nulla est, pretium ut cursus in, sodales sit amet libero. Nulla porttitor vitae nibh ut malesuada.
+//             </p>
+//             <p>
+//             Nam eget cursus arcu. Nunc a risus justo. Sed a nisl ipsum. Cras libero mauris, feugiat hendrerit metus lobortis, molestie tempus mauris. Quisque sit amet sodales orci. In tincidunt sodales sem euismod fringilla. Fusce eleifend, nibh vel egestas fringilla, risus neque porta purus, et vestibulum leo quam sit amet est. Etiam ultricies aliquam diam, nec posuere enim scelerisque a. Integer blandit pellentesque neque quis tempor.
+//             </p>
+//             <p>
+//             Integer semper erat eget ultricies luctus. Fusce placerat, lorem ac commodo commodo, enim orci laoreet orci, vel aliquam quam turpis laoreet turpis. Praesent vitae turpis erat. Aenean nec arcu dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed rhoncus pellentesque velit, at ultricies nulla consectetur sit amet. Duis ut pretium odio. Praesent mattis nisl aliquet tincidunt tincidunt. Nam non nunc mi. Sed vitae accumsan eros. Aliquam eleifend varius nunc ultricies tincidunt. Aenean consequat maximus faucibus. Nam convallis rutrum urna, quis faucibus neque laoreet ut. Ut consectetur tristique nisi ac tempus. Mauris hendrerit cursus sollicitudin.
+//             </p>
+//             <p>
+//             Praesent non ex a lectus vulputate rhoncus vitae vel mi. Mauris elit lectus, vestibulum at placerat nec, aliquam et augue. Nullam egestas ac nisl eget tincidunt. Integer suscipit felis odio. Sed maximus ex vel nibh hendrerit commodo. Nam porta tincidunt maximus. Nulla feugiat quis tellus eu porta. Aenean ante dolor, convallis ut dolor vel, pulvinar posuere eros.
+//             </p>
+//             <p>
+//             Donec at erat suscipit, maximus orci in, blandit libero. Nam neque mi, finibus vitae pharetra venenatis, convallis sed ante. Quisque pellentesque diam et lacinia finibus. Sed placerat id tellus ut luctus. Vivamus turpis velit, tincidunt id quam et, efficitur facilisis elit. Curabitur vel diam at lorem ornare efficitur et vel mi. Ut gravida dignissim ipsum, eget eleifend magna mattis pharetra. Morbi sagittis tincidunt elementum. Suspendisse potenti. Duis condimentum lorem nibh, vitae gravida velit maximus eu. Praesent viverra laoreet odio vel tincidunt. Aenean molestie mauris enim, vel imperdiet urna eleifend sit amet.
+//             </p>
+//             </div>
+//             </div>
+//             <sg-insert>5.4.1</sg-insert>
 //         </div>
 //     </div>
 // </div>
@@ -65,31 +123,6 @@
         margin: 0; // Transiotn back to 0 margin
     }
 
-    // App Bar
-    // --------------------------------
-    // SHould side inside __main element.
-    &__appBar{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        z-index: 50;
-        //overflow-y: hidden; // **!HACK!** Fixes overflow issue with full width toolbars
-        @include baseline-calc((
-            min-height: 10
-        ));
-
-        // Transparent nav,
-        // --------------------------------
-        // Position absoloute and add padding to splash item
-        &--trans{
-            position: absolute;
-            left: 0;
-            right: 0;
-
-            // Splash element
-            &+ .base__canvas > .o-splash { padding-top: $theme-appBar-height; }
-        }
-    }
 
     // Content Canvas
     // --------------------------------
@@ -100,6 +133,8 @@
         position: relative;
         display: block;
         z-index: 0; // Forces canvas to sit under sticky toolbars
+        min-height: 100vh;
+
     }
 }
 

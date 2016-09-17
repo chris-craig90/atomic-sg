@@ -8,7 +8,7 @@
 //     <h1 class="u-txt-sec">Heading</h1>
 //     <ul role="menu">
 //         <li>
-//             <a class="u-txt-prime">Design</a>
+//             <a class="u-txt-prime">Designddd</a>
 //             <ul>
 //                 <li><a class="u-txt-prime">Typography</a></li>
 //                 <li><a class="u-txt-prime">Grid system</a></li>
@@ -73,6 +73,7 @@
                 align-items: center;
                 padding: 0;
                 margin: 0;
+                @extend .u-txt-prime;
             }
         }
 

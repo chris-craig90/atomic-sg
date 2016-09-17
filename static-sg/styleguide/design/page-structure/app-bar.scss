@@ -1,0 +1,186 @@
+// Sidbars
+//
+//
+// markup:
+// <!-- App bar -->
+// <div class="base__appBar base__appBar--trans js-gridOverlay--bl">
+//     <div class="base__appBar__toolbar base__appBar__toolbar--company base__appBar__toolbar--dark base__appBar__toolbar--full u-hide u-show@desktop">
+//         <div class="grid-wrap">
+//             <div class="grid-col-12">
+//                 <div class="o-toolbar">
+//                     <div class="o-toolbar_sect--lft base__appBar__toolbar__logo">
+//                         <nav class="m-nav-hor">
+//                             <h1 class="u-txt-sec">Heading</h1>
+//                             <ul role="menu">
+//                                 <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                 <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-1</sg-insert></li>
+//                             </ul>
+//                         </nav>
+//                     </div>
+//                     <div class="o-toolbar_sect--rgt base__appBar__toolbar__cart">
+//                         <nav class="m-nav-hor">
+//                             <h1 class="u-txt-sec">Shop</h1>
+//                             <ul role="menu">
+//                                 <li>
+//                                     <span class="a-icon a-icon--large a-icon--left">&#xE551;</span>
+//                                     <p class="u-pb--0"><a href="tel:18881234567"><strong>1-888-123-4567</strong></a> <br> info@buildpress.com</p>
+//                                 </li>
+//                                 <li>
+//                                     <span class="a-icon a-icon--large a-icon--left">&#xE88A;</span>
+//                                     <p class="u-pb--0"><strong>227 Marion Street</strong> <br> Columbia, SC 29201</p>
+//                                 </li>
+//                                 <li>
+//                                     <span class="a-icon a-icon--large a-icon--left">&#xE8AE;</span>
+//                                     <p class="u-pb--0"><strong>Mon - Sat 8.00 - 18.00</strong> <br> Sunday CLOSED</p>
+//                                 </li>
+//                                 <li>
+//                                     <a href="" class="a-icon u-txt-hilgt">&#xE80D;</a>
+//                                 </li>
+//                             </ul>
+//                         </nav>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="base__appBar__toolbar base__appBar__toolbar--main base__appBar__toolbar--light base__appBar__toolbar--full js-pinned">
+//         <div class="grid-wrap">
+//             <div class="grid-col-12">
+//                 <div class="o-toolbar">
+//                     <div class="o-toolbar_sect--lft base__appBar__toolbar__logo">
+//                         <nav class="m-nav-hor">
+//                             <h1 class="u-txt-sec">Heading</h1>
+//                             <ul role="menu">
+//                                 <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                 <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-2</sg-insert></li>
+//                             </ul>
+//                         </nav>
+//                     </div>
+//                     <div class="o-toolbar_sect--mid u-hide u-show@desktop">
+//                         <sg-insert>4.6.1-1</sg-insert>
+//                     </div>
+//                     <div class="o-toolbar_sect--rgt base__appBar__toolbar__cart">
+//                         <nav class="m-nav-hor">
+//                             <h1 class="u-txt-sec">Shop</h1>
+//                             <ul role="menu">
+//                                 <li><a class="u-txt-prime"><span class="a-icon">&#xE8CC;</span><span class="u-hide u-show@desktop">&nbsp;Basket&nbsp;</span><span class="u-hide u-show@desktop u-txt-sec">(3)</span></a></li>
+//                             </ul>
+//                         </nav>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// sg-wrapper:
+// <div class="sg-hide"><sg-wrapper-content/></div>
+//
+// Styleguide 1.6.3
+
+// styleguide:ignore:start
+
+
+// App Bar
+// --------------------------------
+// SHould side inside __main element.
+.base__appBar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    //overflow-y: hidden; // **!HACK!** Fixes overflow issue with full width toolbars
+    @include baseline-calc((
+        min-height: 10
+    ));
+
+
+    // Toolbar
+    .base__appBar__toolbar{
+        @include baseline-calc(( bottom: -15 ));
+    }
+    .stuck{ max-width: 100%!important;}
+    .sticky-wrapper{ height: 0px!important; }
+    //.base__appBar__toolbar--company,
+    //.base__appBar__toolbar--company .o-toolbar{ background: transparent!important; box-shadow: none!important;}
+
+    // Add Extra Padding to first Splash element
+    &+ .base__canvas { padding-top: $theme-appBar-height; }
+    &+ .base__canvas > .o-splash { margin-top: $theme-appBar-height * -1; }
+
+
+    // App Bar elements
+    // ================================
+
+    // Primary toolbar
+    // --------------------------------
+
+    // Primary toolbar
+    // --------------------------------
+    &__toolbar{
+        position: relative;
+        display: block;
+        top: 0;
+        @include baseline-calc((
+            margin-top: 2,
+            margin-bottom: 2
+        ));
+
+        // Colours
+        &--prime .o-toolbar{ @include atomic_color( 'prime' );  box-shadow: $tk-shadow--l2; }
+        &--accent .o-toolbar{ @include atomic_color( 'accent' ); box-shadow: $tk-shadow--l2;  }
+        &--dark .o-toolbar{ @include atomic_color( 'grey1' );  box-shadow: $tk-shadow--l2; }
+        &--light .o-toolbar{ @include atomic_color( 'grey8' );  box-shadow: $tk-shadow--l2; }
+
+        // Boxed
+        &--full{
+            margin-top: 0;
+            margin-bottom: 0;
+            box-shadow: $tk-shadow--l2;
+            .o-toolbar { box-shadow: none; }
+
+            // Overwirte grid classes to force full width
+            // .grid-wrap,
+            // .grid-col-12{ max-width: 100%; padding: 0; }
+
+            // Colours
+            &.base__appBar__toolbar--prime{ @include atomic_color( 'prime' ); }
+            &.base__appBar__toolbar--accent{ @include atomic_color( 'accent' ); }
+            &.base__appBar__toolbar--dark{ @include atomic_color( 'grey1' ); }
+            &.base__appBar__toolbar--light{ @include atomic_color( 'grey8' ); }
+        }
+
+        // Heirarchy
+        &--company{
+            @include baseline-calc((
+                padding-top: 5,
+                padding-bottom: 12,
+                margin-bottom: -8
+            ));
+        }
+        &--main{
+            @include baseline-calc((
+                max-height: 10,
+            ));
+            // Sticky toolbar
+            &.stuck{
+                position: fixed;
+                top: 0;
+                z-index: 5000;
+                margin: 0 auto;
+                width: 100%;
+                left: 0;
+                right: 0;
+                @include mq(){
+                    max-width: $theme-site-width;
+                }
+            }
+        }
+
+    }
+}
+
+
+// styleguide:ignore:end

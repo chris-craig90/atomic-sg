@@ -38,21 +38,8 @@
     width: 100%;
     padding: 0;
     max-width: 100%;
+    overflow: hidden; // **!HACK!** - Fixes overflow issues with full width toolbars
     //transition: all .2s $tk-anim-grow;
-
-    // Stickly toolbar
-    &.stuck{
-        position: fixed;
-        top: 0;
-        z-index: 5000;
-        margin: 0 auto;
-        width: 100%;
-        left: 0;
-        right: 0;
-        @include mq(){
-            max-width: calc( #{$theme-site-width} - #{$v-grid-gut\@desktop * 2 } );
-        }
-    }
 }
 
 // Tool Bar sections
@@ -67,6 +54,6 @@
 }
 .o-toolbar_sect--lft{ justify-content: flex-start; }
 .o-toolbar_sect--rgt{ justify-content: flex-end; }
-.o-toolbar_sect--mid{ justify-content: center; flex: 1 1 100%; }
+.o-toolbar_sect--mid{ justify-content: center; }
 
 // styleguide:ignore:end

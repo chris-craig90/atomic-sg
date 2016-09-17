@@ -4,22 +4,27 @@
 // .base__sidenav--right - Right Sidebar
 //
 // markup:
-// <div class="base__sidenav base__sidenav--persistent js-gridOverlay--bl u-bg--grey8 {$modifiers}">
+// <div class="base__sidenav base__sidenav--left base__sidenav--persistent base__sidenav--prime">
 //     <div class="base__sidenav__appBar">
-//         <div class="base__sidenav__logo">
-//            <a href="" title="Home"><sg-insert>1.5.2</sg-insert></a>
+//         <div class="base__sidenav__logo u-hide--desktop">
+//            <a href="" title="Home"><sg-insert>1.5.4-1</sg-insert></a>
 //         </div>
-//         <button class="base__sidenav__close u-hide--desktopgg a-icon base__sidenav__openLeft"><i class="a-icon a-icon--reg">close</i></button>
+//         <button class="base__sidenav__close u-hide--desktop base__sidenav__openLeft"><i class="a-icon a-icon--reg">close</i></button>
+//     </div>
+//     <div class="base__sidenav__systemBar">
+//         <button class="base__sidenav__btn"><i class="a-icon a-icon--reg"><span class="a-icon">&#xE8CC;</span></a></i></button>
+//         <button class="base__sidenav__btn"><i class="a-icon a-icon--reg">&#xE853;</i></button>
 //     </div>
 //     <form class="base__sidenav__search">
 //         <input type="search" placeholder="Search">
 //         <input type="submit" value="&#xE8B6;" class="a-icon">
 //     </form>
 //     <header class="base__sidenav__title">
-//         <h1>Heading</h1>
-//         <p class="meta">Sub heading</p>
+//         <h1>Interface guidelines</h1>
+//         <p class="meta">Version 1.0</p>
 //     </header>
 //     <div class="base__sidenav__main">
+//         <sg-insert>4.6.2-2</sg-insert>
 //     </div>
 // </div>
 //
@@ -53,6 +58,24 @@ $t-sideBar-width--right: 230px;
         right: 0;
     }
 
+    // Colors
+    &--prime{
+        @include atomic_color( 'prime' );
+        .base__sidenav__search{ @include atomic_color( 'prime--drk' ); }
+    }
+    &--accent{
+        @include atomic_color( 'accent' );
+        .base__sidenav__search{ @include atomic_color( 'accent--drk' ); }
+    }
+    &--dark{
+        @include atomic_color( 'grey1' );
+        .base__sidenav__search{ @include atomic_color( 'grey4' ); }
+    }
+    &--light{
+        @include atomic_color( 'grey8' );
+        .base__sidenav__search{ @include atomic_color( 'grey5' ); }
+    }
+
     // Sidebar elements
     // ================================
 
@@ -60,14 +83,18 @@ $t-sideBar-width--right: 230px;
     // --------------------------------
     // Logo an close button shoulf sit inside appBar
 
-    &__appBar{
+    &__appBar,
+    &__systemBar{
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include  baseline-border( "bottom", 1px, 0, "margin" );
     }
 
-    &__logo, &__close{
+    &__logo,
+    &__close,
+    &__btn{
         position: relative;
         display: flex;
         flex-direction: column;
@@ -97,14 +124,24 @@ $t-sideBar-width--right: 230px;
 
     // Sidebar close button
     // --------------------------------
-    &__close{
+    &__close,
+    &__btn{
         position: relative;
+        display: flex;
         align-items: center;
         border-width: 0 0 0 1px;
         border-style: solid;
-        @include baseline-calc((
-            width: 10
-        ));
+        flex: 1;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__close{
+        @include baseline-calc(( width: 10 ));
+        flex: 2;
     }
 
     // Sidebar search
@@ -115,10 +152,10 @@ $t-sideBar-width--right: 230px;
         flex-direction: row-reverse;
         flex: 1 1 100%;
         order: 3;
-        @extend %u-bg--grey6;
-        @include baseline-calc((padding: 3));
-
-        @include  baseline-border( "top", 1px, 0 );
+        @include baseline-calc((
+            padding: 3,
+            padding-left: 6
+        ));
 
         input{
             position: relative;

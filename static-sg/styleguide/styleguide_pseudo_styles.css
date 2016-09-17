@@ -88,13 +88,20 @@ tr.pseudo-class-hover hr {
   border-color: #c5c5c5;
 }
 
-tr.pseudo-class-hover .u-txt-hilgt,
 tr.pseudo-class-hover a {
   color: #32408f;
   border-color: #32408f;
 }
 
-tr.pseudo-class-hover .u-txt-prime {
+tr.pseudo-class-hover .u-txt-hilgt {
+  color: #32408f !important;
+  border-color: #32408f !important;
+}
+
+tr.pseudo-class-hover .u-txt-prime,
+tr.pseudo-class-hover .m-nav-hor > ul > li > a,
+tr.pseudo-class-hover
+  .m-nav-hor > ul > li > button {
   color: #1d1d1d;
 }
 

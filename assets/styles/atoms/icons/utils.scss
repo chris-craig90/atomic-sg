@@ -21,4 +21,7 @@
 .a-icon--reg{ font-size: 24px; }
 .a-icon--large{ font-size: 36px; }
 
+.a-icon--left{ float: left; @include baseline-calc(( margin-right: 2 )); }
+.a-icon--right{ float: right; @include baseline-calc(( margin-left: 2 )); }
+
 // styleguide:ignore:end

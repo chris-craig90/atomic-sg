@@ -63,24 +63,11 @@ $colorUtils: (
 );
 
 
-// Utility class generator
-// --------------------------------
-// Loop $colorUtils map and create new util class
-// Util classes that are generated will apply consitent text colours to child elements
-@each $name, $color in $colorUtils {
-
-    // Text colour utils
-    //.u-bg-#{$name}--prime{color: get-txt-colour($color, 'prime');}
-    //.u-bg-#{$name}--secondary{color: get-txt-colour($color, 'secondary');}
-    //.u-bg-#{$name}--disabled{color: get-txt-colour($color, 'disabled');}
-    //.u-bg-#{$name}--icons{color: get-txt-colour($color, 'icons');}
-    //.u-bg-#{$name}--dividers{color: get-txt-colour($color, 'dividers');}
-
-    .u-bgonly--#{$name}{ background-color: $color;}
+@mixin atomic_color( $colorName ) {
+    $name : $colorName;
+    $color : map-get( $colorUtils, $name );
 
     // Background colour utils
-    %u-bg--#{$name},
-    .u-bg--#{$name} {
         background-color: $color;
         color: get-txt-colour($color, 'prime');
         border-color: get-txt-colour($color, 'dividers');
@@ -119,17 +106,32 @@ $colorUtils: (
 
         // Highlight Colour
         // --------------------------------
-        .u-txt-hilgt,
         a{
             color: get-txt-colour($color, 'hiLgt');
             border-color: get-txt-colour($color, 'hiLgt');
+        }
+        .u-txt-hilgt{
+            color: get-txt-colour($color, 'hiLgt')!important;
+            border-color: get-txt-colour($color, 'hiLgt')!important;
         }
 
         // Primary color
         // --------------------------------
         .u-txt-prime{  color:get-txt-colour($color, 'prime'); }
+}
 
+
+// Utility class generator
+// --------------------------------
+// Loop $colorUtils map and create new util class
+// Util classes that are generated will apply consitent text colours to child elements
+@each $name, $color in $colorUtils {
+    // Background colour utils
+    %u-bg--#{$name},
+    .u-bg--#{$name} {
+        @include atomic_color( $name );
     }
 }
+
 
 // styleguide:ignore:end
