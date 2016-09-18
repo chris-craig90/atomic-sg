@@ -121,7 +121,7 @@ $breakpoint-list : phone, phablet, tablet, desktop, wide;
 // Defualt spacing util classes
 // Example output: `.u-mb--2`
 @each $name, $property in $spacingsUtils {
-    @for $i from 1 through 25{
+    @for $i from 1 through 12{
         .u-#{$name}--0{
             #{$property}: 0!important;
         }
@@ -137,7 +137,7 @@ $breakpoint-list : phone, phablet, tablet, desktop, wide;
     $className: '';
     @include mq($from: $breakpoint)   {
         @each $name, $property in $spacingsUtils {
-            @for $i from 1 through 25{
+            @for $i from 1 through 12{
                 .u-#{$name}--0\@#{$breakpoint}{
                     #{$property}: 0!important;
                 }
