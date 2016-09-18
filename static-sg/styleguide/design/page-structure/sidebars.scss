@@ -2,9 +2,10 @@
 //
 // .base__sidenav--left - Left Sidebar
 // .base__sidenav--right - Right Sidebar
+// .base__sidenav--left.base__sidenav--persistent - Left persistent
 //
 // markup:
-// <div class="base__sidenav base__sidenav--left base__sidenav--persistent base__sidenav--prime">
+// <div class="base__sidenav {$modifiers} base__sidenav--prime">
 //     <div class="base__sidenav__appBar">
 //         <div class="base__sidenav__logo u-hide--desktop">
 //            <a href="" title="Home"><sg-insert>1.5.4-1</sg-insert></a>

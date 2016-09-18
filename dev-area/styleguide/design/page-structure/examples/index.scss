@@ -4,7 +4,7 @@
 // Styleguide 1.6.4
 
 
-// Styleguide
+// Minimal
 //
 // markup:
 // <div class="sg-hide js-gridOverlay--bl">
@@ -14,8 +14,62 @@
 //     <!-- Main content -->
 //     <div class="base__main js-gridOverlay">
 //         <!-- App bar -->
-//         <div class="base__appBar base__appBar--trans js-gridOverlay--bl">
-//             <div class="base__appBar__toolbar base__appBar__toolbar--company base__appBar__toolbar--dark base__appBar__toolbar--full js-pinneddd">
+//         <div class="base__appBar $layout_minimal_appbar">
+//             <div class="base__appBar__toolbar base__appBar__toolbar--main $layout_minimal_appbar_prime">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--lft base__appBar__toolbar__logo">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop js-pinned--hideStuck"><sg-insert>1.5.4-1</sg-insert></li>
+//                                         <li class="u-pad--0 js-pinned--showStuck"><sg-insert>1.5.4-2</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                             <div class="o-toolbar_sect--mid u-hide u-show@desktop">
+//                                 <sg-insert>4.6.1-1</sg-insert>
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Shop</h1>
+//                                     <ul role="menu">
+//                                         <li><a class="u-txt-prime"><span class="a-icon">&#xE8CC;</span><span class="u-hide u-show@desktop">&nbsp;Basket&nbsp;</span><span class="u-hide u-show@desktop u-txt-sec">(3)</span></a></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- Content Canvas -->
+//         <div class="base__canvas">
+//             <sg-wrapper-content/>
+//             <sg-insert>5.4.1</sg-insert>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 1.6.4.1
+
+$layout_minimal_appbar: base__appBar--transPrime;
+$layout_minimal_appbar_prime: base__appBar__toolbar--light base__appBar__toolbar--full js-pinned;
+
+
+// Corporate
+//
+// markup:
+// <div class="sg-hide js-gridOverlay--bl">
+// <div class="base base--shadow">
+//     <!-- Sidebar -->
+//     <sg-insert>1.6.2-3</sg-insert>
+//     <!-- Main content -->
+//     <div class="base__main js-gridOverlay">
+//         <!-- App bar -->
+//         <div class="base__appBar $layout_corporate_appbar">
+//             <div class="base__appBar__toolbar base__appBar__toolbar--company $layout_corporate_appbar_company u-hide u-show@desktop">
 //                 <div class="grid-wrap">
 //                     <div class="grid-col-12">
 //                         <div class="o-toolbar">
@@ -58,7 +112,175 @@
 //                 <div class="grid-wrap">
 //                     <div class="grid-col-12">
 //                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--lft base__appBar__toolbar__logo u-hide@desktop">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-2</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                             <div class="o-toolbar_sect--lft u-hide u-show@desktop">
+//                                 <sg-insert>4.6.1-1</sg-insert>
+//                             </div>
+//                             <div class="o-toolbar_sect--rgt base__appBar__toolbar__cart">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Shop</h1>
+//                                     <ul role="menu">
+//                                         <li><a class="u-txt-prime"><span class="a-icon">&#xE8CC;</span><span class="u-hide u-show@desktop">&nbsp;Basket&nbsp;</span><span class="u-hide u-show@desktop u-txt-sec">(3)</span></a></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- Content Canvas -->
+//         <div class="base__canvas">
+//             <sg-wrapper-content/>
+//             <sg-insert>5.4.1</sg-insert>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 1.6.4.2
+
+$layout_corporate_appbar: base__appBar--hasCompany base__appBar--transPrime;
+$layout_corporate_appbar_company: base__appBar__toolbar--dark base__appBar__toolbar--full;
+
+
+// Corporate
+//
+// markup:
+// <div class="sg-hide js-gridOverlay--bl">
+// <div class="base base--shadow">
+//     <!-- Sidebar -->
+//     <sg-insert>1.6.2-3</sg-insert>
+//     <!-- Main content -->
+//     <div class="base__main js-gridOverlay">
+//         <!-- App bar -->
+//         <div class="base__appBar $layout_corporate_trans_appbar">
+//             <div class="base__appBar__toolbar base__appBar__toolbar--company $layout_corporate_trans_appbar_company u-hide u-show@desktop">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
 //                             <div class="o-toolbar_sect--lft base__appBar__toolbar__logo">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-1</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                             <div class="o-toolbar_sect--rgt base__appBar__toolbar__cart">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Shop</h1>
+//                                     <ul role="menu">
+//                                         <li>
+//                                             <span class="a-icon a-icon--large a-icon--left">&#xE551;</span>
+//                                             <p class="u-pb--0"><a href="tel:18881234567"><strong>1-888-123-4567</strong></a> <br> info@buildpress.com</p>
+//                                         </li>
+//                                         <li>
+//                                             <span class="a-icon a-icon--large a-icon--left">&#xE88A;</span>
+//                                             <p class="u-pb--0"><strong>227 Marion Street</strong> <br> Columbia, SC 29201</p>
+//                                         </li>
+//                                         <li>
+//                                             <span class="a-icon a-icon--large a-icon--left">&#xE8AE;</span>
+//                                             <p class="u-pb--0"><strong>Mon - Sat 8.00 - 18.00</strong> <br> Sunday CLOSED</p>
+//                                         </li>
+//                                         <li>
+//                                             <a href="" class="a-icon u-txt-hilgt">&#xE80D;</a>
+//                                         </li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="base__appBar__toolbar base__appBar__toolbar--main base__appBar__toolbar--light base__appBar__toolbar--full js-pinned">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--lft base__appBar__toolbar__logo u-hide@desktop">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-2</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                             <div class="o-toolbar_sect--lft u-hide u-show@desktop">
+//                                 <sg-insert>4.6.1-1</sg-insert>
+//                             </div>
+//                             <div class="o-toolbar_sect--rgt base__appBar__toolbar__cart">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Shop</h1>
+//                                     <ul role="menu">
+//                                         <li><a class="u-txt-prime"><span class="a-icon">&#xE8CC;</span><span class="u-hide u-show@desktop">&nbsp;Basket&nbsp;</span><span class="u-hide u-show@desktop u-txt-sec">(3)</span></a></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- Content Canvas -->
+//         <div class="base__canvas">
+//             <sg-wrapper-content/>
+//             <sg-insert>5.4.1</sg-insert>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 1.6.4.3
+
+$layout_corporate_trans_appbar: base__appBar--transPrimeCompany base__appBar--hasCompany;
+$layout_corporate_trans_appbar_company: base__appBar__toolbar--dark base__appBar__toolbar--full;
+
+
+
+
+// Elegant
+//
+// markup:
+// <div class="sg-hide js-gridOverlay--bl">
+// <div class="base base--shadow">
+//     <!-- Sidebar -->
+//     <sg-insert>1.6.2-3</sg-insert>
+//     <!-- Main content -->
+//     <div class="base__main js-gridOverlay">
+//         <!-- App bar -->
+//         <div class="base__appBar $layout_corporate_trans_appbar">
+//             <div class="base__appBar__toolbar base__appBar__toolbar--company $layout_corporate_trans_appbar_company u-hide u-show@desktop">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--mid base__appBar__toolbar__logo">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-1</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="base__appBar__toolbar base__appBar__toolbar--main base__appBar__toolbar--light base__appBar__toolbar--full js-pinned">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--mid base__appBar__toolbar__logo u-hide@desktop">
 //                                 <nav class="m-nav-hor">
 //                                     <h1 class="u-txt-sec">Heading</h1>
 //                                     <ul role="menu">
@@ -92,4 +314,82 @@
 // </div>
 // </div>
 //
-// Styleguide 1.6.4.1
+// Styleguide 1.6.4.4
+
+$layout_corporate_trans_appbar: base__appBar--transPrimeCompany base__appBar--hasCompany;
+$layout_corporate_trans_appbar_company: base__appBar__toolbar--dark base__appBar__toolbar--full;
+
+
+
+
+// Elegant
+//
+// markup:
+// <div class="sg-hide js-gridOverlay--bl">
+// <div class="base base--shadow">
+//     <!-- Sidebar -->
+//     <sg-insert>1.6.2-3</sg-insert>
+//     <!-- Main content -->
+//     <div class="base__main js-gridOverlay">
+//         <!-- App bar -->
+//         <div class="base__appBar $layout_elegant2_appbar">
+//             <div class="base__appBar__toolbar base__appBar__toolbar--company $layout_elegant2_appbar_company u-hide u-show@desktop">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--mid base__appBar__toolbar__logo">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-1</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="base__appBar__toolbar base__appBar__toolbar--main $layout_elegant2_appbar_prime">
+//                 <div class="grid-wrap">
+//                     <div class="grid-col-12">
+//                         <div class="o-toolbar">
+//                             <div class="o-toolbar_sect--mid base__appBar__toolbar__logo u-hide@desktop">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Heading</h1>
+//                                     <ul role="menu">
+//                                         <li class="u-hide@desktop"><button class="u-txt-prime a-icon base__sidenav__openLeft u-txt-prime">&#xE5D2;</button></li>
+//                                         <li class="u-pad--0 u-hide u-show@desktop"><sg-insert>1.5.4-2</sg-insert></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                             <div class="o-toolbar_sect--mid u-hide u-show@desktop">
+//                                 <sg-insert>4.6.1-1</sg-insert>
+//                             </div>
+//                             <div class="o-toolbar_sect--rgt base__appBar__toolbar__cart">
+//                                 <nav class="m-nav-hor">
+//                                     <h1 class="u-txt-sec">Shop</h1>
+//                                     <ul role="menu">
+//                                         <li><a class="u-txt-prime"><span class="a-icon">&#xE8CC;</span><span class="u-hide u-show@desktop">&nbsp;Basket&nbsp;</span><span class="u-hide u-show@desktop u-txt-sec">(3)</span></a></li>
+//                                     </ul>
+//                                 </nav>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//         <!-- Content Canvas -->
+//         <div class="base__canvas">
+//             <sg-wrapper-content/>
+//             <sg-insert>5.4.1</sg-insert>
+//         </div>
+//     </div>
+// </div>
+// </div>
+//
+// Styleguide 1.6.4.5
+
+$layout_elegant2_appbar: base__appBar--transCompany base__appBar--hasCompany;
+$layout_elegant2_appbar_company: base__appBar__toolbar--dark base__appBar__toolbar--full;
+$layout_elegant2_appbar_prime: base__appBar__toolbar--light js-pinned;

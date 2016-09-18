@@ -100,15 +100,173 @@
     // Toolbar
     .base__appBar__toolbar{
         @include baseline-calc(( bottom: -15 ));
+        transition: all 0.1s $tk-anim-fade;
     }
     .stuck{ max-width: 100%!important;}
     .sticky-wrapper{ height: 0px!important; }
     //.base__appBar__toolbar--company,
     //.base__appBar__toolbar--company .o-toolbar{ background: transparent!important; box-shadow: none!important;}
 
+    // Sibling paddings
+    // ================================
     // Add Extra Padding to first Splash element
-    &+ .base__canvas { padding-top: $theme-appBar-height; }
-    &+ .base__canvas > .o-splash { margin-top: $theme-appBar-height * -1; }
+    &+ .base__canvas {
+        @include baseline-calc((
+            padding-top: 10
+        ));
+    }
+    // Company bar padding top
+    &.base__appBar--hasCompany + .base__canvas {
+        @include baseline-calc((
+            padding-top: 33
+        ));
+    }
+
+
+    // Trnadsparent navs
+    // ================================
+
+    &--transPrime {
+        @include baseline-calc(( padding-top : 6 ));
+        .base__appBar__toolbar--main:not(.stuck),
+        .o-toolbar {
+            background-color: transparent!important;
+            box-shadow: none;
+             @include atomic_color( 'grey1' );
+        }
+
+        // Base canvas and splash paddingngs
+        & + .base__canvas {
+           @include baseline-calc((
+               padding-top: 16
+           ));
+        }
+        &.base__appBar--hasCompany + .base__canvas {
+           @include baseline-calc((
+               padding-top: 36
+           ));
+       }
+       &+ .base__canvas .o-splash:first-child {
+           @include baseline-calc((
+               margin-top: -16,
+               padding-top: 19
+           ));
+       }
+
+        // Company bar with bg
+        &.base__appBar--hasCompany {
+            .base__appBar__toolbar--main:not(.stuck){
+                @include baseline-calc((
+                    margin-top: 10
+                ));
+            }
+            &+ .base__canvas .o-splash:first-child {
+                @include baseline-calc((
+                    padding-top: 22
+                ));
+            }
+        }
+
+       .base__appBar__toolbar--company{
+           @include baseline-calc((
+               margin-top: -6,
+               padding-bottom: 5
+           ));
+       }
+    }
+
+    &--transPrimeCompany{
+        @include baseline-calc(( padding-top : 6 ));
+        .base__appBar__toolbar:not(.stuck),
+        .o-toolbar {
+            background-color: transparent!important;
+            box-shadow: none;
+             @include atomic_color( 'grey1' );
+        }
+
+        // Base Cnavs and splash paddings
+        + .base__canvas {
+           @include baseline-calc((
+               padding-top: 39
+           ));
+       }
+        + .base__canvas .o-splash:first-child {
+           @include baseline-calc((
+               margin-top: -39,
+               padding-top: 42
+           ));
+       }
+
+        // Company bar with bg
+        &.base__appBar--hasCompany {
+            .base__appBar__toolbar--main:not(.stuck){
+                @include baseline-calc((
+                    margin-top: 6
+                ));
+            }
+            &+ .base__canvas .o-splash:first-child {
+                // @include baseline-calc((
+                //     padding-top: 22
+                // ));
+            }
+        }
+
+
+       .base__appBar__toolbar--company{
+           @include baseline-calc((
+               margin-top: -6,
+               padding-bottom: 5
+           ));
+       }
+    }
+
+
+    // Trans Company
+    // --------------------------------
+    &--transCompany{
+        @include baseline-calc(( padding-top : 6 ));
+        .base__appBar__toolbar--company:not(.stuck),
+        .base__appBar__toolbar--company:not(.stuck) .o-toolbar {
+            background-color: transparent!important;
+            box-shadow: none;
+             @include atomic_color( 'grey1' );
+        }
+
+        // Base Cnavs and splash paddings
+        + .base__canvas {
+           @include baseline-calc((
+               padding-top: 39
+           ));
+       }
+        + .base__canvas .o-splash:first-child {
+           @include baseline-calc((
+               margin-top: -39,
+               padding-top: 42
+           ));
+       }
+
+        // Company bar with bg
+        &.base__appBar--hasCompany {
+            .base__appBar__toolbar--main:not(.stuck){
+                @include baseline-calc((
+                    margin-top: 6
+                ));
+            }
+            &+ .base__canvas .o-splash:first-child {
+                // @include baseline-calc((
+                //     padding-top: 22
+                // ));
+            }
+        }
+
+
+       .base__appBar__toolbar--company{
+           @include baseline-calc((
+               margin-top: -6,
+               padding-bottom: 5
+           ));
+       }
+    }
 
 
     // App Bar elements
@@ -124,7 +282,6 @@
         display: block;
         top: 0;
         @include baseline-calc((
-            margin-top: 2,
             margin-bottom: 2
         ));
 
@@ -136,7 +293,6 @@
 
         // Boxed
         &--full{
-            margin-top: 0;
             margin-bottom: 0;
             box-shadow: $tk-shadow--l2;
             .o-toolbar { box-shadow: none; }
@@ -165,6 +321,7 @@
                 max-height: 10,
             ));
             // Sticky toolbar
+            .js-pinned--showStuck{ display: none; }
             &.stuck{
                 position: fixed;
                 top: 0;
@@ -176,6 +333,8 @@
                 @include mq(){
                     max-width: $theme-site-width;
                 }
+                .js-pinned--hideStuck { display: none!important; }
+                .js-pinned--showStuck{ display: block!important; }
             }
         }
 

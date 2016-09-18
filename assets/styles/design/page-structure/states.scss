@@ -16,6 +16,6 @@
     .base__sidenav--persistent.base__sidenav--right ~ .base__main{ margin-right: $t-sideBar-width--right; }
 
     // Sticky nav extra padding
-    .base__appBar__toolbar--main.stuck{ padding-left: $t-sideBar-width; }
+    .base__sidenav--persistent.base__sidenav--left ~ .base__main .base__appBar__toolbar--main.stuck{ padding-left: $t-sideBar-width; }
 
 }

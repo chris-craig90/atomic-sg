@@ -105,6 +105,25 @@ tr.pseudo-class-hover
   color: #1d1d1d;
 }
 
+.base__appBar--transPrime + .base__canvas .o-splash.pseudo-class-first-child {
+  margin-top: -6rem;
+  padding-top: 7.125rem;
+}
+
+.base__appBar--transPrime.base__appBar--hasCompany + .base__canvas .o-splash.pseudo-class-first-child {
+  padding-top: 8.25rem;
+}
+
+.base__appBar--transPrimeCompany + .base__canvas .o-splash.pseudo-class-first-child {
+  margin-top: -14.625rem;
+  padding-top: 15.75rem;
+}
+
+.base__appBar--transCompany + .base__canvas .o-splash.pseudo-class-first-child {
+  margin-top: -14.625rem;
+  padding-top: 15.75rem;
+}
+
 .a-btn.pseudo-class-focus {
   background-color: #FFFFFF;
   color: #1d1d1d;

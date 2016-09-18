@@ -1,8 +1,8 @@
 // Custom SC5 stylewguide setup
 // ===================================
 
-$(document).ready(function(){
-  setTimeout(function (){
+$(document).ready(function() {
+  setTimeout(function () {
     // # Template setup
     // ==========================================
     var sc5Template = $SC5();

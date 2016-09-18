@@ -1,3 +1,15 @@
+// Template Strucutre
+//
+// markup:
+// <div class="sg-hide">
+// <sg-insert>1.6.4.1</sg-insert>
+// </div>
+//
+// Styleguide 1.7.1
+
+// styleguide:ignore:start
+
+
 // Defualt theme
 // ================================
 // Contains a list of all defualt values,
@@ -54,4 +66,10 @@ $tk-borderRadius--circ : 50%;
 
 $theme-site-width: 86rem;
 
-$theme-appBar-height: 36 * 0.375rem;
+
+$theme-appBar-height: 13 * 0.375rem;
+// $theme-appBar-height: 36 * 0.375rem;
+
+
+
+// styleguide:ignore:end

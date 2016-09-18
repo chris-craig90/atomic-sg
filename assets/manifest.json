@@ -9,6 +9,7 @@
     },
     "components.js": {
       "files": [
+        "scripts/atomic/main.js",
         "styles/molecules/cards/cards.js",
         "styles/templates/side-nav.js",
         "scripts/atomic/m-dropdown.js"
