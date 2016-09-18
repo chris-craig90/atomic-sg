@@ -9765,14 +9765,17 @@ img[class*="a-tall"] {
     height: 0px !important; }
   .base__appBar + .base__canvas {
     padding-top: 3.75rem; }
-  .base__appBar.base__appBar--hasCompany + .base__canvas {
-    padding-top: 12.375rem; }
+  .base__appBar--hasCompany + .base__canvas {
+    padding-top: 11.25rem; }
+    .base__appBar--hasCompany + .base__canvas .o-splash:first-child {
+      margin-top: -1.125rem;
+      padding-top: 3.375rem; }
   .base__appBar--transPrime {
     padding-top: 2.25rem; }
     .base__appBar--transPrime .base__appBar__toolbar--main:not(.stuck),
     .base__appBar--transPrime .o-toolbar {
       background-color: transparent !important;
-      box-shadow: none;
+      box-shadow: none !important;
       background-color: #212121;
       color: white;
       border-color: #3c3c3c; }
@@ -9853,7 +9856,7 @@ img[class*="a-tall"] {
     .base__appBar--transPrimeCompany .base__appBar__toolbar:not(.stuck),
     .base__appBar--transPrimeCompany .o-toolbar {
       background-color: transparent !important;
-      box-shadow: none;
+      box-shadow: none !important;
       background-color: #212121;
       color: white;
       border-color: #3c3c3c; }
@@ -9930,7 +9933,7 @@ img[class*="a-tall"] {
     .base__appBar--transCompany .base__appBar__toolbar--company:not(.stuck),
     .base__appBar--transCompany .base__appBar__toolbar--company:not(.stuck) .o-toolbar {
       background-color: transparent !important;
-      box-shadow: none;
+      box-shadow: none !important;
       background-color: #212121;
       color: white;
       border-color: #3c3c3c; }
@@ -10322,8 +10325,8 @@ img[class*="a-tall"] {
           color: #212121; }
     .base__appBar__toolbar--company {
       padding-top: 1.875rem;
-      padding-bottom: 4.5rem;
-      margin-bottom: -3rem; }
+      padding-bottom: 3.375rem;
+      margin-bottom: -1.875rem; }
     .base__appBar__toolbar--main {
       max-height: 3.75rem; }
       .base__appBar__toolbar--main .js-pinned--showStuck {

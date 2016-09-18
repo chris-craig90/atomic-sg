@@ -9,10 +9,8 @@
     },
     "components.js": {
       "files": [
-        "scripts/atomic/main.js",
-        "styles/molecules/cards/cards.js",
-        "styles/templates/side-nav.js",
-        "scripts/atomic/m-dropdown.js"
+        "scripts/atomic/m-dropdown.js",
+        "scripts/atomic/main.js"
       ]
     },
     "main.css": {
@@ -49,7 +47,7 @@
       "bower": ["jquery"]
     },
     "plugins.js": {
-      "bower": ["vanilla-ripplejs", "Stickyfill", "flexslider", "waypoints"],
+      "bower": ["jquery", "vanilla-ripplejs", "Stickyfill", "flexslider", "waypoints"],
       "files": [
         "../bower_components/waypoints/lib/shortcuts/sticky.js"
       ]

@@ -253,7 +253,7 @@
    * sc5Template.gridControls
    */
   SC5Layout.prototype.gridControls = function(){
-    if( !this.environment() ){
+
       $('body').append(
       '<div id="sg-controls" class="sg-controls">' +
       ' <nav class=" m-nav-tog u-shadow-l3">' +
@@ -288,7 +288,7 @@
         $(this).toggleClass('m-nav-tog__link--focus');
         $('body').toggleClass('mqSettings--show');
       });
-    }
+
 
 
     return this; // *chainable method*

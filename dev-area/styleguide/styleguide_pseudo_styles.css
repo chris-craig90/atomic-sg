@@ -105,6 +105,11 @@ tr.pseudo-class-hover
   color: #1d1d1d;
 }
 
+.base__appBar--hasCompany + .base__canvas .o-splash.pseudo-class-first-child {
+  margin-top: -1.125rem;
+  padding-top: 3.375rem;
+}
+
 .base__appBar--transPrime + .base__canvas .o-splash.pseudo-class-first-child {
   margin-top: -6rem;
   padding-top: 7.125rem;

@@ -1,4 +1,4 @@
-var AtomicSG = (function () {
+var AtomicSG = (function ($) {
 
     var _sideNav = function () {
         // Controls for Side nav
@@ -80,4 +80,4 @@ var AtomicSG = (function () {
         init: init
     };
 
-})();
+})(jQuery);

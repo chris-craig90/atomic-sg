@@ -3,16 +3,19 @@
 
 $(document).ready(function() {
   setTimeout(function () {
+
+      console.log('styleguidestart');
+
     // # Template setup
     // ==========================================
     var sc5Template = $SC5();
     sc5Template
-      .clean()
-        .gridControls()
-          .mainContent()
-            .sideNav()
-              .placeholder()
-                .demo('temp');
+      //.clean()
+        .gridControls();
+        //   .mainContent()
+        //     .sideNav()
+        //       .placeholder()
+        //         .demo('temp');
                 //.demo('fashion-light-uni');
 
     // # Grid Overlays
