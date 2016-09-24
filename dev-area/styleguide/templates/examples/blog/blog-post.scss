@@ -1,18 +1,9 @@
 // Blog Post
 //
 // markup:
-// <sg-insert>5.3.5.1</sg-insert>
-// <div class="grid-wrap">
-//     <div class="grid-col-12">
-//         <div class=" t-post-head">
-//             <h1 class="t-post-head__title">Post title</h1>
-//         </div>
-//     </div>
-// </div>
 // <div class="grid-wrap u-mb--12">
-//     <div class="grid-col-12 grid-col-8@tablet">
-//         <main class="t-post-main">
-//             <div class="t-post-meta">
+//     <div class="grid-col-12 grid-col-2@tablet grid-col-1@wide">
+//             <div class="t-postMeta">
 //                 <div class="m-mediaBlk">
 //                     <img class="m-mediaBlk__thumb a-sqaure--sml u-img-circ" $a-sqaure--sml >
 //                     <div class="m-mediaBlk__content">
@@ -22,6 +13,9 @@
 //                     </div>
 //                 </div>
 //             </div>
+//     </div>
+//     <div class="grid-col-12 grid-col-10@tablet grid-col-7@desktop grid-col-8@wide">
+//         <main class="t-postMain">
 //             <h1 class="u-typ--tera u-typ--serif u-pb--4">Vestibulum sodales pellentesque ligula nec pretium.</h1>
 //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Quid ait Aristoteles reliquique Platonis alumni? Sequitur disserendi ratio cognitioque naturae; Nisi autem rerum natura perspecta erit, nullo modo poterimus sensuum iudicia defendere. </p>
 //             <p class="u-pb--4">Sed condimentum nibh et justo pharetra, eget feugiat ligula pretium. Cras ut porttitor lorem. Nam dapibus vehicula mauris in vestibulum. Praesent fringilla arcu leo, eget pharetra lorem sodales sed. Ut euismod sit amet nulla in euismod. Quisque maximus ut ligula sit amet consectetur. Mauris pharetra pulvinar tortor, suscipit rhoncus nisi interdum interdum. In condimentum nisi sed eros varius iaculis. Integer condimentum at nunc eget porta. Aenean venenatis placerat nibh, in interdum augue varius at. Donec efficitur, erat vel egestas porta, urna justo ultrices libero, a gravida justo lectus sed nibh. Mauris ac sem tellus. Aliquam et dictum velit. Nam eget eros auctor, finibus nisl sit amet, fermentum ligula. Fusce sodales maximus tristique.</p>
@@ -35,14 +29,28 @@
 //             <p>Ut sagittis ullamcorper semper. Curabitur ultrices arcu vitae nulla convallis congue. Vestibulum vitae auctor mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas eu turpis molestie, accumsan odio ac, varius purus. Quisque lobortis consectetur eleifend. Maecenas suscipit ex elit, vitae consectetur nisl auctor vitae. Suspendisse malesuada sodales est vitae gravida. Aenean ultrices posuere rutrum. Pellentesque convallis elit ut nunc sagittis lobortis. Donec eleifend velit eget accumsan pretium. Morbi nec rhoncus augue. Sed dapibus rutrum lorem eget varius. Mauris dignissim, nibh quis pellentesque cursus, ipsum eros commodo enim, vitae eleifend tellus tortor vel enim. Sed aliquet pellentesque libero, eu vulputate lectus. Morbi turpis magna, auctor sed ligula suscipit, luctus ullamcorper leo.</p>
 //         </main>
 //     </div>
-//     <div class="grid-col-12 grid-col-4@tablet grid-col-3@wide">
-//         <aside class="t-post-aside">
-//             <div class="t-post-aside__widget">
+//     <div class="grid-col-12 grid-col-12@tablet grid-col-3@desktop">
+//         <aside class="t-postAside">
+//             <div class="t-postAside__widget">
 //                 <input type="text" placeholder="Search"/>
 //             </div>
-//             <div class="t-post-aside__widget">
-//                 <h5 class="u-typ--kilo a-underline">About us</h5>
-//                 <p class="u-mt--2">Mauris viverra venenatis convallis. Nulla sit amet orci bibendum, pharetra diam eu, facilisis turpis. Duis justo libero, efficitur quis lobortis in, pretium ac libero. Aliquam erat volutpat. Nullam commodo enim sed pellentesque pharetra. Aliquam vitae interdum urna. Nunc lorem leo, pulvinar vitae augue ut, consectetur volutpat sapien.</p>
+//             <div class="t-postAside__widget">
+//                 <h5 class="u-typ--kilo u-pb--2">About us</h5>
+//                 <p>Mauris viverra venenatis convallis. Nulla sit amet orci bibendum, pharetra diam eu, facilisis turpis. Duis justo libero, efficitur quis lobortis in, pretium ac libero. Aliquam erat volutpat. Nullam commodo enim sed pellentesque pharetra. Aliquam vitae interdum urna. Nunc lorem leo, pulvinar vitae augue ut, consectetur volutpat sapien.</p>
+//             </div>
+//             <div class="t-postAside__widget">
+//                 <h5 class="u-typ--kilo u-pb--2">About us</h5>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//             </div>
+//             <div class="t-postAside__widget">
+//                 <h5 class="u-typ--kilo u-pb--2">About us</h5>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//                 <sg-insert>4.4.2-1</sg-insert>
+//                 <sg-insert>4.4.2-1</sg-insert>
 //             </div>
 //         </aside>
 //     </div>
@@ -50,47 +58,29 @@
 //
 // Styleguide 6.2.4.1
 
-
-
-.t-post-head{
-    position: relative;
-    display: block;
-    background-color: $color-grey8;
-    z-index: 1000;
+.t-postMain {
     @include baseline-calc((
-        padding-top: 4,
-        padding-bottom: 4,
-        margin-top: -15
-    ));
-    @include  baseline-border( "bottom", 1px, 6, "margin" );
-
-    // Bortder colour
-    &:before{
-        content: '';
-        position: absolute;
-        display: block;
-        background-color: $color-grey8;
-        top: 0;
-        bottom: 0;
-        @include baseline-calc((
-            left: -4,
-            right: -4
-        ));
-    }
-
-    &__title{ @extend %mega; }
+        padding-top: 16,
+        padding-bottom: 16
+     ));
 }
 
-.t-post-meta{
-    float: left;
+.t-postAside{
     @include baseline-calc((
-        margin-right: 4,
-        margin-bottom: 2
+        padding: 3,
+        margin-top: 16
     ));
-    @include baseline-calc((
-        margin-left: -8
-    ), 'wide');
+    box-shadow: $tk-shadow--l2;
+    @include atomic_color( 'grey6' );
+    &__widget{
+        @include baseline-calc(( margin-bottom: 6));
+        &:last-child{ margin-bottom: 0; }
+    }
+}
 
+
+.t-postMeta{
+    @include baseline-calc(( padding-top: 16 ));
     // Overwride dewfualt media block sryleing
     img{
         flex: 50%!important;
@@ -102,6 +92,7 @@
         ));
     }
 }
+
 
 .t-post-thumb--lft{
     float: left;
@@ -124,19 +115,4 @@
         margin-top: 2,
         margin-bottom: 3
     ));
-}
-
-
-.t-post-aside{
-    @include baseline-calc((
-        padding-left: 12
-    ), 'tablet');
-
-    @include baseline-calc((
-        padding-left: 10
-    ), 'wide');
-
-    &__widget{
-        @include baseline-calc(( margin-bottom: 6));
-    }
 }

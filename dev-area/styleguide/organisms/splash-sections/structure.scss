@@ -35,6 +35,7 @@
 .o-splash{
   position: relative;
   display: flex;
+  flex-direction: column;
   @extend %u-bg--prime;
   @include baseline-calc(( padding-top: 3, padding-bottom: 3));
   background-size: cover;

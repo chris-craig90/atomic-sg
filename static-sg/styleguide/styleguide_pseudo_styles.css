@@ -278,6 +278,10 @@ input.pseudo-class-active {
   padding-right: 0;
 }
 
+.t-postAside__widget.pseudo-class-last-child {
+  margin-bottom: 0;
+}
+
 .sg.sg-label a.pseudo-class-hover i.fa {
   color: rgba(28, 56, 73, 0.7);
 }

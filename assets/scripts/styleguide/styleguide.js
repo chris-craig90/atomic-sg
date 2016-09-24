@@ -10,12 +10,12 @@ $(document).ready(function() {
     // ==========================================
     var sc5Template = $SC5();
     sc5Template
-      //.clean()
-        .gridControls();
-        //   .mainContent()
-        //     .sideNav()
-        //       .placeholder()
-        //         .demo('temp');
+      .clean()
+        .gridControls()
+           .mainContent()
+             .sideNav()
+               .placeholder()
+                 .demo('temp');
                 //.demo('fashion-light-uni');
 
     // # Grid Overlays

@@ -26,6 +26,7 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
+  padding: 0; /* Reset defualt padding on <a> if used as a `m-mediaBlk` elelemts */
 
   &__thumb{
     position: relative;
